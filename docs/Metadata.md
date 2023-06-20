@@ -1,0 +1,11 @@
+# Metadata
+
+Version metadata.
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**server_version** | **str** | Version of the server. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

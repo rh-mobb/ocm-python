@@ -1,0 +1,14 @@
+# Subnetwork
+
+AWS subnetwork object to be used while installing a cluster
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**availability_zone** | **str** | The availability zone to which the subnet is related | [optional] 
+**name** | **str** | Name of the subnet according to its &#x60;Name&#x60; tag on AWS | [optional] 
+**public** | **bool** | Whether it is a public subnet | [optional] 
+**subnet_id** | **str** | The subnet id to be used while installing a cluster | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
