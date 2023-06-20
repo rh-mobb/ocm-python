@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# ocm_client.DefaultApi
 
 All URIs are relative to *https://api.openshift.com*
 
@@ -220,12 +220,12 @@ Deletes the add-on.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -235,14 +235,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 
     try:
@@ -291,12 +291,12 @@ Retrieves the details of the add-on.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -306,14 +306,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 
     try:
@@ -363,12 +363,12 @@ Updates the add-on.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -378,16 +378,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
-add_on = openapi_client.AddOn() # AddOn |  (optional)
+add_on = ocm_client.AddOn() # AddOn |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_addons_addon_id_patch(addon_id, add_on=add_on)
@@ -437,12 +437,12 @@ Retrieves the list of add-on versions.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -452,14 +452,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the add-on instead of the names of the columns of a table. For example, in order to sort the add-on versions descending by id the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -517,12 +517,12 @@ Create a new add-on version and add it to the collection of add-ons.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -532,16 +532,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
-add_on_version = openapi_client.AddOnVersion() # AddOnVersion |  (optional)
+add_on_version = ocm_client.AddOnVersion() # AddOnVersion |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_addons_addon_id_versions_post(addon_id, add_on_version=add_on_version)
@@ -591,12 +591,12 @@ Deletes the add-on version.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -606,14 +606,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 version_id = 'version_id_example' # str | 
 
@@ -664,12 +664,12 @@ Retrieves the details of the add-on version.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -679,14 +679,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 version_id = 'version_id_example' # str | 
 
@@ -738,12 +738,12 @@ Updates the add-on version.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -753,17 +753,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     addon_id = 'addon_id_example' # str | 
 version_id = 'version_id_example' # str | 
-add_on_version = openapi_client.AddOnVersion() # AddOnVersion |  (optional)
+add_on_version = ocm_client.AddOnVersion() # AddOnVersion |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_addons_addon_id_versions_version_id_patch(addon_id, version_id, add_on_version=add_on_version)
@@ -814,12 +814,12 @@ Retrieves the list of add-ons.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -829,14 +829,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the add-on instead of the names of the columns of a table. For example, in order to sort the add-ons descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the add-on instead of the names of the columns of a table. For example, in order to retrieve all the add-ons with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the add-ons that the user has permission to see will be returned. (optional)
@@ -892,12 +892,12 @@ Create a new add-on and add it to the collection of add-ons.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -907,15 +907,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    add_on = openapi_client.AddOn() # AddOn |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    add_on = ocm_client.AddOn() # AddOn |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_addons_post(add_on=add_on)
@@ -964,12 +964,12 @@ Retrieves the details of the aws infrastructure access role.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -979,14 +979,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     aws_infrastructure_access_role_id = 'aws_infrastructure_access_role_id_example' # str | 
 
     try:
@@ -1034,12 +1034,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1049,14 +1049,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the role instead of the names of the columns of a table. For example, in order to sort the roles descending by dislay_name the value should be:  ```sql display_name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the role instead of the names of the columns of a table. For example, in order to retrieve all the role with a name starting with `my`the value should be:  ```sql display_name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the roles that the user has permission to see will be returned. (optional)
@@ -1112,12 +1112,12 @@ Retrieves the list of machine types in the provided region.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1127,17 +1127,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_aws_inquiries_machine_types_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -1188,12 +1188,12 @@ Retrieves the list of available regions of the cloud provider. IMPORTANT: This l
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1203,17 +1203,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_aws_inquiries_regions_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -1264,12 +1264,12 @@ Retrieves the list of policies.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1279,14 +1279,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
 
@@ -1338,12 +1338,12 @@ Retrieves the list of policies.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1353,14 +1353,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the awsstspolicies instead of the names of the columns of a table. For example, in order to sort the policies descending by operator type identifier the value should be:  ```sql orderBy id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the awsstspolicies instead of the names of the columns of a table. For example, in order to retrieve all the policies of type  `operatorrole` should be:  ```sql policy_type like 'OperatorRole%' ```  If the parameter isn't provided, or if the value is empty, then all the policies  will be returned. (optional)
@@ -1416,12 +1416,12 @@ Retrieves the list of available vpcs of the cloud provider for specific region. 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1431,17 +1431,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of vpcs of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_aws_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -1492,12 +1492,12 @@ Retrieves the list of available regions of the cloud provider.  IMPORTANT: This 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1507,18 +1507,18 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider. (optional)
-aws = openapi_client.AWS() # AWS |  (optional)
+aws = ocm_client.AWS() # AWS |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_available_regions_post(cloud_provider_id, page=page, size=size, aws=aws)
@@ -1570,12 +1570,12 @@ Retrieves the details of the cloud provider.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1585,14 +1585,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 
     try:
@@ -1642,12 +1642,12 @@ Retrieves the list of regions of the cloud provider.  IMPORTANT: This collection
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1657,14 +1657,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider. (optional)
@@ -1718,12 +1718,12 @@ Adds a cloud region to the database.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1733,16 +1733,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
-cloud_region = openapi_client.CloudRegion() # CloudRegion |  (optional)
+cloud_region = ocm_client.CloudRegion() # CloudRegion |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_regions_post(cloud_provider_id, cloud_region=cloud_region)
@@ -1792,12 +1792,12 @@ Deletes the region.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1807,14 +1807,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 region_id = 'region_id_example' # str | 
 
@@ -1865,12 +1865,12 @@ Retrieves the details of the region.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1880,14 +1880,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 region_id = 'region_id_example' # str | 
 
@@ -1939,12 +1939,12 @@ Updates the region.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -1954,17 +1954,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cloud_provider_id = 'cloud_provider_id_example' # str | 
 region_id = 'region_id_example' # str | 
-cloud_region = openapi_client.CloudRegion() # CloudRegion |  (optional)
+cloud_region = ocm_client.CloudRegion() # CloudRegion |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_regions_region_id_patch(cloud_provider_id, region_id, cloud_region=cloud_region)
@@ -2015,12 +2015,12 @@ Retrieves the list of cloud providers.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2030,14 +2030,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to sort the clusters descending by name identifier the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to retrieve all the cloud providers with a name starting with `A` the value should be:  ```sql name like 'A%' ```  If the parameter isn't provided, or if the value is empty, then all the clusters that the user has permission to see will be returned. (optional)
@@ -2091,12 +2091,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2106,14 +2106,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_inquiry_id = 'addon_inquiry_id_example' # str | 
 
@@ -2163,12 +2163,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2178,14 +2178,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the add-on instead of the names of the columns of a table. For example, in order to sort the add-ons descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -2243,12 +2243,12 @@ Deletes the addon upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2258,14 +2258,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_upgrade_policy_id = 'addon_upgrade_policy_id_example' # str | 
 
@@ -2316,12 +2316,12 @@ Retrieves the details of the addon upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2331,14 +2331,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_upgrade_policy_id = 'addon_upgrade_policy_id_example' # str | 
 
@@ -2390,12 +2390,12 @@ Update the addon upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2405,17 +2405,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_upgrade_policy_id = 'addon_upgrade_policy_id_example' # str | 
-addon_upgrade_policy = openapi_client.AddonUpgradePolicy() # AddonUpgradePolicy |  (optional)
+addon_upgrade_policy = ocm_client.AddonUpgradePolicy() # AddonUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_addon_upgrade_policy_id_patch(cluster_id, addon_upgrade_policy_id, addon_upgrade_policy=addon_upgrade_policy)
@@ -2466,12 +2466,12 @@ Retrieves the details of the upgrade policy state.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2481,14 +2481,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_upgrade_policy_id = 'addon_upgrade_policy_id_example' # str | 
 
@@ -2540,12 +2540,12 @@ Update the upgrade policy state.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2555,17 +2555,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addon_upgrade_policy_id = 'addon_upgrade_policy_id_example' # str | 
-addon_upgrade_policy_state = openapi_client.AddonUpgradePolicyState() # AddonUpgradePolicyState |  (optional)
+addon_upgrade_policy_state = ocm_client.AddonUpgradePolicyState() # AddonUpgradePolicyState |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_addon_upgrade_policy_id_state_patch(cluster_id, addon_upgrade_policy_id, addon_upgrade_policy_state=addon_upgrade_policy_state)
@@ -2616,12 +2616,12 @@ Retrieves the list of addon upgrade policies.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2631,14 +2631,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -2692,12 +2692,12 @@ Adds a new addon upgrade policy to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2707,16 +2707,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-addon_upgrade_policy = openapi_client.AddonUpgradePolicy() # AddonUpgradePolicy |  (optional)
+addon_upgrade_policy = ocm_client.AddonUpgradePolicy() # AddonUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_post(cluster_id, addon_upgrade_policy=addon_upgrade_policy)
@@ -2766,12 +2766,12 @@ Delete an add-on installation and remove it from the collection of add-on instal
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2781,14 +2781,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addoninstallation_id = 'addoninstallation_id_example' # str | 
 
@@ -2839,12 +2839,12 @@ Retrieves the details of the add-on installation.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2854,14 +2854,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addoninstallation_id = 'addoninstallation_id_example' # str | 
 
@@ -2913,12 +2913,12 @@ Updates the add-on installation.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -2928,17 +2928,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 addoninstallation_id = 'addoninstallation_id_example' # str | 
-add_on_installation = openapi_client.AddOnInstallation() # AddOnInstallation |  (optional)
+add_on_installation = ocm_client.AddOnInstallation() # AddOnInstallation |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_addons_addoninstallation_id_patch(cluster_id, addoninstallation_id, add_on_installation=add_on_installation)
@@ -2989,12 +2989,12 @@ Retrieves the list of add-on installations.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3004,14 +3004,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the add-on installation instead of the names of the columns of a table. For example, in order to sort the add-on installations descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -3069,12 +3069,12 @@ Create a new add-on installation and add it to the collection of add-on installa
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3084,16 +3084,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-add_on_installation = openapi_client.AddOnInstallation() # AddOnInstallation |  (optional)
+add_on_installation = ocm_client.AddOnInstallation() # AddOnInstallation |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_addons_post(cluster_id, add_on_installation=add_on_installation)
@@ -3143,12 +3143,12 @@ Deletes the AWS infrastructure access role grant.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3158,14 +3158,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 aws_infrastructure_access_role_grant_id = 'aws_infrastructure_access_role_grant_id_example' # str | 
 
@@ -3216,12 +3216,12 @@ Retrieves the details of the AWS infrastructure access role grant.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3231,14 +3231,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 aws_infrastructure_access_role_grant_id = 'aws_infrastructure_access_role_grant_id_example' # str | 
 
@@ -3290,12 +3290,12 @@ Retrieves the list of AWS infrastructure access role grants.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3305,14 +3305,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the AWS infrastructure access role grant instead of the names of the columns of a table. For example, in order to sort the AWS infrastructure access role grants descending by user ARN the value should be:  ```sql user_arn desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -3370,12 +3370,12 @@ Create a new AWS infrastructure access role grant and add it to the collection o
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3385,16 +3385,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-aws_infrastructure_access_role_grant = openapi_client.AWSInfrastructureAccessRoleGrant() # AWSInfrastructureAccessRoleGrant |  (optional)
+aws_infrastructure_access_role_grant = ocm_client.AWSInfrastructureAccessRoleGrant() # AWSInfrastructureAccessRoleGrant |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_post(cluster_id, aws_infrastructure_access_role_grant=aws_infrastructure_access_role_grant)
@@ -3444,12 +3444,12 @@ Retrieves the details of the configuration for the Private Link.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3459,14 +3459,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -3516,12 +3516,12 @@ Retrieves the list of principals.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3531,14 +3531,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the role binding instead of the names of the columns of a table. For example, in order to retrieve role bindings with role_id AuthenticatedUser:  ```sql role_id = 'AuthenticatedUser' ```  If the parameter isn't provided, or if the value is empty, then all the items that the user has permission to see will be returned. (optional)
@@ -3594,12 +3594,12 @@ Adds a new principal for the Private Link.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3609,16 +3609,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-private_link_principal = openapi_client.PrivateLinkPrincipal() # PrivateLinkPrincipal |  (optional)
+private_link_principal = ocm_client.PrivateLinkPrincipal() # PrivateLinkPrincipal |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_aws_private_link_configuration_principals_post(cluster_id, private_link_principal=private_link_principal)
@@ -3668,12 +3668,12 @@ Deletes the principal.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3683,14 +3683,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 principal_id = 'principal_id_example' # str | 
 
@@ -3741,12 +3741,12 @@ Retrieves the details of the principal.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3756,14 +3756,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 principal_id = 'principal_id_example' # str | 
 
@@ -3815,12 +3815,12 @@ Deletes the clusterdeployment.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3830,14 +3830,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -3886,12 +3886,12 @@ Deletes the upgrade policy for the control plane.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3901,14 +3901,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 control_plane_upgrade_policy_id = 'control_plane_upgrade_policy_id_example' # str | 
 
@@ -3959,12 +3959,12 @@ Retrieves the details of the upgrade policy for the control plane.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -3974,14 +3974,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 control_plane_upgrade_policy_id = 'control_plane_upgrade_policy_id_example' # str | 
 
@@ -4033,12 +4033,12 @@ Update the upgrade policy for the control plane.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4048,17 +4048,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 control_plane_upgrade_policy_id = 'control_plane_upgrade_policy_id_example' # str | 
-control_plane_upgrade_policy = openapi_client.ControlPlaneUpgradePolicy() # ControlPlaneUpgradePolicy |  (optional)
+control_plane_upgrade_policy = ocm_client.ControlPlaneUpgradePolicy() # ControlPlaneUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_control_plane_upgrade_policies_control_plane_upgrade_policy_id_patch(cluster_id, control_plane_upgrade_policy_id, control_plane_upgrade_policy=control_plane_upgrade_policy)
@@ -4109,12 +4109,12 @@ Retrieves the list of upgrade policies for the control plane.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4124,14 +4124,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -4185,12 +4185,12 @@ Adds a new upgrade policy to the control plane of the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4200,16 +4200,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-control_plane_upgrade_policy = openapi_client.ControlPlaneUpgradePolicy() # ControlPlaneUpgradePolicy |  (optional)
+control_plane_upgrade_policy = ocm_client.ControlPlaneUpgradePolicy() # ControlPlaneUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_control_plane_upgrade_policies_post(cluster_id, control_plane_upgrade_policy=control_plane_upgrade_policy)
@@ -4259,12 +4259,12 @@ Retrieves the details of the credentials of a cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4274,14 +4274,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -4331,12 +4331,12 @@ Deletes the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4346,14 +4346,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 deprovision = True # bool | If false it will only delete from OCM but not the actual cluster resources. false is only allowed for OCP clusters. true by default. (optional)
 dry_run = True # bool | Dry run flag is used to check if the operation can be completed, but won't delete. (optional)
@@ -4404,12 +4404,12 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4419,14 +4419,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -4474,12 +4474,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4489,16 +4489,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-delete_protection = openapi_client.DeleteProtection() # DeleteProtection |  (optional)
+delete_protection = ocm_client.DeleteProtection() # DeleteProtection |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_delete_protection_patch(cluster_id, delete_protection=delete_protection)
@@ -4548,12 +4548,12 @@ Retrieves the details of the external configuration.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4563,14 +4563,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -4620,12 +4620,12 @@ Retrieves the list of labels.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4635,14 +4635,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -4696,12 +4696,12 @@ Deletes the label.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4711,14 +4711,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 label_id = 'label_id_example' # str | 
 
@@ -4769,12 +4769,12 @@ Retrieves the details of the label.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4784,14 +4784,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 label_id = 'label_id_example' # str | 
 
@@ -4843,12 +4843,12 @@ Update the label.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4858,17 +4858,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 label_id = 'label_id_example' # str | 
-label = openapi_client.Label() # Label |  (optional)
+label = ocm_client.Label() # Label |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_labels_label_id_patch(cluster_id, label_id, label=label)
@@ -4919,12 +4919,12 @@ Adds a new label to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -4934,16 +4934,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-label = openapi_client.Label() # Label |  (optional)
+label = ocm_client.Label() # Label |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_labels_post(cluster_id, label=label)
@@ -4993,12 +4993,12 @@ Retrieves the list of manifests.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5008,14 +5008,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -5069,12 +5069,12 @@ Deletes the manifest.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5084,14 +5084,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 manifest_id = 'manifest_id_example' # str | 
 
@@ -5142,12 +5142,12 @@ Retrieves the details of the manifest.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5157,14 +5157,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 manifest_id = 'manifest_id_example' # str | 
 
@@ -5216,12 +5216,12 @@ Update the manifest.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5231,17 +5231,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 manifest_id = 'manifest_id_example' # str | 
-manifest = openapi_client.Manifest() # Manifest |  (optional)
+manifest = ocm_client.Manifest() # Manifest |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_manifests_manifest_id_patch(cluster_id, manifest_id, manifest=manifest)
@@ -5292,12 +5292,12 @@ Adds a new manifest to a cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5307,16 +5307,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-manifest = openapi_client.Manifest() # Manifest |  (optional)
+manifest = ocm_client.Manifest() # Manifest |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_manifests_post(cluster_id, manifest=manifest)
@@ -5366,12 +5366,12 @@ Retrieves the list of syncsets.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5381,14 +5381,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -5442,12 +5442,12 @@ Adds a new syncset to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5457,16 +5457,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-syncset = openapi_client.Syncset() # Syncset |  (optional)
+syncset = ocm_client.Syncset() # Syncset |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_syncsets_post(cluster_id, syncset=syncset)
@@ -5516,12 +5516,12 @@ Deletes the syncset.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5531,14 +5531,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 syncset_id = 'syncset_id_example' # str | 
 
@@ -5589,12 +5589,12 @@ Retrieves the details of the syncset.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5604,14 +5604,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 syncset_id = 'syncset_id_example' # str | 
 
@@ -5663,12 +5663,12 @@ Update the syncset.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5678,17 +5678,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 syncset_id = 'syncset_id_example' # str | 
-syncset = openapi_client.Syncset() # Syncset |  (optional)
+syncset = ocm_client.Syncset() # Syncset |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_syncsets_syncset_id_patch(cluster_id, syncset_id, syncset=syncset)
@@ -5739,12 +5739,12 @@ Retrieves the list of reasons.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5754,14 +5754,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -5815,12 +5815,12 @@ Adds a new agreed version gate to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5830,16 +5830,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-version_gate_agreement = openapi_client.VersionGateAgreement() # VersionGateAgreement |  (optional)
+version_gate_agreement = ocm_client.VersionGateAgreement() # VersionGateAgreement |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_gate_agreements_post(cluster_id, version_gate_agreement=version_gate_agreement)
@@ -5889,12 +5889,12 @@ Deletes the version gate agreement.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5904,14 +5904,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 version_gate_agreement_id = 'version_gate_agreement_id_example' # str | 
 
@@ -5962,12 +5962,12 @@ Retrieves the details of the version gate agreement.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -5977,14 +5977,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 version_gate_agreement_id = 'version_gate_agreement_id_example' # str | 
 
@@ -6036,12 +6036,12 @@ Retrieves the details of the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6051,14 +6051,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -6108,12 +6108,12 @@ Retrieves the list of groups.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6123,14 +6123,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -6184,12 +6184,12 @@ Retrieves the details of the group.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6199,14 +6199,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 group_id = 'group_id_example' # str | 
 
@@ -6258,12 +6258,12 @@ Retrieves the list of users.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6273,14 +6273,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 group_id = 'group_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -6336,12 +6336,12 @@ Adds a new user to the group.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6351,17 +6351,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 group_id = 'group_id_example' # str | 
-user = openapi_client.User() # User |  (optional)
+user = ocm_client.User() # User |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_post(cluster_id, group_id, user=user)
@@ -6412,12 +6412,12 @@ Deletes the user.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6427,14 +6427,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 group_id = 'group_id_example' # str | 
 user_id = 'user_id_example' # str | 
@@ -6487,12 +6487,12 @@ Retrieves the details of the user.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6502,14 +6502,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 group_id = 'group_id_example' # str | 
 user_id = 'user_id_example' # str | 
@@ -6563,12 +6563,12 @@ Initiates cluster hibernation. While hibernating a cluster will not consume any 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6578,14 +6578,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -6634,12 +6634,12 @@ Retrieves the Hypershift details for a single cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6649,14 +6649,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -6706,12 +6706,12 @@ Retrieves the list of identity providers.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6721,14 +6721,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -6782,12 +6782,12 @@ Deletes the identity provider.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6797,14 +6797,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 
@@ -6855,12 +6855,12 @@ Retrieves the details of the identity provider.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6870,14 +6870,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 
@@ -6929,12 +6929,12 @@ Retrieves the list of _HTPasswd_ IDP users.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -6944,14 +6944,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -7007,12 +7007,12 @@ Deletes the user.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7022,14 +7022,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 htpasswd_user_id = 'htpasswd_user_id_example' # str | 
@@ -7082,12 +7082,12 @@ Retrieves the details of the user.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7097,14 +7097,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 htpasswd_user_id = 'htpasswd_user_id_example' # str | 
@@ -7158,12 +7158,12 @@ Updates the user's password. The username is not editable
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7173,18 +7173,18 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
 htpasswd_user_id = 'htpasswd_user_id_example' # str | 
-ht_passwd_user = openapi_client.HTPasswdUser() # HTPasswdUser |  (optional)
+ht_passwd_user = ocm_client.HTPasswdUser() # HTPasswdUser |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_htpasswd_user_id_patch(cluster_id, identity_provider_id, htpasswd_user_id, ht_passwd_user=ht_passwd_user)
@@ -7236,12 +7236,12 @@ Adds multiple new users to the _HTPasswd_ file.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7251,17 +7251,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
-inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
+inline_object = ocm_client.InlineObject() # InlineObject |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_import_post(cluster_id, identity_provider_id, inline_object=inline_object)
@@ -7312,12 +7312,12 @@ Adds a new user to the _HTPasswd_ file.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7327,17 +7327,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
-ht_passwd_user = openapi_client.HTPasswdUser() # HTPasswdUser |  (optional)
+ht_passwd_user = ocm_client.HTPasswdUser() # HTPasswdUser |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_post(cluster_id, identity_provider_id, ht_passwd_user=ht_passwd_user)
@@ -7388,12 +7388,12 @@ Update identity provider in the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7403,17 +7403,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 identity_provider_id = 'identity_provider_id_example' # str | 
-identity_provider = openapi_client.IdentityProvider() # IdentityProvider |  (optional)
+identity_provider = ocm_client.IdentityProvider() # IdentityProvider |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_patch(cluster_id, identity_provider_id, identity_provider=identity_provider)
@@ -7464,12 +7464,12 @@ Adds a new identity provider to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7479,16 +7479,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-identity_provider = openapi_client.IdentityProvider() # IdentityProvider |  (optional)
+identity_provider = ocm_client.IdentityProvider() # IdentityProvider |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_post(cluster_id, identity_provider=identity_provider)
@@ -7538,12 +7538,12 @@ Retrieves the list of inflight checks.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7553,14 +7553,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -7614,12 +7614,12 @@ Retrieves the details of the inflight check.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7629,14 +7629,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 inflight_check_id = 'inflight_check_id_example' # str | 
 
@@ -7688,12 +7688,12 @@ Retrieves the list of ingresses.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7703,14 +7703,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -7764,12 +7764,12 @@ Deletes the ingress.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7779,14 +7779,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 ingress_id = 'ingress_id_example' # str | 
 
@@ -7837,12 +7837,12 @@ Retrieves the details of the ingress.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7852,14 +7852,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 ingress_id = 'ingress_id_example' # str | 
 
@@ -7911,12 +7911,12 @@ Updates the ingress.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -7926,17 +7926,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 ingress_id = 'ingress_id_example' # str | 
-ingress = openapi_client.Ingress() # Ingress |  (optional)
+ingress = ocm_client.Ingress() # Ingress |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_ingresses_ingress_id_patch(cluster_id, ingress_id, ingress=ingress)
@@ -7987,12 +7987,12 @@ Updates all ingresses
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8002,16 +8002,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-ingress = [openapi_client.Ingress()] # list[Ingress] |  (optional)
+ingress = [ocm_client.Ingress()] # list[Ingress] |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_ingresses_patch(cluster_id, ingress=ingress)
@@ -8061,12 +8061,12 @@ Adds a new ingress to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8076,16 +8076,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-ingress = openapi_client.Ingress() # Ingress |  (optional)
+ingress = ocm_client.Ingress() # Ingress |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_ingresses_post(cluster_id, ingress=ingress)
@@ -8135,12 +8135,12 @@ Retrieves the list of reasons.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8150,14 +8150,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -8211,12 +8211,12 @@ Deletes the reason.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8226,14 +8226,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 limited_support_reason_id = 'limited_support_reason_id_example' # str | 
 
@@ -8284,12 +8284,12 @@ Retrieves the details of the reason.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8299,14 +8299,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 limited_support_reason_id = 'limited_support_reason_id_example' # str | 
 
@@ -8358,12 +8358,12 @@ Adds a new reason to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8373,16 +8373,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-limited_support_reason = openapi_client.LimitedSupportReason() # LimitedSupportReason |  (optional)
+limited_support_reason = ocm_client.LimitedSupportReason() # LimitedSupportReason |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_post(cluster_id, limited_support_reason=limited_support_reason)
@@ -8432,12 +8432,12 @@ Retrieves the list of log links.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8447,14 +8447,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -8508,12 +8508,12 @@ Retrieves the details of the log.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8523,14 +8523,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 offset = 56 # int | Line offset to start logs from. if 0 retreive entire log. If offset > #lines return an empty log. (optional)
 tail = 56 # int | Returns the number of tail lines from the end of the log. If there are no line breaks or the number of lines < tail return the entire log. Either 'tail' or 'offset' can be set. Not both.  (optional)
@@ -8584,12 +8584,12 @@ Retrieves the details of the log.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8599,14 +8599,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 offset = 56 # int | Line offset to start logs from. if 0 retreive entire log. If offset > #lines return an empty log. (optional)
 tail = 56 # int | Returns the number of tail lines from the end of the log. If there are no line breaks or the number of lines < tail return the entire log. Either 'tail' or 'offset' can be set. Not both.  (optional)
@@ -8660,12 +8660,12 @@ Retrieves the list of machine pools.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8675,14 +8675,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -8736,12 +8736,12 @@ Deletes the machine pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8751,14 +8751,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 machine_pool_id = 'machine_pool_id_example' # str | 
 
@@ -8809,12 +8809,12 @@ Retrieves the details of the machine pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8824,14 +8824,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 machine_pool_id = 'machine_pool_id_example' # str | 
 
@@ -8883,12 +8883,12 @@ Updates the machine pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8898,17 +8898,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 machine_pool_id = 'machine_pool_id_example' # str | 
-machine_pool = openapi_client.MachinePool() # MachinePool |  (optional)
+machine_pool = ocm_client.MachinePool() # MachinePool |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_machine_pools_machine_pool_id_patch(cluster_id, machine_pool_id, machine_pool=machine_pool)
@@ -8959,12 +8959,12 @@ Adds a new machine pool to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -8974,16 +8974,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-machine_pool = openapi_client.MachinePool() # MachinePool |  (optional)
+machine_pool = ocm_client.MachinePool() # MachinePool |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_machine_pools_post(cluster_id, machine_pool=machine_pool)
@@ -9031,12 +9031,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9046,14 +9046,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -9101,12 +9101,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9116,14 +9116,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -9173,12 +9173,12 @@ Retrieves the metrics.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9188,14 +9188,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -9243,12 +9243,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9258,14 +9258,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -9315,12 +9315,12 @@ Retrieves the metrics.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9330,14 +9330,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -9387,12 +9387,12 @@ Retrieves the list of node pools.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9402,14 +9402,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -9463,12 +9463,12 @@ Deletes the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9478,14 +9478,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 
@@ -9536,12 +9536,12 @@ Retrieves the details of the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9551,14 +9551,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 
@@ -9610,12 +9610,12 @@ Updates the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9625,17 +9625,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
-node_pool = openapi_client.NodePool() # NodePool |  (optional)
+node_pool = ocm_client.NodePool() # NodePool |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_patch(cluster_id, node_pool_id, node_pool=node_pool)
@@ -9686,12 +9686,12 @@ Retrieves the list of upgrade policies for the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9701,14 +9701,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
@@ -9764,12 +9764,12 @@ Deletes the upgrade policy for the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9779,14 +9779,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 node_pool_upgrade_policy_id = 'node_pool_upgrade_policy_id_example' # str | 
@@ -9839,12 +9839,12 @@ Retrieves the details of the upgrade policy for the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9854,14 +9854,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 node_pool_upgrade_policy_id = 'node_pool_upgrade_policy_id_example' # str | 
@@ -9915,12 +9915,12 @@ Update the upgrade policy for the node pool.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -9930,18 +9930,18 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
 node_pool_upgrade_policy_id = 'node_pool_upgrade_policy_id_example' # str | 
-node_pool_upgrade_policy = openapi_client.NodePoolUpgradePolicy() # NodePoolUpgradePolicy |  (optional)
+node_pool_upgrade_policy = ocm_client.NodePoolUpgradePolicy() # NodePoolUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_upgrade_policies_node_pool_upgrade_policy_id_patch(cluster_id, node_pool_id, node_pool_upgrade_policy_id, node_pool_upgrade_policy=node_pool_upgrade_policy)
@@ -9993,12 +9993,12 @@ Adds a new upgrade policy to the node pool of the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10008,17 +10008,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 node_pool_id = 'node_pool_id_example' # str | 
-node_pool_upgrade_policy = openapi_client.NodePoolUpgradePolicy() # NodePoolUpgradePolicy |  (optional)
+node_pool_upgrade_policy = ocm_client.NodePoolUpgradePolicy() # NodePoolUpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_upgrade_policies_post(cluster_id, node_pool_id, node_pool_upgrade_policy=node_pool_upgrade_policy)
@@ -10069,12 +10069,12 @@ Adds a new node pool to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10084,16 +10084,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-node_pool = openapi_client.NodePool() # NodePool |  (optional)
+node_pool = ocm_client.NodePool() # NodePool |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_post(cluster_id, node_pool=node_pool)
@@ -10143,12 +10143,12 @@ Updates the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10158,16 +10158,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-cluster = openapi_client.Cluster() # Cluster |  (optional)
+cluster = ocm_client.Cluster() # Cluster |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_patch(cluster_id, cluster=cluster)
@@ -10217,12 +10217,12 @@ Retrieves the details of the product.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10232,14 +10232,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10289,12 +10289,12 @@ Delete the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10304,14 +10304,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10360,12 +10360,12 @@ Retrieves the details of the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10375,14 +10375,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10432,12 +10432,12 @@ Updates the details of the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10447,16 +10447,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-provision_shard = openapi_client.ProvisionShard() # ProvisionShard |  (optional)
+provision_shard = ocm_client.ProvisionShard() # ProvisionShard |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_patch(cluster_id, provision_shard=provision_shard)
@@ -10506,12 +10506,12 @@ Retrieves a list of resources for a cluster in error state
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10521,14 +10521,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10578,12 +10578,12 @@ Retrieves currently available cluster resources
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10593,14 +10593,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10650,12 +10650,12 @@ Resumes from Hibernation.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10665,14 +10665,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10719,12 +10719,12 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10734,14 +10734,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 
     try:
@@ -10791,12 +10791,12 @@ Retrieves the list of operator roles.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10806,14 +10806,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. (optional)
@@ -10867,12 +10867,12 @@ Deletes the operator role.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10882,14 +10882,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 operator_iam_role_id = 'operator_iam_role_id_example' # str | 
 
@@ -10940,12 +10940,12 @@ Adds a new operator role to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -10955,16 +10955,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-operator_iam_role = openapi_client.OperatorIAMRole() # OperatorIAMRole |  (optional)
+operator_iam_role = ocm_client.OperatorIAMRole() # OperatorIAMRole |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_post(cluster_id, operator_iam_role=operator_iam_role)
@@ -11014,12 +11014,12 @@ Retrieves the list of tuning configs.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11029,14 +11029,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -11090,12 +11090,12 @@ Adds a new tuning config to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11105,16 +11105,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-tuning_config = openapi_client.TuningConfig() # TuningConfig |  (optional)
+tuning_config = ocm_client.TuningConfig() # TuningConfig |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_post(cluster_id, tuning_config=tuning_config)
@@ -11164,12 +11164,12 @@ Deletes the tuning config.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11179,14 +11179,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 tuning_config_id = 'tuning_config_id_example' # str | 
 
@@ -11237,12 +11237,12 @@ Retrieves the details of the tuning config.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11252,14 +11252,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 tuning_config_id = 'tuning_config_id_example' # str | 
 
@@ -11311,12 +11311,12 @@ Updates the tuning config.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11326,17 +11326,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 tuning_config_id = 'tuning_config_id_example' # str | 
-tuning_config = openapi_client.TuningConfig() # TuningConfig |  (optional)
+tuning_config = ocm_client.TuningConfig() # TuningConfig |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_tuning_config_id_patch(cluster_id, tuning_config_id, tuning_config=tuning_config)
@@ -11387,12 +11387,12 @@ Retrieves the list of upgrade policies.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11402,14 +11402,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
@@ -11463,12 +11463,12 @@ Adds a new upgrade policy to the cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11478,16 +11478,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
-upgrade_policy = openapi_client.UpgradePolicy() # UpgradePolicy |  (optional)
+upgrade_policy = ocm_client.UpgradePolicy() # UpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_post(cluster_id, upgrade_policy=upgrade_policy)
@@ -11537,12 +11537,12 @@ Deletes the upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11552,14 +11552,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 upgrade_policy_id = 'upgrade_policy_id_example' # str | 
 
@@ -11610,12 +11610,12 @@ Retrieves the details of the upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11625,14 +11625,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 upgrade_policy_id = 'upgrade_policy_id_example' # str | 
 
@@ -11684,12 +11684,12 @@ Update the upgrade policy.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11699,17 +11699,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 upgrade_policy_id = 'upgrade_policy_id_example' # str | 
-upgrade_policy = openapi_client.UpgradePolicy() # UpgradePolicy |  (optional)
+upgrade_policy = ocm_client.UpgradePolicy() # UpgradePolicy |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_patch(cluster_id, upgrade_policy_id, upgrade_policy=upgrade_policy)
@@ -11760,12 +11760,12 @@ Retrieves the details of the upgrade policy state.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11775,14 +11775,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 upgrade_policy_id = 'upgrade_policy_id_example' # str | 
 
@@ -11834,12 +11834,12 @@ Update the upgrade policy state.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11849,17 +11849,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
 upgrade_policy_id = 'upgrade_policy_id_example' # str | 
-upgrade_policy_state = openapi_client.UpgradePolicyState() # UpgradePolicyState |  (optional)
+upgrade_policy_state = ocm_client.UpgradePolicyState() # UpgradePolicyState |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_patch(cluster_id, upgrade_policy_id, upgrade_policy_state=upgrade_policy_state)
@@ -11910,12 +11910,12 @@ Retrieves the list of clusters.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -11925,14 +11925,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the cluster instead of the names of the columns of a table. For example, in order to sort the clusters descending by region identifier the value should be:  ```sql region.id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the cluster instead of the names of the columns of a table. For example, in order to retrieve all the clusters with a name starting with `my` in the `us-east-1` region the value should be:  ```sql name like 'my%' and region.id = 'us-east-1' ```  If the parameter isn't provided, or if the value is empty, then all the clusters that the user has permission to see will be returned. (optional)
@@ -11988,12 +11988,12 @@ Provision a new cluster and add it to the collection of clusters.  See the `regi
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12003,15 +12003,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    cluster = openapi_client.Cluster() # Cluster |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster = ocm_client.Cluster() # Cluster |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_clusters_post(cluster=cluster)
@@ -12060,12 +12060,12 @@ Delete the DNS domain.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12075,14 +12075,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     dns_domain_id = 'dns_domain_id_example' # str | 
 
     try:
@@ -12131,12 +12131,12 @@ Retrieves the details of the DNS domain.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12146,14 +12146,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     dns_domain_id = 'dns_domain_id_example' # str | 
 
     try:
@@ -12203,12 +12203,12 @@ Updates the details of the DNS domain.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12218,16 +12218,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     dns_domain_id = 'dns_domain_id_example' # str | 
-dns_domain = openapi_client.DNSDomain() # DNSDomain |  (optional)
+dns_domain = ocm_client.DNSDomain() # DNSDomain |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_dns_domains_dns_domain_id_patch(dns_domain_id, dns_domain=dns_domain)
@@ -12275,12 +12275,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12290,14 +12290,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the dns domain instead of the names of the columns of a table. For example, in order to retrieve all the dns domains with a ID starting with `02a5` should be:  ```sql id like '02a5%' ```  If the parameter isn't provided, or if the value is empty, then all the dns domains that the user has permission to see will be returned. (optional)
 size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
@@ -12351,12 +12351,12 @@ Adds a DNS domain.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12366,15 +12366,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    dns_domain = openapi_client.DNSDomain() # DNSDomain |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    dns_domain = ocm_client.DNSDomain() # DNSDomain |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_dns_domains_post(dns_domain=dns_domain)
@@ -12423,12 +12423,12 @@ Retrieves the details of the environment.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12438,14 +12438,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     
     try:
         api_response = api_instance.api_clusters_mgmt_v1_environment_get()
@@ -12491,12 +12491,12 @@ Updates the environment.  Attributes that can be updated are:  - `last_upgrade_a
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12506,15 +12506,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    environment = openapi_client.Environment() # Environment |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    environment = ocm_client.Environment() # Environment |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_environment_patch(environment=environment)
@@ -12563,12 +12563,12 @@ Adds a new event to be tracked. When sending a new event request, it gets tracke
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12578,15 +12578,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    event = openapi_client.Event() # Event |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    event = ocm_client.Event() # Event |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_events_post(event=event)
@@ -12635,12 +12635,12 @@ Retrieves the details of the cluster flavour.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12650,14 +12650,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     flavour_id = 'flavour_id_example' # str | 
 
     try:
@@ -12707,12 +12707,12 @@ Updates the flavour.  Attributes that can be updated are:  - `aws.infra_volume` 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12722,16 +12722,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     flavour_id = 'flavour_id_example' # str | 
-flavour = openapi_client.Flavour() # Flavour |  (optional)
+flavour = ocm_client.Flavour() # Flavour |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_flavours_flavour_id_patch(flavour_id, flavour=flavour)
@@ -12779,12 +12779,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12794,14 +12794,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the flavour instead of the names of the columns of a table. For example, in order to sort the flavours descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the flavour instead of the names of the columns of a table. For example, in order to retrieve all the flavours with a name starting with `my`the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the flavours that the user has permission to see will be returned. (optional)
@@ -12857,12 +12857,12 @@ Adds a new cluster flavour.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12872,15 +12872,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    flavour = openapi_client.Flavour() # Flavour |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    flavour = ocm_client.Flavour() # Flavour |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_flavours_post(flavour=flavour)
@@ -12929,12 +12929,12 @@ Retrieves the list of encryption keys. IMPORTANT: This collection doesn't curren
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -12944,17 +12944,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -13005,12 +13005,12 @@ Retrieves the list of available key rings of the cloud provider. IMPORTANT: This
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13020,17 +13020,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of key rings of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_gcp_inquiries_key_rings_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -13081,12 +13081,12 @@ Retrieves the list of available regions of the cloud provider. IMPORTANT: This l
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13096,17 +13096,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_gcp_inquiries_regions_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -13157,12 +13157,12 @@ Retrieves the list of available vpcs of the cloud provider for specific region. 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13172,17 +13172,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
 size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of vpcs of the provider. (optional)
-cloud_provider_data = openapi_client.CloudProviderData() # CloudProviderData |  (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_gcp_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
@@ -13233,12 +13233,12 @@ Retrieves the version metadata.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13248,14 +13248,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     
     try:
         api_response = api_instance.api_clusters_mgmt_v1_get()
@@ -13301,12 +13301,12 @@ Retrieves the list of templates.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13316,14 +13316,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
 
@@ -13375,12 +13375,12 @@ Retrieves the details of the template.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13390,14 +13390,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     limited_support_reason_template_id = 'limited_support_reason_template_id_example' # str | 
 
     try:
@@ -13447,12 +13447,12 @@ Retrieves the list of machine types.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13462,14 +13462,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the machine type instead of the names of the columns of a table. For example, in order to sort the machine types descending by name identifier the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the machine type instead of the names of the columns of a table. For example, in order to retrieve all the machine types with a name starting with `A` the value should be:  ```sql name like 'A%' ```  If the parameter isn't provided, or if the value is empty, then all the machine types that the user has permission to see will be returned. (optional)
@@ -13525,12 +13525,12 @@ Retrieves the details of the machine type.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13540,14 +13540,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     machine_type_id = 'machine_type_id_example' # str | 
 
     try:
@@ -13597,12 +13597,12 @@ Retrieves the list of oidc configs.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13612,14 +13612,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
 
@@ -13671,12 +13671,12 @@ Deletes the OidcConfig.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13686,14 +13686,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     oidc_config_id = 'oidc_config_id_example' # str | 
 
     try:
@@ -13742,12 +13742,12 @@ Retrieves the details of an OidcConfig.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13757,14 +13757,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     oidc_config_id = 'oidc_config_id_example' # str | 
 
     try:
@@ -13814,12 +13814,12 @@ Updates attributes of an OidcConfig.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13829,16 +13829,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     oidc_config_id = 'oidc_config_id_example' # str | 
-oidc_config = openapi_client.OidcConfig() # OidcConfig |  (optional)
+oidc_config = ocm_client.OidcConfig() # OidcConfig |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_oidc_configs_oidc_config_id_patch(oidc_config_id, oidc_config=oidc_config)
@@ -13888,12 +13888,12 @@ Creates a hosting under Red Hat's S3 bucket for byo oidc configuration
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13903,15 +13903,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    oidc_config = openapi_client.OidcConfig() # OidcConfig |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    oidc_config = ocm_client.OidcConfig() # OidcConfig |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_oidc_configs_post(oidc_config=oidc_config)
@@ -13960,12 +13960,12 @@ Retrieves the list of pending delete clusters.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -13975,14 +13975,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the pending delete cluster instead of the names of the columns of a table. For example, in order to sort the pending delete clusters descending by creation timestamp (i.e. their deletion time) the value should be:  ```sql creation_timestamp desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the pending delete cluster instead of the names of the columns of a table. For example, in order to retrieve all the pending delete clusters with creation time later than 2023-03-01T00:00:00Z the following is required:  ```sql creation_timestamp > '2023-03-01T00:00:00Z' ```  If the parameter isn't provided, or if the value is empty, then all the pending delete clusters that the user has permission to see will be returned. (optional)
@@ -14038,12 +14038,12 @@ Retrieves the details of the pending delete cluster.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14053,14 +14053,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     pending_delete_cluster_id = 'pending_delete_cluster_id_example' # str | 
 
     try:
@@ -14110,12 +14110,12 @@ Updates the pending delete cluster entry.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14125,16 +14125,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     pending_delete_cluster_id = 'pending_delete_cluster_id_example' # str | 
-pending_delete_cluster = openapi_client.PendingDeleteCluster() # PendingDeleteCluster |  (optional)
+pending_delete_cluster = ocm_client.PendingDeleteCluster() # PendingDeleteCluster |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_pending_delete_clusters_pending_delete_cluster_id_patch(pending_delete_cluster_id, pending_delete_cluster=pending_delete_cluster)
@@ -14184,12 +14184,12 @@ Retrieves the list of products.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14199,14 +14199,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the products that the user has permission to see will be returned. (optional)
@@ -14262,12 +14262,12 @@ Retrieves the details of the product.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14277,14 +14277,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     product_id = 'product_id_example' # str | 
 
     try:
@@ -14332,12 +14332,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14347,14 +14347,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the cluster instead of the names of the columns of a table. For example, in order to retrieve all the clusters with a name starting with `my` in the `us-east-1` region the value should be:  ```sql name like 'my%' and region.id = 'us-east-1' ```  If the parameter isn't provided, or if the value is empty, then all the provision shards that the user has permission to see will be returned. (optional)
 size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
@@ -14408,12 +14408,12 @@ Adds a provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14423,15 +14423,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    provision_shard = openapi_client.ProvisionShard() # ProvisionShard |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    provision_shard = ocm_client.ProvisionShard() # ProvisionShard |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_provision_shards_post(provision_shard=provision_shard)
@@ -14480,12 +14480,12 @@ Delete the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14495,14 +14495,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     provision_shard_id = 'provision_shard_id_example' # str | 
 
     try:
@@ -14551,12 +14551,12 @@ Retrieves the details of the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14566,14 +14566,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     provision_shard_id = 'provision_shard_id_example' # str | 
 
     try:
@@ -14623,12 +14623,12 @@ Updates the details of the provision shard.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14638,16 +14638,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     provision_shard_id = 'provision_shard_id_example' # str | 
-provision_shard = openapi_client.ProvisionShard() # ProvisionShard |  (optional)
+provision_shard = ocm_client.ProvisionShard() # ProvisionShard |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_provision_shards_provision_shard_id_patch(provision_shard_id, provision_shard=provision_shard)
@@ -14697,12 +14697,12 @@ Retrieves a list of version gates.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14712,14 +14712,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of an SQL statement, but using the names of the attributes of the version gate instead of the names of the columns of a table. For example, in order to sort the version gates descending by identifier the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the version gate instead of the names of the columns of a table.  If the parameter isn't provided, or if the value is empty, then all the version gates that the user has permission to see will be returned. (optional)
@@ -14775,12 +14775,12 @@ Adds a new version gate
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14790,15 +14790,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    version_gate = openapi_client.VersionGate() # VersionGate |  (optional)
+    api_instance = ocm_client.DefaultApi(api_client)
+    version_gate = ocm_client.VersionGate() # VersionGate |  (optional)
 
     try:
         api_response = api_instance.api_clusters_mgmt_v1_version_gates_post(version_gate=version_gate)
@@ -14847,12 +14847,12 @@ Deletes the version gate.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14862,14 +14862,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     version_gate_id = 'version_gate_id_example' # str | 
 
     try:
@@ -14918,12 +14918,12 @@ Retrieves the details of the version gate.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -14933,14 +14933,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     version_gate_id = 'version_gate_id_example' # str | 
 
     try:
@@ -14990,12 +14990,12 @@ Retrieves a list of versions.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -15005,14 +15005,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the version instead of the names of the columns of a table. For example, in order to sort the versions descending by identifier the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the version instead of the names of the columns of a table. For example, in order to retrieve all the versions that are enabled:  ```sql enabled = 't' ```  If the parameter isn't provided, or if the value is empty, then all the versions that the user has permission to see will be returned. (optional)
@@ -15068,12 +15068,12 @@ Retrieves the details of the version.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import ocm_client
+from ocm_client.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.openshift.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     host = "https://api.openshift.com"
 )
 
@@ -15083,14 +15083,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): bearer
-configuration = openapi_client.Configuration(
+configuration = ocm_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = ocm_client.DefaultApi(api_client)
     version_id = 'version_id_example' # str | 
 
     try:
