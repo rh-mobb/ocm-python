@@ -34,7 +34,7 @@ class InlineResponse20012(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[AddonUpgradePolicy]',
+        'items': 'list[Cluster]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20012(object):
     def items(self):
         """Gets the items of this InlineResponse20012.  # noqa: E501
 
-        Retrieved list of addon upgrade policy.  # noqa: E501
+        Retrieved list of clusters.  # noqa: E501
 
         :return: The items of this InlineResponse20012.  # noqa: E501
-        :rtype: list[AddonUpgradePolicy]
+        :rtype: list[Cluster]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20012(object):
     def items(self, items):
         """Sets the items of this InlineResponse20012.
 
-        Retrieved list of addon upgrade policy.  # noqa: E501
+        Retrieved list of clusters.  # noqa: E501
 
         :param items: The items of this InlineResponse20012.  # noqa: E501
-        :type: list[AddonUpgradePolicy]
+        :type: list[Cluster]
         """
 
         self._items = items
@@ -118,7 +118,7 @@ class InlineResponse20012(object):
     def size(self):
         """Gets the size of this InlineResponse20012.  # noqa: E501
 
-        Number of items contained in the returned page.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :return: The size of this InlineResponse20012.  # noqa: E501
         :rtype: int
@@ -129,7 +129,7 @@ class InlineResponse20012(object):
     def size(self, size):
         """Sets the size of this InlineResponse20012.
 
-        Number of items contained in the returned page.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :param size: The size of this InlineResponse20012.  # noqa: E501
         :type: int
@@ -141,7 +141,7 @@ class InlineResponse20012(object):
     def total(self):
         """Gets the total of this InlineResponse20012.  # noqa: E501
 
-        Total number of items of the collection.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
 
         :return: The total of this InlineResponse20012.  # noqa: E501
         :rtype: int
@@ -152,7 +152,7 @@ class InlineResponse20012(object):
     def total(self, total):
         """Sets the total of this InlineResponse20012.
 
-        Total number of items of the collection.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
 
         :param total: The total of this InlineResponse20012.  # noqa: E501
         :type: int

@@ -41,8 +41,8 @@ class UpgradePolicy(object):
         'enable_minor_version_upgrades': 'bool',
         'next_run': 'datetime',
         'schedule': 'str',
-        'schedule_type': 'str',
-        'upgrade_type': 'str',
+        'schedule_type': 'ScheduleType',
+        'upgrade_type': 'UpgradeType',
         'version': 'str'
     }
 
@@ -263,10 +263,9 @@ class UpgradePolicy(object):
     def schedule_type(self):
         """Gets the schedule_type of this UpgradePolicy.  # noqa: E501
 
-        Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).  # noqa: E501
 
         :return: The schedule_type of this UpgradePolicy.  # noqa: E501
-        :rtype: str
+        :rtype: ScheduleType
         """
         return self._schedule_type
 
@@ -274,10 +273,9 @@ class UpgradePolicy(object):
     def schedule_type(self, schedule_type):
         """Sets the schedule_type of this UpgradePolicy.
 
-        Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).  # noqa: E501
 
         :param schedule_type: The schedule_type of this UpgradePolicy.  # noqa: E501
-        :type: str
+        :type: ScheduleType
         """
 
         self._schedule_type = schedule_type
@@ -286,10 +284,9 @@ class UpgradePolicy(object):
     def upgrade_type(self):
         """Gets the upgrade_type of this UpgradePolicy.  # noqa: E501
 
-        Upgrade type specify the type of the upgrade. Can be \"OSD\" or \"CVE\".  # noqa: E501
 
         :return: The upgrade_type of this UpgradePolicy.  # noqa: E501
-        :rtype: str
+        :rtype: UpgradeType
         """
         return self._upgrade_type
 
@@ -297,10 +294,9 @@ class UpgradePolicy(object):
     def upgrade_type(self, upgrade_type):
         """Sets the upgrade_type of this UpgradePolicy.
 
-        Upgrade type specify the type of the upgrade. Can be \"OSD\" or \"CVE\".  # noqa: E501
 
         :param upgrade_type: The upgrade_type of this UpgradePolicy.  # noqa: E501
-        :type: str
+        :type: UpgradeType
         """
 
         self._upgrade_type = upgrade_type

@@ -37,6 +37,7 @@ class AWSMachinePool(object):
         'kind': 'str',
         'id': 'str',
         'href': 'str',
+        'additional_security_group_ids': 'list[str]',
         'spot_market_options': 'AWSSpotMarketOptions'
     }
 
@@ -44,10 +45,11 @@ class AWSMachinePool(object):
         'kind': 'kind',
         'id': 'id',
         'href': 'href',
+        'additional_security_group_ids': 'additional_security_group_ids',
         'spot_market_options': 'spot_market_options'
     }
 
-    def __init__(self, kind=None, id=None, href=None, spot_market_options=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, additional_security_group_ids=None, spot_market_options=None, local_vars_configuration=None):  # noqa: E501
         """AWSMachinePool - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +58,7 @@ class AWSMachinePool(object):
         self._kind = None
         self._id = None
         self._href = None
+        self._additional_security_group_ids = None
         self._spot_market_options = None
         self.discriminator = None
 
@@ -65,6 +68,8 @@ class AWSMachinePool(object):
             self.id = id
         if href is not None:
             self.href = href
+        if additional_security_group_ids is not None:
+            self.additional_security_group_ids = additional_security_group_ids
         if spot_market_options is not None:
             self.spot_market_options = spot_market_options
 
@@ -136,6 +141,29 @@ class AWSMachinePool(object):
         """
 
         self._href = href
+
+    @property
+    def additional_security_group_ids(self):
+        """Gets the additional_security_group_ids of this AWSMachinePool.  # noqa: E501
+
+        Additional AWS Security Groups to be added machine pool. Note that machine pools can only be worker node at the time.  # noqa: E501
+
+        :return: The additional_security_group_ids of this AWSMachinePool.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._additional_security_group_ids
+
+    @additional_security_group_ids.setter
+    def additional_security_group_ids(self, additional_security_group_ids):
+        """Sets the additional_security_group_ids of this AWSMachinePool.
+
+        Additional AWS Security Groups to be added machine pool. Note that machine pools can only be worker node at the time.  # noqa: E501
+
+        :param additional_security_group_ids: The additional_security_group_ids of this AWSMachinePool.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._additional_security_group_ids = additional_security_group_ids
 
     @property
     def spot_market_options(self):

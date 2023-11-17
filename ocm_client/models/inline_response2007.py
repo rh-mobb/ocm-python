@@ -34,7 +34,7 @@ class InlineResponse2007(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[CloudVPC]',
+        'items': 'list[AWSSTSPolicy]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse2007(object):
     def items(self):
         """Gets the items of this InlineResponse2007.  # noqa: E501
 
-        Retrieved list of cloud VPC.  # noqa: E501
+        Retrieved list of policies.  # noqa: E501
 
         :return: The items of this InlineResponse2007.  # noqa: E501
-        :rtype: list[CloudVPC]
+        :rtype: list[AWSSTSPolicy]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse2007(object):
     def items(self, items):
         """Sets the items of this InlineResponse2007.
 
-        Retrieved list of cloud VPC.  # noqa: E501
+        Retrieved list of policies.  # noqa: E501
 
         :param items: The items of this InlineResponse2007.  # noqa: E501
-        :type: list[CloudVPC]
+        :type: list[AWSSTSPolicy]
         """
 
         self._items = items
@@ -95,7 +95,7 @@ class InlineResponse2007(object):
     def page(self):
         """Gets the page of this InlineResponse2007.  # noqa: E501
 
-        Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`.  # noqa: E501
+        Index of the requested page, where one corresponds to the first page.  # noqa: E501
 
         :return: The page of this InlineResponse2007.  # noqa: E501
         :rtype: int
@@ -106,7 +106,7 @@ class InlineResponse2007(object):
     def page(self, page):
         """Sets the page of this InlineResponse2007.
 
-        Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`.  # noqa: E501
+        Index of the requested page, where one corresponds to the first page.  # noqa: E501
 
         :param page: The page of this InlineResponse2007.  # noqa: E501
         :type: int
@@ -118,7 +118,7 @@ class InlineResponse2007(object):
     def size(self):
         """Gets the size of this InlineResponse2007.  # noqa: E501
 
-        Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of vpcs of the provider.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :return: The size of this InlineResponse2007.  # noqa: E501
         :rtype: int
@@ -129,7 +129,7 @@ class InlineResponse2007(object):
     def size(self, size):
         """Sets the size of this InlineResponse2007.
 
-        Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of vpcs of the provider.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :param size: The size of this InlineResponse2007.  # noqa: E501
         :type: int
@@ -141,7 +141,7 @@ class InlineResponse2007(object):
     def total(self):
         """Gets the total of this InlineResponse2007.  # noqa: E501
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of available vpcs of the provider.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
 
         :return: The total of this InlineResponse2007.  # noqa: E501
         :rtype: int
@@ -152,7 +152,7 @@ class InlineResponse2007(object):
     def total(self, total):
         """Sets the total of this InlineResponse2007.
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of available vpcs of the provider.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
 
         :param total: The total of this InlineResponse2007.  # noqa: E501
         :type: int

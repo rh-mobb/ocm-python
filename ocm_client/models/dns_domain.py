@@ -37,21 +37,23 @@ class DNSDomain(object):
         'kind': 'str',
         'id': 'str',
         'href': 'str',
-        'cluster_link': 'ClusterLink',
-        'organization_link': 'OrganizationLink',
-        'reserved_at': 'datetime'
+        'cluster': 'ClusterLink',
+        'organization': 'OrganizationLink',
+        'reserved_at_timestamp': 'datetime',
+        'user_defined': 'bool'
     }
 
     attribute_map = {
         'kind': 'kind',
         'id': 'id',
         'href': 'href',
-        'cluster_link': 'cluster_link',
-        'organization_link': 'organization_link',
-        'reserved_at': 'reserved_at'
+        'cluster': 'cluster',
+        'organization': 'organization',
+        'reserved_at_timestamp': 'reserved_at_timestamp',
+        'user_defined': 'user_defined'
     }
 
-    def __init__(self, kind=None, id=None, href=None, cluster_link=None, organization_link=None, reserved_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, cluster=None, organization=None, reserved_at_timestamp=None, user_defined=None, local_vars_configuration=None):  # noqa: E501
         """DNSDomain - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,9 +62,10 @@ class DNSDomain(object):
         self._kind = None
         self._id = None
         self._href = None
-        self._cluster_link = None
-        self._organization_link = None
-        self._reserved_at = None
+        self._cluster = None
+        self._organization = None
+        self._reserved_at_timestamp = None
+        self._user_defined = None
         self.discriminator = None
 
         if kind is not None:
@@ -71,12 +74,14 @@ class DNSDomain(object):
             self.id = id
         if href is not None:
             self.href = href
-        if cluster_link is not None:
-            self.cluster_link = cluster_link
-        if organization_link is not None:
-            self.organization_link = organization_link
-        if reserved_at is not None:
-            self.reserved_at = reserved_at
+        if cluster is not None:
+            self.cluster = cluster
+        if organization is not None:
+            self.organization = organization
+        if reserved_at_timestamp is not None:
+            self.reserved_at_timestamp = reserved_at_timestamp
+        if user_defined is not None:
+            self.user_defined = user_defined
 
     @property
     def kind(self):
@@ -148,69 +153,92 @@ class DNSDomain(object):
         self._href = href
 
     @property
-    def cluster_link(self):
-        """Gets the cluster_link of this DNSDomain.  # noqa: E501
+    def cluster(self):
+        """Gets the cluster of this DNSDomain.  # noqa: E501
 
 
-        :return: The cluster_link of this DNSDomain.  # noqa: E501
+        :return: The cluster of this DNSDomain.  # noqa: E501
         :rtype: ClusterLink
         """
-        return self._cluster_link
+        return self._cluster
 
-    @cluster_link.setter
-    def cluster_link(self, cluster_link):
-        """Sets the cluster_link of this DNSDomain.
+    @cluster.setter
+    def cluster(self, cluster):
+        """Sets the cluster of this DNSDomain.
 
 
-        :param cluster_link: The cluster_link of this DNSDomain.  # noqa: E501
+        :param cluster: The cluster of this DNSDomain.  # noqa: E501
         :type: ClusterLink
         """
 
-        self._cluster_link = cluster_link
+        self._cluster = cluster
 
     @property
-    def organization_link(self):
-        """Gets the organization_link of this DNSDomain.  # noqa: E501
+    def organization(self):
+        """Gets the organization of this DNSDomain.  # noqa: E501
 
 
-        :return: The organization_link of this DNSDomain.  # noqa: E501
+        :return: The organization of this DNSDomain.  # noqa: E501
         :rtype: OrganizationLink
         """
-        return self._organization_link
+        return self._organization
 
-    @organization_link.setter
-    def organization_link(self, organization_link):
-        """Sets the organization_link of this DNSDomain.
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this DNSDomain.
 
 
-        :param organization_link: The organization_link of this DNSDomain.  # noqa: E501
+        :param organization: The organization of this DNSDomain.  # noqa: E501
         :type: OrganizationLink
         """
 
-        self._organization_link = organization_link
+        self._organization = organization
 
     @property
-    def reserved_at(self):
-        """Gets the reserved_at of this DNSDomain.  # noqa: E501
+    def reserved_at_timestamp(self):
+        """Gets the reserved_at_timestamp of this DNSDomain.  # noqa: E501
 
         Date and time when the DNS domain was reserved.  # noqa: E501
 
-        :return: The reserved_at of this DNSDomain.  # noqa: E501
+        :return: The reserved_at_timestamp of this DNSDomain.  # noqa: E501
         :rtype: datetime
         """
-        return self._reserved_at
+        return self._reserved_at_timestamp
 
-    @reserved_at.setter
-    def reserved_at(self, reserved_at):
-        """Sets the reserved_at of this DNSDomain.
+    @reserved_at_timestamp.setter
+    def reserved_at_timestamp(self, reserved_at_timestamp):
+        """Sets the reserved_at_timestamp of this DNSDomain.
 
         Date and time when the DNS domain was reserved.  # noqa: E501
 
-        :param reserved_at: The reserved_at of this DNSDomain.  # noqa: E501
+        :param reserved_at_timestamp: The reserved_at_timestamp of this DNSDomain.  # noqa: E501
         :type: datetime
         """
 
-        self._reserved_at = reserved_at
+        self._reserved_at_timestamp = reserved_at_timestamp
+
+    @property
+    def user_defined(self):
+        """Gets the user_defined of this DNSDomain.  # noqa: E501
+
+        Indicates if this dns domain is user defined.  # noqa: E501
+
+        :return: The user_defined of this DNSDomain.  # noqa: E501
+        :rtype: bool
+        """
+        return self._user_defined
+
+    @user_defined.setter
+    def user_defined(self, user_defined):
+        """Sets the user_defined of this DNSDomain.
+
+        Indicates if this dns domain is user defined.  # noqa: E501
+
+        :param user_defined: The user_defined of this DNSDomain.  # noqa: E501
+        :type: bool
+        """
+
+        self._user_defined = user_defined
 
     def to_dict(self):
         """Returns the model properties as a dict"""

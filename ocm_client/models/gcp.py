@@ -42,6 +42,7 @@ class GCP(object):
         'private_key': 'str',
         'private_key_id': 'str',
         'project_id': 'str',
+        'security': 'GcpSecurity',
         'token_uri': 'str',
         'type': 'str'
     }
@@ -55,11 +56,12 @@ class GCP(object):
         'private_key': 'private_key',
         'private_key_id': 'private_key_id',
         'project_id': 'project_id',
+        'security': 'security',
         'token_uri': 'token_uri',
         'type': 'type'
     }
 
-    def __init__(self, auth_uri=None, auth_provider_x509_cert_url=None, client_id=None, client_x509_cert_url=None, client_email=None, private_key=None, private_key_id=None, project_id=None, token_uri=None, type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, auth_uri=None, auth_provider_x509_cert_url=None, client_id=None, client_x509_cert_url=None, client_email=None, private_key=None, private_key_id=None, project_id=None, security=None, token_uri=None, type=None, local_vars_configuration=None):  # noqa: E501
         """GCP - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,6 +75,7 @@ class GCP(object):
         self._private_key = None
         self._private_key_id = None
         self._project_id = None
+        self._security = None
         self._token_uri = None
         self._type = None
         self.discriminator = None
@@ -93,6 +96,8 @@ class GCP(object):
             self.private_key_id = private_key_id
         if project_id is not None:
             self.project_id = project_id
+        if security is not None:
+            self.security = security
         if token_uri is not None:
             self.token_uri = token_uri
         if type is not None:
@@ -281,6 +286,27 @@ class GCP(object):
         """
 
         self._project_id = project_id
+
+    @property
+    def security(self):
+        """Gets the security of this GCP.  # noqa: E501
+
+
+        :return: The security of this GCP.  # noqa: E501
+        :rtype: GcpSecurity
+        """
+        return self._security
+
+    @security.setter
+    def security(self, security):
+        """Sets the security of this GCP.
+
+
+        :param security: The security of this GCP.  # noqa: E501
+        :type: GcpSecurity
+        """
+
+        self._security = security
 
     @property
     def token_uri(self):

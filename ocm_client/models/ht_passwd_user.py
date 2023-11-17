@@ -35,29 +35,34 @@ class HTPasswdUser(object):
     """
     openapi_types = {
         'id': 'str',
+        'hashed_password': 'str',
         'password': 'str',
         'username': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'hashed_password': 'hashed_password',
         'password': 'password',
         'username': 'username'
     }
 
-    def __init__(self, id=None, password=None, username=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, hashed_password=None, password=None, username=None, local_vars_configuration=None):  # noqa: E501
         """HTPasswdUser - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
+        self._hashed_password = None
         self._password = None
         self._username = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if hashed_password is not None:
+            self.hashed_password = hashed_password
         if password is not None:
             self.password = password
         if username is not None:
@@ -87,10 +92,33 @@ class HTPasswdUser(object):
         self._id = id
 
     @property
+    def hashed_password(self):
+        """Gets the hashed_password of this HTPasswdUser.  # noqa: E501
+
+        HTPasswd Hashed Password for a user in the _HTPasswd_ data file. The value of this field is set as-is in the _HTPasswd_ data file for the HTPasswd IDP  # noqa: E501
+
+        :return: The hashed_password of this HTPasswdUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._hashed_password
+
+    @hashed_password.setter
+    def hashed_password(self, hashed_password):
+        """Sets the hashed_password of this HTPasswdUser.
+
+        HTPasswd Hashed Password for a user in the _HTPasswd_ data file. The value of this field is set as-is in the _HTPasswd_ data file for the HTPasswd IDP  # noqa: E501
+
+        :param hashed_password: The hashed_password of this HTPasswdUser.  # noqa: E501
+        :type: str
+        """
+
+        self._hashed_password = hashed_password
+
+    @property
     def password(self):
         """Gets the password of this HTPasswdUser.  # noqa: E501
 
-        Password for a secondary user in the _HTPasswd_ data file.  # noqa: E501
+        Password in plain-text for a  user in the _HTPasswd_ data file. The value of this field is hashed before setting it in the  _HTPasswd_ data file for the HTPasswd IDP  # noqa: E501
 
         :return: The password of this HTPasswdUser.  # noqa: E501
         :rtype: str
@@ -101,7 +129,7 @@ class HTPasswdUser(object):
     def password(self, password):
         """Sets the password of this HTPasswdUser.
 
-        Password for a secondary user in the _HTPasswd_ data file.  # noqa: E501
+        Password in plain-text for a  user in the _HTPasswd_ data file. The value of this field is hashed before setting it in the  _HTPasswd_ data file for the HTPasswd IDP  # noqa: E501
 
         :param password: The password of this HTPasswdUser.  # noqa: E501
         :type: str

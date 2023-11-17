@@ -34,7 +34,7 @@ class InlineResponse20022(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[User]',
+        'items': 'list[Group]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20022(object):
     def items(self):
         """Gets the items of this InlineResponse20022.  # noqa: E501
 
-        Retrieved list of users.  # noqa: E501
+        Retrieved list of groups.  # noqa: E501
 
         :return: The items of this InlineResponse20022.  # noqa: E501
-        :rtype: list[User]
+        :rtype: list[Group]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20022(object):
     def items(self, items):
         """Sets the items of this InlineResponse20022.
 
-        Retrieved list of users.  # noqa: E501
+        Retrieved list of groups.  # noqa: E501
 
         :param items: The items of this InlineResponse20022.  # noqa: E501
-        :type: list[User]
+        :type: list[Group]
         """
 
         self._items = items

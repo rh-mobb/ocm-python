@@ -34,7 +34,7 @@ class InlineResponse20028(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[LimitedSupportReason]',
+        'items': 'list[Ingress]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20028(object):
     def items(self):
         """Gets the items of this InlineResponse20028.  # noqa: E501
 
-        Retrieved list of template.  # noqa: E501
+        Retrieved list of ingresses.  # noqa: E501
 
         :return: The items of this InlineResponse20028.  # noqa: E501
-        :rtype: list[LimitedSupportReason]
+        :rtype: list[Ingress]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20028(object):
     def items(self, items):
         """Sets the items of this InlineResponse20028.
 
-        Retrieved list of template.  # noqa: E501
+        Retrieved list of ingresses.  # noqa: E501
 
         :param items: The items of this InlineResponse20028.  # noqa: E501
-        :type: list[LimitedSupportReason]
+        :type: list[Ingress]
         """
 
         self._items = items

@@ -72,7 +72,7 @@ class InlineResponse20010(object):
     def items(self):
         """Gets the items of this InlineResponse20010.  # noqa: E501
 
-        Retrieved list of cloud providers.  # noqa: E501
+        Retrieved list of cloud regions.  # noqa: E501
 
         :return: The items of this InlineResponse20010.  # noqa: E501
         :rtype: list[CloudRegion]
@@ -83,7 +83,7 @@ class InlineResponse20010(object):
     def items(self, items):
         """Sets the items of this InlineResponse20010.
 
-        Retrieved list of cloud providers.  # noqa: E501
+        Retrieved list of cloud regions.  # noqa: E501
 
         :param items: The items of this InlineResponse20010.  # noqa: E501
         :type: list[CloudRegion]
@@ -141,7 +141,7 @@ class InlineResponse20010(object):
     def total(self):
         """Gets the total of this InlineResponse20010.  # noqa: E501
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of available regions of the provider.  # noqa: E501
 
         :return: The total of this InlineResponse20010.  # noqa: E501
         :rtype: int
@@ -152,7 +152,7 @@ class InlineResponse20010(object):
     def total(self, total):
         """Sets the total of this InlineResponse20010.
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of regions of the provider.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of available regions of the provider.  # noqa: E501
 
         :param total: The total of this InlineResponse20010.  # noqa: E501
         :type: int

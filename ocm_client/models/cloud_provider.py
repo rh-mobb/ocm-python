@@ -38,7 +38,8 @@ class CloudProvider(object):
         'id': 'str',
         'href': 'str',
         'display_name': 'str',
-        'name': 'str'
+        'name': 'str',
+        'regions': 'list[CloudRegion]'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class CloudProvider(object):
         'id': 'id',
         'href': 'href',
         'display_name': 'display_name',
-        'name': 'name'
+        'name': 'name',
+        'regions': 'regions'
     }
 
-    def __init__(self, kind=None, id=None, href=None, display_name=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, display_name=None, name=None, regions=None, local_vars_configuration=None):  # noqa: E501
         """CloudProvider - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class CloudProvider(object):
         self._href = None
         self._display_name = None
         self._name = None
+        self._regions = None
         self.discriminator = None
 
         if kind is not None:
@@ -72,6 +75,8 @@ class CloudProvider(object):
             self.display_name = display_name
         if name is not None:
             self.name = name
+        if regions is not None:
+            self.regions = regions
 
     @property
     def kind(self):
@@ -187,6 +192,29 @@ class CloudProvider(object):
         """
 
         self._name = name
+
+    @property
+    def regions(self):
+        """Gets the regions of this CloudProvider.  # noqa: E501
+
+        (optional) Provider's regions - only included when listing providers with `fetchRegions=true`.  # noqa: E501
+
+        :return: The regions of this CloudProvider.  # noqa: E501
+        :rtype: list[CloudRegion]
+        """
+        return self._regions
+
+    @regions.setter
+    def regions(self, regions):
+        """Sets the regions of this CloudProvider.
+
+        (optional) Provider's regions - only included when listing providers with `fetchRegions=true`.  # noqa: E501
+
+        :param regions: The regions of this CloudProvider.  # noqa: E501
+        :type: list[CloudRegion]
+        """
+
+        self._regions = regions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -38,10 +38,15 @@ class AWS(object):
         'sts': 'STS',
         'access_key_id': 'str',
         'account_id': 'str',
+        'additional_compute_security_group_ids': 'list[str]',
+        'additional_control_plane_security_group_ids': 'list[str]',
+        'additional_infra_security_group_ids': 'list[str]',
         'audit_log': 'AuditLog',
         'billing_account_id': 'str',
         'ec2_metadata_http_tokens': 'Ec2MetadataHttpTokens',
         'etcd_encryption': 'AwsEtcdEncryption',
+        'private_hosted_zone_id': 'str',
+        'private_hosted_zone_role_arn': 'str',
         'private_link': 'bool',
         'private_link_configuration': 'PrivateLinkClusterConfiguration',
         'secret_access_key': 'str',
@@ -54,10 +59,15 @@ class AWS(object):
         'sts': 'sts',
         'access_key_id': 'access_key_id',
         'account_id': 'account_id',
+        'additional_compute_security_group_ids': 'additional_compute_security_group_ids',
+        'additional_control_plane_security_group_ids': 'additional_control_plane_security_group_ids',
+        'additional_infra_security_group_ids': 'additional_infra_security_group_ids',
         'audit_log': 'audit_log',
         'billing_account_id': 'billing_account_id',
         'ec2_metadata_http_tokens': 'ec2_metadata_http_tokens',
         'etcd_encryption': 'etcd_encryption',
+        'private_hosted_zone_id': 'private_hosted_zone_id',
+        'private_hosted_zone_role_arn': 'private_hosted_zone_role_arn',
         'private_link': 'private_link',
         'private_link_configuration': 'private_link_configuration',
         'secret_access_key': 'secret_access_key',
@@ -65,7 +75,7 @@ class AWS(object):
         'tags': 'tags'
     }
 
-    def __init__(self, kms_key_arn=None, sts=None, access_key_id=None, account_id=None, audit_log=None, billing_account_id=None, ec2_metadata_http_tokens=None, etcd_encryption=None, private_link=None, private_link_configuration=None, secret_access_key=None, subnet_ids=None, tags=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kms_key_arn=None, sts=None, access_key_id=None, account_id=None, additional_compute_security_group_ids=None, additional_control_plane_security_group_ids=None, additional_infra_security_group_ids=None, audit_log=None, billing_account_id=None, ec2_metadata_http_tokens=None, etcd_encryption=None, private_hosted_zone_id=None, private_hosted_zone_role_arn=None, private_link=None, private_link_configuration=None, secret_access_key=None, subnet_ids=None, tags=None, local_vars_configuration=None):  # noqa: E501
         """AWS - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,10 +85,15 @@ class AWS(object):
         self._sts = None
         self._access_key_id = None
         self._account_id = None
+        self._additional_compute_security_group_ids = None
+        self._additional_control_plane_security_group_ids = None
+        self._additional_infra_security_group_ids = None
         self._audit_log = None
         self._billing_account_id = None
         self._ec2_metadata_http_tokens = None
         self._etcd_encryption = None
+        self._private_hosted_zone_id = None
+        self._private_hosted_zone_role_arn = None
         self._private_link = None
         self._private_link_configuration = None
         self._secret_access_key = None
@@ -94,6 +109,12 @@ class AWS(object):
             self.access_key_id = access_key_id
         if account_id is not None:
             self.account_id = account_id
+        if additional_compute_security_group_ids is not None:
+            self.additional_compute_security_group_ids = additional_compute_security_group_ids
+        if additional_control_plane_security_group_ids is not None:
+            self.additional_control_plane_security_group_ids = additional_control_plane_security_group_ids
+        if additional_infra_security_group_ids is not None:
+            self.additional_infra_security_group_ids = additional_infra_security_group_ids
         if audit_log is not None:
             self.audit_log = audit_log
         if billing_account_id is not None:
@@ -102,6 +123,10 @@ class AWS(object):
             self.ec2_metadata_http_tokens = ec2_metadata_http_tokens
         if etcd_encryption is not None:
             self.etcd_encryption = etcd_encryption
+        if private_hosted_zone_id is not None:
+            self.private_hosted_zone_id = private_hosted_zone_id
+        if private_hosted_zone_role_arn is not None:
+            self.private_hosted_zone_role_arn = private_hosted_zone_role_arn
         if private_link is not None:
             self.private_link = private_link
         if private_link_configuration is not None:
@@ -204,6 +229,75 @@ class AWS(object):
         self._account_id = account_id
 
     @property
+    def additional_compute_security_group_ids(self):
+        """Gets the additional_compute_security_group_ids of this AWS.  # noqa: E501
+
+        Additional AWS Security Groups to be added to default worker (compute) machine pool.  # noqa: E501
+
+        :return: The additional_compute_security_group_ids of this AWS.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._additional_compute_security_group_ids
+
+    @additional_compute_security_group_ids.setter
+    def additional_compute_security_group_ids(self, additional_compute_security_group_ids):
+        """Sets the additional_compute_security_group_ids of this AWS.
+
+        Additional AWS Security Groups to be added to default worker (compute) machine pool.  # noqa: E501
+
+        :param additional_compute_security_group_ids: The additional_compute_security_group_ids of this AWS.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._additional_compute_security_group_ids = additional_compute_security_group_ids
+
+    @property
+    def additional_control_plane_security_group_ids(self):
+        """Gets the additional_control_plane_security_group_ids of this AWS.  # noqa: E501
+
+        Additional AWS Security Groups to be added to default control plane machine pool.  # noqa: E501
+
+        :return: The additional_control_plane_security_group_ids of this AWS.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._additional_control_plane_security_group_ids
+
+    @additional_control_plane_security_group_ids.setter
+    def additional_control_plane_security_group_ids(self, additional_control_plane_security_group_ids):
+        """Sets the additional_control_plane_security_group_ids of this AWS.
+
+        Additional AWS Security Groups to be added to default control plane machine pool.  # noqa: E501
+
+        :param additional_control_plane_security_group_ids: The additional_control_plane_security_group_ids of this AWS.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._additional_control_plane_security_group_ids = additional_control_plane_security_group_ids
+
+    @property
+    def additional_infra_security_group_ids(self):
+        """Gets the additional_infra_security_group_ids of this AWS.  # noqa: E501
+
+        Additional AWS Security Groups to be added to default infra machine pool.  # noqa: E501
+
+        :return: The additional_infra_security_group_ids of this AWS.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._additional_infra_security_group_ids
+
+    @additional_infra_security_group_ids.setter
+    def additional_infra_security_group_ids(self, additional_infra_security_group_ids):
+        """Sets the additional_infra_security_group_ids of this AWS.
+
+        Additional AWS Security Groups to be added to default infra machine pool.  # noqa: E501
+
+        :param additional_infra_security_group_ids: The additional_infra_security_group_ids of this AWS.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._additional_infra_security_group_ids = additional_infra_security_group_ids
+
+    @property
     def audit_log(self):
         """Gets the audit_log of this AWS.  # noqa: E501
 
@@ -288,6 +382,52 @@ class AWS(object):
         """
 
         self._etcd_encryption = etcd_encryption
+
+    @property
+    def private_hosted_zone_id(self):
+        """Gets the private_hosted_zone_id of this AWS.  # noqa: E501
+
+        ID of private hosted zone.  # noqa: E501
+
+        :return: The private_hosted_zone_id of this AWS.  # noqa: E501
+        :rtype: str
+        """
+        return self._private_hosted_zone_id
+
+    @private_hosted_zone_id.setter
+    def private_hosted_zone_id(self, private_hosted_zone_id):
+        """Sets the private_hosted_zone_id of this AWS.
+
+        ID of private hosted zone.  # noqa: E501
+
+        :param private_hosted_zone_id: The private_hosted_zone_id of this AWS.  # noqa: E501
+        :type: str
+        """
+
+        self._private_hosted_zone_id = private_hosted_zone_id
+
+    @property
+    def private_hosted_zone_role_arn(self):
+        """Gets the private_hosted_zone_role_arn of this AWS.  # noqa: E501
+
+        Role ARN for private hosted zone.  # noqa: E501
+
+        :return: The private_hosted_zone_role_arn of this AWS.  # noqa: E501
+        :rtype: str
+        """
+        return self._private_hosted_zone_role_arn
+
+    @private_hosted_zone_role_arn.setter
+    def private_hosted_zone_role_arn(self, private_hosted_zone_role_arn):
+        """Sets the private_hosted_zone_role_arn of this AWS.
+
+        Role ARN for private hosted zone.  # noqa: E501
+
+        :param private_hosted_zone_role_arn: The private_hosted_zone_role_arn of this AWS.  # noqa: E501
+        :type: str
+        """
+
+        self._private_hosted_zone_role_arn = private_hosted_zone_role_arn
 
     @property
     def private_link(self):

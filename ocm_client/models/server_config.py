@@ -38,7 +38,8 @@ class ServerConfig(object):
         'id': 'str',
         'href': 'str',
         'kubeconfig': 'str',
-        'server': 'str'
+        'server': 'str',
+        'topology': 'ProvisionShardTopology'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class ServerConfig(object):
         'id': 'id',
         'href': 'href',
         'kubeconfig': 'kubeconfig',
-        'server': 'server'
+        'server': 'server',
+        'topology': 'topology'
     }
 
-    def __init__(self, kind=None, id=None, href=None, kubeconfig=None, server=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, kubeconfig=None, server=None, topology=None, local_vars_configuration=None):  # noqa: E501
         """ServerConfig - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +62,7 @@ class ServerConfig(object):
         self._href = None
         self._kubeconfig = None
         self._server = None
+        self._topology = None
         self.discriminator = None
 
         if kind is not None:
@@ -72,6 +75,8 @@ class ServerConfig(object):
             self.kubeconfig = kubeconfig
         if server is not None:
             self.server = server
+        if topology is not None:
+            self.topology = topology
 
     @property
     def kind(self):
@@ -146,7 +151,7 @@ class ServerConfig(object):
     def kubeconfig(self):
         """Gets the kubeconfig of this ServerConfig.  # noqa: E501
 
-        The kubeconfig of the server  # noqa: E501
+        The kubeconfig of the server.  # noqa: E501
 
         :return: The kubeconfig of this ServerConfig.  # noqa: E501
         :rtype: str
@@ -157,7 +162,7 @@ class ServerConfig(object):
     def kubeconfig(self, kubeconfig):
         """Sets the kubeconfig of this ServerConfig.
 
-        The kubeconfig of the server  # noqa: E501
+        The kubeconfig of the server.  # noqa: E501
 
         :param kubeconfig: The kubeconfig of this ServerConfig.  # noqa: E501
         :type: str
@@ -169,7 +174,7 @@ class ServerConfig(object):
     def server(self):
         """Gets the server of this ServerConfig.  # noqa: E501
 
-        The URL of the server  # noqa: E501
+        The URL of the server.  # noqa: E501
 
         :return: The server of this ServerConfig.  # noqa: E501
         :rtype: str
@@ -180,13 +185,34 @@ class ServerConfig(object):
     def server(self, server):
         """Sets the server of this ServerConfig.
 
-        The URL of the server  # noqa: E501
+        The URL of the server.  # noqa: E501
 
         :param server: The server of this ServerConfig.  # noqa: E501
         :type: str
         """
 
         self._server = server
+
+    @property
+    def topology(self):
+        """Gets the topology of this ServerConfig.  # noqa: E501
+
+
+        :return: The topology of this ServerConfig.  # noqa: E501
+        :rtype: ProvisionShardTopology
+        """
+        return self._topology
+
+    @topology.setter
+    def topology(self, topology):
+        """Sets the topology of this ServerConfig.
+
+
+        :param topology: The topology of this ServerConfig.  # noqa: E501
+        :type: ProvisionShardTopology
+        """
+
+        self._topology = topology
 
     def to_dict(self):
         """Returns the model properties as a dict"""

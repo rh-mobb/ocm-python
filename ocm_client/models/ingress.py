@@ -38,10 +38,15 @@ class Ingress(object):
         'id': 'str',
         'href': 'str',
         'dns_name': 'str',
+        'cluster_routes_hostname': 'str',
+        'cluster_routes_tls_secret_ref': 'str',
         'default': 'bool',
+        'excluded_namespaces': 'list[str]',
         'listening': 'ListeningMethod',
         'load_balancer_type': 'LoadBalancerFlavor',
-        'route_selectors': 'dict(str, str)'
+        'route_namespace_ownership_policy': 'NamespaceOwnershipPolicy',
+        'route_selectors': 'dict(str, str)',
+        'route_wildcard_policy': 'WildcardPolicy'
     }
 
     attribute_map = {
@@ -49,13 +54,18 @@ class Ingress(object):
         'id': 'id',
         'href': 'href',
         'dns_name': 'dns_name',
+        'cluster_routes_hostname': 'cluster_routes_hostname',
+        'cluster_routes_tls_secret_ref': 'cluster_routes_tls_secret_ref',
         'default': 'default',
+        'excluded_namespaces': 'excluded_namespaces',
         'listening': 'listening',
         'load_balancer_type': 'load_balancer_type',
-        'route_selectors': 'route_selectors'
+        'route_namespace_ownership_policy': 'route_namespace_ownership_policy',
+        'route_selectors': 'route_selectors',
+        'route_wildcard_policy': 'route_wildcard_policy'
     }
 
-    def __init__(self, kind=None, id=None, href=None, dns_name=None, default=None, listening=None, load_balancer_type=None, route_selectors=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, dns_name=None, cluster_routes_hostname=None, cluster_routes_tls_secret_ref=None, default=None, excluded_namespaces=None, listening=None, load_balancer_type=None, route_namespace_ownership_policy=None, route_selectors=None, route_wildcard_policy=None, local_vars_configuration=None):  # noqa: E501
         """Ingress - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,10 +75,15 @@ class Ingress(object):
         self._id = None
         self._href = None
         self._dns_name = None
+        self._cluster_routes_hostname = None
+        self._cluster_routes_tls_secret_ref = None
         self._default = None
+        self._excluded_namespaces = None
         self._listening = None
         self._load_balancer_type = None
+        self._route_namespace_ownership_policy = None
         self._route_selectors = None
+        self._route_wildcard_policy = None
         self.discriminator = None
 
         if kind is not None:
@@ -79,14 +94,24 @@ class Ingress(object):
             self.href = href
         if dns_name is not None:
             self.dns_name = dns_name
+        if cluster_routes_hostname is not None:
+            self.cluster_routes_hostname = cluster_routes_hostname
+        if cluster_routes_tls_secret_ref is not None:
+            self.cluster_routes_tls_secret_ref = cluster_routes_tls_secret_ref
         if default is not None:
             self.default = default
+        if excluded_namespaces is not None:
+            self.excluded_namespaces = excluded_namespaces
         if listening is not None:
             self.listening = listening
         if load_balancer_type is not None:
             self.load_balancer_type = load_balancer_type
+        if route_namespace_ownership_policy is not None:
+            self.route_namespace_ownership_policy = route_namespace_ownership_policy
         if route_selectors is not None:
             self.route_selectors = route_selectors
+        if route_wildcard_policy is not None:
+            self.route_wildcard_policy = route_wildcard_policy
 
     @property
     def kind(self):
@@ -181,6 +206,52 @@ class Ingress(object):
         self._dns_name = dns_name
 
     @property
+    def cluster_routes_hostname(self):
+        """Gets the cluster_routes_hostname of this Ingress.  # noqa: E501
+
+        Cluster routes hostname.  # noqa: E501
+
+        :return: The cluster_routes_hostname of this Ingress.  # noqa: E501
+        :rtype: str
+        """
+        return self._cluster_routes_hostname
+
+    @cluster_routes_hostname.setter
+    def cluster_routes_hostname(self, cluster_routes_hostname):
+        """Sets the cluster_routes_hostname of this Ingress.
+
+        Cluster routes hostname.  # noqa: E501
+
+        :param cluster_routes_hostname: The cluster_routes_hostname of this Ingress.  # noqa: E501
+        :type: str
+        """
+
+        self._cluster_routes_hostname = cluster_routes_hostname
+
+    @property
+    def cluster_routes_tls_secret_ref(self):
+        """Gets the cluster_routes_tls_secret_ref of this Ingress.  # noqa: E501
+
+        Cluster routes TLS Secret reference.  # noqa: E501
+
+        :return: The cluster_routes_tls_secret_ref of this Ingress.  # noqa: E501
+        :rtype: str
+        """
+        return self._cluster_routes_tls_secret_ref
+
+    @cluster_routes_tls_secret_ref.setter
+    def cluster_routes_tls_secret_ref(self, cluster_routes_tls_secret_ref):
+        """Sets the cluster_routes_tls_secret_ref of this Ingress.
+
+        Cluster routes TLS Secret reference.  # noqa: E501
+
+        :param cluster_routes_tls_secret_ref: The cluster_routes_tls_secret_ref of this Ingress.  # noqa: E501
+        :type: str
+        """
+
+        self._cluster_routes_tls_secret_ref = cluster_routes_tls_secret_ref
+
+    @property
     def default(self):
         """Gets the default of this Ingress.  # noqa: E501
 
@@ -202,6 +273,29 @@ class Ingress(object):
         """
 
         self._default = default
+
+    @property
+    def excluded_namespaces(self):
+        """Gets the excluded_namespaces of this Ingress.  # noqa: E501
+
+        A set of excluded namespaces for the ingress.  # noqa: E501
+
+        :return: The excluded_namespaces of this Ingress.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._excluded_namespaces
+
+    @excluded_namespaces.setter
+    def excluded_namespaces(self, excluded_namespaces):
+        """Sets the excluded_namespaces of this Ingress.
+
+        A set of excluded namespaces for the ingress.  # noqa: E501
+
+        :param excluded_namespaces: The excluded_namespaces of this Ingress.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._excluded_namespaces = excluded_namespaces
 
     @property
     def listening(self):
@@ -246,6 +340,27 @@ class Ingress(object):
         self._load_balancer_type = load_balancer_type
 
     @property
+    def route_namespace_ownership_policy(self):
+        """Gets the route_namespace_ownership_policy of this Ingress.  # noqa: E501
+
+
+        :return: The route_namespace_ownership_policy of this Ingress.  # noqa: E501
+        :rtype: NamespaceOwnershipPolicy
+        """
+        return self._route_namespace_ownership_policy
+
+    @route_namespace_ownership_policy.setter
+    def route_namespace_ownership_policy(self, route_namespace_ownership_policy):
+        """Sets the route_namespace_ownership_policy of this Ingress.
+
+
+        :param route_namespace_ownership_policy: The route_namespace_ownership_policy of this Ingress.  # noqa: E501
+        :type: NamespaceOwnershipPolicy
+        """
+
+        self._route_namespace_ownership_policy = route_namespace_ownership_policy
+
+    @property
     def route_selectors(self):
         """Gets the route_selectors of this Ingress.  # noqa: E501
 
@@ -267,6 +382,27 @@ class Ingress(object):
         """
 
         self._route_selectors = route_selectors
+
+    @property
+    def route_wildcard_policy(self):
+        """Gets the route_wildcard_policy of this Ingress.  # noqa: E501
+
+
+        :return: The route_wildcard_policy of this Ingress.  # noqa: E501
+        :rtype: WildcardPolicy
+        """
+        return self._route_wildcard_policy
+
+    @route_wildcard_policy.setter
+    def route_wildcard_policy(self, route_wildcard_policy):
+        """Sets the route_wildcard_policy of this Ingress.
+
+
+        :param route_wildcard_policy: The route_wildcard_policy of this Ingress.  # noqa: E501
+        :type: WildcardPolicy
+        """
+
+        self._route_wildcard_policy = route_wildcard_policy
 
     def to_dict(self):
         """Returns the model properties as a dict"""

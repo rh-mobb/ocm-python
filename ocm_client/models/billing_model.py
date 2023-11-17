@@ -31,11 +31,12 @@ class BillingModel(object):
     """
     MARKETPLACE = "marketplace"
     MARKETPLACE_AWS = "marketplace-aws"
+    MARKETPLACE_GCP = "marketplace-gcp"
     MARKETPLACE_RHM = "marketplace-rhm"
     MARKETPLACE_AZURE = "marketplace-azure"
     STANDARD = "standard"
 
-    allowable_values = [MARKETPLACE, MARKETPLACE_AWS, MARKETPLACE_RHM, MARKETPLACE_AZURE, STANDARD]  # noqa: E501
+    allowable_values = [MARKETPLACE, MARKETPLACE_AWS, MARKETPLACE_GCP, MARKETPLACE_RHM, MARKETPLACE_AZURE, STANDARD]  # noqa: E501
 
     """
     Attributes:

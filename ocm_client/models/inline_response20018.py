@@ -34,7 +34,7 @@ class InlineResponse20018(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[Manifest]',
+        'items': 'list[Label]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20018(object):
     def items(self):
         """Gets the items of this InlineResponse20018.  # noqa: E501
 
-        Retrieved list of Manifests.  # noqa: E501
+        Retrieved list of labels.  # noqa: E501
 
         :return: The items of this InlineResponse20018.  # noqa: E501
-        :rtype: list[Manifest]
+        :rtype: list[Label]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20018(object):
     def items(self, items):
         """Sets the items of this InlineResponse20018.
 
-        Retrieved list of Manifests.  # noqa: E501
+        Retrieved list of labels.  # noqa: E501
 
         :param items: The items of this InlineResponse20018.  # noqa: E501
-        :type: list[Manifest]
+        :type: list[Label]
         """
 
         self._items = items

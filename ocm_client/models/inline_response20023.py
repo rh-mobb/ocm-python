@@ -34,7 +34,7 @@ class InlineResponse20023(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[IdentityProvider]',
+        'items': 'list[User]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20023(object):
     def items(self):
         """Gets the items of this InlineResponse20023.  # noqa: E501
 
-        Retrieved list of identity providers.  # noqa: E501
+        Retrieved list of users.  # noqa: E501
 
         :return: The items of this InlineResponse20023.  # noqa: E501
-        :rtype: list[IdentityProvider]
+        :rtype: list[User]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20023(object):
     def items(self, items):
         """Sets the items of this InlineResponse20023.
 
-        Retrieved list of identity providers.  # noqa: E501
+        Retrieved list of users.  # noqa: E501
 
         :param items: The items of this InlineResponse20023.  # noqa: E501
-        :type: list[IdentityProvider]
+        :type: list[User]
         """
 
         self._items = items
