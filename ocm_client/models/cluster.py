@@ -48,6 +48,7 @@ class Cluster(object):
         'gcp_network': 'GCPNetwork',
         'additional_trust_bundle': 'str',
         'addons': 'list[AddOnInstallation]',
+        'autoscaler': 'ClusterAutoscaler',
         'billing_model': 'BillingModel',
         'byo_oidc': 'ByoOidc',
         'cloud_provider': 'CloudProvider',
@@ -68,6 +69,7 @@ class Cluster(object):
         'inflight_checks': 'list[InflightCheck]',
         'infra_id': 'str',
         'ingresses': 'list[Ingress]',
+        'kubelet_config': 'KubeletConfig',
         'load_balancer_quota': 'int',
         'machine_pools': 'list[MachinePool]',
         'managed': 'bool',
@@ -106,6 +108,7 @@ class Cluster(object):
         'gcp_network': 'gcp_network',
         'additional_trust_bundle': 'additional_trust_bundle',
         'addons': 'addons',
+        'autoscaler': 'autoscaler',
         'billing_model': 'billing_model',
         'byo_oidc': 'byo_oidc',
         'cloud_provider': 'cloud_provider',
@@ -126,6 +129,7 @@ class Cluster(object):
         'inflight_checks': 'inflight_checks',
         'infra_id': 'infra_id',
         'ingresses': 'ingresses',
+        'kubelet_config': 'kubelet_config',
         'load_balancer_quota': 'load_balancer_quota',
         'machine_pools': 'machine_pools',
         'managed': 'managed',
@@ -149,7 +153,7 @@ class Cluster(object):
         'version': 'version'
     }
 
-    def __init__(self, kind=None, id=None, href=None, api=None, aws=None, aws_infrastructure_access_role_grants=None, ccs=None, dns=None, fips=None, gcp=None, gcp_encryption_key=None, gcp_network=None, additional_trust_bundle=None, addons=None, billing_model=None, byo_oidc=None, cloud_provider=None, console=None, creation_timestamp=None, delete_protection=None, disable_user_workload_monitoring=None, etcd_encryption=None, expiration_timestamp=None, external_id=None, external_configuration=None, flavour=None, groups=None, health_state=None, htpasswd=None, hypershift=None, identity_providers=None, inflight_checks=None, infra_id=None, ingresses=None, load_balancer_quota=None, machine_pools=None, managed=None, managed_service=None, multi_az=None, name=None, network=None, node_drain_grace_period=None, node_pools=None, nodes=None, openshift_version=None, product=None, properties=None, provision_shard=None, proxy=None, region=None, state=None, status=None, storage_quota=None, subscription=None, version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, api=None, aws=None, aws_infrastructure_access_role_grants=None, ccs=None, dns=None, fips=None, gcp=None, gcp_encryption_key=None, gcp_network=None, additional_trust_bundle=None, addons=None, autoscaler=None, billing_model=None, byo_oidc=None, cloud_provider=None, console=None, creation_timestamp=None, delete_protection=None, disable_user_workload_monitoring=None, etcd_encryption=None, expiration_timestamp=None, external_id=None, external_configuration=None, flavour=None, groups=None, health_state=None, htpasswd=None, hypershift=None, identity_providers=None, inflight_checks=None, infra_id=None, ingresses=None, kubelet_config=None, load_balancer_quota=None, machine_pools=None, managed=None, managed_service=None, multi_az=None, name=None, network=None, node_drain_grace_period=None, node_pools=None, nodes=None, openshift_version=None, product=None, properties=None, provision_shard=None, proxy=None, region=None, state=None, status=None, storage_quota=None, subscription=None, version=None, local_vars_configuration=None):  # noqa: E501
         """Cluster - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -169,6 +173,7 @@ class Cluster(object):
         self._gcp_network = None
         self._additional_trust_bundle = None
         self._addons = None
+        self._autoscaler = None
         self._billing_model = None
         self._byo_oidc = None
         self._cloud_provider = None
@@ -189,6 +194,7 @@ class Cluster(object):
         self._inflight_checks = None
         self._infra_id = None
         self._ingresses = None
+        self._kubelet_config = None
         self._load_balancer_quota = None
         self._machine_pools = None
         self._managed = None
@@ -240,6 +246,8 @@ class Cluster(object):
             self.additional_trust_bundle = additional_trust_bundle
         if addons is not None:
             self.addons = addons
+        if autoscaler is not None:
+            self.autoscaler = autoscaler
         if billing_model is not None:
             self.billing_model = billing_model
         if byo_oidc is not None:
@@ -280,6 +288,8 @@ class Cluster(object):
             self.infra_id = infra_id
         if ingresses is not None:
             self.ingresses = ingresses
+        if kubelet_config is not None:
+            self.kubelet_config = kubelet_config
         if load_balancer_quota is not None:
             self.load_balancer_quota = load_balancer_quota
         if machine_pools is not None:
@@ -630,6 +640,27 @@ class Cluster(object):
         """
 
         self._addons = addons
+
+    @property
+    def autoscaler(self):
+        """Gets the autoscaler of this Cluster.  # noqa: E501
+
+
+        :return: The autoscaler of this Cluster.  # noqa: E501
+        :rtype: ClusterAutoscaler
+        """
+        return self._autoscaler
+
+    @autoscaler.setter
+    def autoscaler(self, autoscaler):
+        """Sets the autoscaler of this Cluster.
+
+
+        :param autoscaler: The autoscaler of this Cluster.  # noqa: E501
+        :type: ClusterAutoscaler
+        """
+
+        self._autoscaler = autoscaler
 
     @property
     def billing_model(self):
@@ -1070,6 +1101,27 @@ class Cluster(object):
         """
 
         self._ingresses = ingresses
+
+    @property
+    def kubelet_config(self):
+        """Gets the kubelet_config of this Cluster.  # noqa: E501
+
+
+        :return: The kubelet_config of this Cluster.  # noqa: E501
+        :rtype: KubeletConfig
+        """
+        return self._kubelet_config
+
+    @kubelet_config.setter
+    def kubelet_config(self, kubelet_config):
+        """Sets the kubelet_config of this Cluster.
+
+
+        :param kubelet_config: The kubelet_config of this Cluster.  # noqa: E501
+        :type: KubeletConfig
+        """
+
+        self._kubelet_config = kubelet_config
 
     @property
     def load_balancer_quota(self):

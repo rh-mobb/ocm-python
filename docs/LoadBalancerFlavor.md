@@ -1,6 +1,6 @@
 # LoadBalancerFlavor
 
-Type of node received via telemetry.
+Type of load balancer for AWS cloud provider parameters.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

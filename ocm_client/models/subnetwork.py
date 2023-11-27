@@ -34,45 +34,78 @@ class Subnetwork(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'cidr_block': 'str',
         'availability_zone': 'str',
         'name': 'str',
         'public': 'bool',
+        'red_hat_managed': 'bool',
         'subnet_id': 'str'
     }
 
     attribute_map = {
+        'cidr_block': 'cidr_block',
         'availability_zone': 'availability_zone',
         'name': 'name',
         'public': 'public',
+        'red_hat_managed': 'red_hat_managed',
         'subnet_id': 'subnet_id'
     }
 
-    def __init__(self, availability_zone=None, name=None, public=None, subnet_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cidr_block=None, availability_zone=None, name=None, public=None, red_hat_managed=None, subnet_id=None, local_vars_configuration=None):  # noqa: E501
         """Subnetwork - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._cidr_block = None
         self._availability_zone = None
         self._name = None
         self._public = None
+        self._red_hat_managed = None
         self._subnet_id = None
         self.discriminator = None
 
+        if cidr_block is not None:
+            self.cidr_block = cidr_block
         if availability_zone is not None:
             self.availability_zone = availability_zone
         if name is not None:
             self.name = name
         if public is not None:
             self.public = public
+        if red_hat_managed is not None:
+            self.red_hat_managed = red_hat_managed
         if subnet_id is not None:
             self.subnet_id = subnet_id
+
+    @property
+    def cidr_block(self):
+        """Gets the cidr_block of this Subnetwork.  # noqa: E501
+
+        The CIDR Block of the subnet.  # noqa: E501
+
+        :return: The cidr_block of this Subnetwork.  # noqa: E501
+        :rtype: str
+        """
+        return self._cidr_block
+
+    @cidr_block.setter
+    def cidr_block(self, cidr_block):
+        """Sets the cidr_block of this Subnetwork.
+
+        The CIDR Block of the subnet.  # noqa: E501
+
+        :param cidr_block: The cidr_block of this Subnetwork.  # noqa: E501
+        :type: str
+        """
+
+        self._cidr_block = cidr_block
 
     @property
     def availability_zone(self):
         """Gets the availability_zone of this Subnetwork.  # noqa: E501
 
-        The availability zone to which the subnet is related  # noqa: E501
+        The availability zone to which the subnet is related.  # noqa: E501
 
         :return: The availability_zone of this Subnetwork.  # noqa: E501
         :rtype: str
@@ -83,7 +116,7 @@ class Subnetwork(object):
     def availability_zone(self, availability_zone):
         """Sets the availability_zone of this Subnetwork.
 
-        The availability zone to which the subnet is related  # noqa: E501
+        The availability zone to which the subnet is related.  # noqa: E501
 
         :param availability_zone: The availability_zone of this Subnetwork.  # noqa: E501
         :type: str
@@ -95,7 +128,7 @@ class Subnetwork(object):
     def name(self):
         """Gets the name of this Subnetwork.  # noqa: E501
 
-        Name of the subnet according to its `Name` tag on AWS  # noqa: E501
+        Name of the subnet according to its `Name` tag on AWS.  # noqa: E501
 
         :return: The name of this Subnetwork.  # noqa: E501
         :rtype: str
@@ -106,7 +139,7 @@ class Subnetwork(object):
     def name(self, name):
         """Sets the name of this Subnetwork.
 
-        Name of the subnet according to its `Name` tag on AWS  # noqa: E501
+        Name of the subnet according to its `Name` tag on AWS.  # noqa: E501
 
         :param name: The name of this Subnetwork.  # noqa: E501
         :type: str
@@ -118,7 +151,7 @@ class Subnetwork(object):
     def public(self):
         """Gets the public of this Subnetwork.  # noqa: E501
 
-        Whether it is a public subnet  # noqa: E501
+        Whether or not it is a public subnet.  # noqa: E501
 
         :return: The public of this Subnetwork.  # noqa: E501
         :rtype: bool
@@ -129,7 +162,7 @@ class Subnetwork(object):
     def public(self, public):
         """Sets the public of this Subnetwork.
 
-        Whether it is a public subnet  # noqa: E501
+        Whether or not it is a public subnet.  # noqa: E501
 
         :param public: The public of this Subnetwork.  # noqa: E501
         :type: bool
@@ -138,10 +171,33 @@ class Subnetwork(object):
         self._public = public
 
     @property
+    def red_hat_managed(self):
+        """Gets the red_hat_managed of this Subnetwork.  # noqa: E501
+
+        If the resource is RH managed.  # noqa: E501
+
+        :return: The red_hat_managed of this Subnetwork.  # noqa: E501
+        :rtype: bool
+        """
+        return self._red_hat_managed
+
+    @red_hat_managed.setter
+    def red_hat_managed(self, red_hat_managed):
+        """Sets the red_hat_managed of this Subnetwork.
+
+        If the resource is RH managed.  # noqa: E501
+
+        :param red_hat_managed: The red_hat_managed of this Subnetwork.  # noqa: E501
+        :type: bool
+        """
+
+        self._red_hat_managed = red_hat_managed
+
+    @property
     def subnet_id(self):
         """Gets the subnet_id of this Subnetwork.  # noqa: E501
 
-        The subnet id to be used while installing a cluster  # noqa: E501
+        The subnet ID to be used while installing a cluster.  # noqa: E501
 
         :return: The subnet_id of this Subnetwork.  # noqa: E501
         :rtype: str
@@ -152,7 +208,7 @@ class Subnetwork(object):
     def subnet_id(self, subnet_id):
         """Sets the subnet_id of this Subnetwork.
 
-        The subnet id to be used while installing a cluster  # noqa: E501
+        The subnet ID to be used while installing a cluster.  # noqa: E501
 
         :param subnet_id: The subnet_id of this Subnetwork.  # noqa: E501
         :type: str

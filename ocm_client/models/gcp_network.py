@@ -35,29 +35,34 @@ class GCPNetwork(object):
     """
     openapi_types = {
         'vpc_name': 'str',
+        'vpc_project_id': 'str',
         'compute_subnet': 'str',
         'control_plane_subnet': 'str'
     }
 
     attribute_map = {
         'vpc_name': 'vpc_name',
+        'vpc_project_id': 'vpc_project_id',
         'compute_subnet': 'compute_subnet',
         'control_plane_subnet': 'control_plane_subnet'
     }
 
-    def __init__(self, vpc_name=None, compute_subnet=None, control_plane_subnet=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, vpc_name=None, vpc_project_id=None, compute_subnet=None, control_plane_subnet=None, local_vars_configuration=None):  # noqa: E501
         """GCPNetwork - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._vpc_name = None
+        self._vpc_project_id = None
         self._compute_subnet = None
         self._control_plane_subnet = None
         self.discriminator = None
 
         if vpc_name is not None:
             self.vpc_name = vpc_name
+        if vpc_project_id is not None:
+            self.vpc_project_id = vpc_project_id
         if compute_subnet is not None:
             self.compute_subnet = compute_subnet
         if control_plane_subnet is not None:
@@ -85,6 +90,29 @@ class GCPNetwork(object):
         """
 
         self._vpc_name = vpc_name
+
+    @property
+    def vpc_project_id(self):
+        """Gets the vpc_project_id of this GCPNetwork.  # noqa: E501
+
+        The name of the host project where the shared VPC exists.  # noqa: E501
+
+        :return: The vpc_project_id of this GCPNetwork.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_project_id
+
+    @vpc_project_id.setter
+    def vpc_project_id(self, vpc_project_id):
+        """Sets the vpc_project_id of this GCPNetwork.
+
+        The name of the host project where the shared VPC exists.  # noqa: E501
+
+        :param vpc_project_id: The vpc_project_id of this GCPNetwork.  # noqa: E501
+        :type: str
+        """
+
+        self._vpc_project_id = vpc_project_id
 
     @property
     def compute_subnet(self):

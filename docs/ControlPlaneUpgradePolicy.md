@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **last_update_timestamp** | **datetime** | Timestamp for last update that happened to resource. | [optional] 
 **next_run** | **datetime** | Next time the upgrade should run. | [optional] 
 **schedule** | **str** | Schedule cron expression that defines automatic upgrade scheduling. | [optional] 
-**schedule_type** | **str** | Schedule type can be either \&quot;manual\&quot; (single execution) or \&quot;automatic\&quot; (re-occurring). | [optional] 
+**schedule_type** | [**ScheduleType**](ScheduleType.md) |  | [optional] 
 **state** | [**UpgradePolicyState**](UpgradePolicyState.md) |  | [optional] 
-**upgrade_type** | **str** | Upgrade type specify the type of the upgrade. Can only be \&quot;ControlPlane\&quot;. | [optional] 
+**upgrade_type** | [**UpgradeType**](UpgradeType.md) |  | [optional] 
 **version** | **str** | Version is the desired upgrade version. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

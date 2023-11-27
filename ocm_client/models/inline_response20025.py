@@ -72,7 +72,7 @@ class InlineResponse20025(object):
     def items(self):
         """Gets the items of this InlineResponse20025.  # noqa: E501
 
-        Updated list of users of the IDP.  # noqa: E501
+        Retrieved list of users of the IDP.  # noqa: E501
 
         :return: The items of this InlineResponse20025.  # noqa: E501
         :rtype: list[HTPasswdUser]
@@ -83,7 +83,7 @@ class InlineResponse20025(object):
     def items(self, items):
         """Sets the items of this InlineResponse20025.
 
-        Updated list of users of the IDP.  # noqa: E501
+        Retrieved list of users of the IDP.  # noqa: E501
 
         :param items: The items of this InlineResponse20025.  # noqa: E501
         :type: list[HTPasswdUser]

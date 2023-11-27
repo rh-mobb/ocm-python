@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**list[InflightCheck]**](InflightCheck.md) | Retrieved list of inflight checks. | [optional] 
+**items** | [**list[HTPasswdUser]**](HTPasswdUser.md) | Updated list of users of the IDP. | [optional] 
 **page** | **int** | Index of the requested page, where one corresponds to the first page. | [optional] 
 **size** | **int** | Number of items contained in the returned page. | [optional] 
 **total** | **int** | Total number of items of the collection. | [optional] 

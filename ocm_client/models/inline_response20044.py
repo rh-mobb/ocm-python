@@ -34,7 +34,7 @@ class InlineResponse20044(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[Product]',
+        'items': 'list[MachineType]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20044(object):
     def items(self):
         """Gets the items of this InlineResponse20044.  # noqa: E501
 
-        Retrieved list of products.  # noqa: E501
+        Retrieved list of cloud providers.  # noqa: E501
 
         :return: The items of this InlineResponse20044.  # noqa: E501
-        :rtype: list[Product]
+        :rtype: list[MachineType]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20044(object):
     def items(self, items):
         """Sets the items of this InlineResponse20044.
 
-        Retrieved list of products.  # noqa: E501
+        Retrieved list of cloud providers.  # noqa: E501
 
         :param items: The items of this InlineResponse20044.  # noqa: E501
-        :type: list[Product]
+        :type: list[MachineType]
         """
 
         self._items = items

@@ -37,6 +37,7 @@ class Version(object):
         'kind': 'str',
         'id': 'str',
         'href': 'str',
+        'gcp_marketplace_enabled': 'bool',
         'rosa_enabled': 'bool',
         'available_upgrades': 'list[str]',
         'channel_group': 'str',
@@ -44,6 +45,7 @@ class Version(object):
         'enabled': 'bool',
         'end_of_life_timestamp': 'datetime',
         'hosted_control_plane_enabled': 'bool',
+        'image_overrides': 'ImageOverrides',
         'raw_id': 'str',
         'release_image': 'str'
     }
@@ -52,6 +54,7 @@ class Version(object):
         'kind': 'kind',
         'id': 'id',
         'href': 'href',
+        'gcp_marketplace_enabled': 'gcp_marketplace_enabled',
         'rosa_enabled': 'rosa_enabled',
         'available_upgrades': 'available_upgrades',
         'channel_group': 'channel_group',
@@ -59,11 +62,12 @@ class Version(object):
         'enabled': 'enabled',
         'end_of_life_timestamp': 'end_of_life_timestamp',
         'hosted_control_plane_enabled': 'hosted_control_plane_enabled',
+        'image_overrides': 'image_overrides',
         'raw_id': 'raw_id',
         'release_image': 'release_image'
     }
 
-    def __init__(self, kind=None, id=None, href=None, rosa_enabled=None, available_upgrades=None, channel_group=None, default=None, enabled=None, end_of_life_timestamp=None, hosted_control_plane_enabled=None, raw_id=None, release_image=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, gcp_marketplace_enabled=None, rosa_enabled=None, available_upgrades=None, channel_group=None, default=None, enabled=None, end_of_life_timestamp=None, hosted_control_plane_enabled=None, image_overrides=None, raw_id=None, release_image=None, local_vars_configuration=None):  # noqa: E501
         """Version - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,6 +76,7 @@ class Version(object):
         self._kind = None
         self._id = None
         self._href = None
+        self._gcp_marketplace_enabled = None
         self._rosa_enabled = None
         self._available_upgrades = None
         self._channel_group = None
@@ -79,6 +84,7 @@ class Version(object):
         self._enabled = None
         self._end_of_life_timestamp = None
         self._hosted_control_plane_enabled = None
+        self._image_overrides = None
         self._raw_id = None
         self._release_image = None
         self.discriminator = None
@@ -89,6 +95,8 @@ class Version(object):
             self.id = id
         if href is not None:
             self.href = href
+        if gcp_marketplace_enabled is not None:
+            self.gcp_marketplace_enabled = gcp_marketplace_enabled
         if rosa_enabled is not None:
             self.rosa_enabled = rosa_enabled
         if available_upgrades is not None:
@@ -103,6 +111,8 @@ class Version(object):
             self.end_of_life_timestamp = end_of_life_timestamp
         if hosted_control_plane_enabled is not None:
             self.hosted_control_plane_enabled = hosted_control_plane_enabled
+        if image_overrides is not None:
+            self.image_overrides = image_overrides
         if raw_id is not None:
             self.raw_id = raw_id
         if release_image is not None:
@@ -176,6 +186,29 @@ class Version(object):
         """
 
         self._href = href
+
+    @property
+    def gcp_marketplace_enabled(self):
+        """Gets the gcp_marketplace_enabled of this Version.  # noqa: E501
+
+        GCPMarketplaceEnabled indicates if this version can be used to create GCP Marketplace clusters.  # noqa: E501
+
+        :return: The gcp_marketplace_enabled of this Version.  # noqa: E501
+        :rtype: bool
+        """
+        return self._gcp_marketplace_enabled
+
+    @gcp_marketplace_enabled.setter
+    def gcp_marketplace_enabled(self, gcp_marketplace_enabled):
+        """Sets the gcp_marketplace_enabled of this Version.
+
+        GCPMarketplaceEnabled indicates if this version can be used to create GCP Marketplace clusters.  # noqa: E501
+
+        :param gcp_marketplace_enabled: The gcp_marketplace_enabled of this Version.  # noqa: E501
+        :type: bool
+        """
+
+        self._gcp_marketplace_enabled = gcp_marketplace_enabled
 
     @property
     def rosa_enabled(self):
@@ -339,6 +372,27 @@ class Version(object):
         self._hosted_control_plane_enabled = hosted_control_plane_enabled
 
     @property
+    def image_overrides(self):
+        """Gets the image_overrides of this Version.  # noqa: E501
+
+
+        :return: The image_overrides of this Version.  # noqa: E501
+        :rtype: ImageOverrides
+        """
+        return self._image_overrides
+
+    @image_overrides.setter
+    def image_overrides(self, image_overrides):
+        """Sets the image_overrides of this Version.
+
+
+        :param image_overrides: The image_overrides of this Version.  # noqa: E501
+        :type: ImageOverrides
+        """
+
+        self._image_overrides = image_overrides
+
+    @property
     def raw_id(self):
         """Gets the raw_id of this Version.  # noqa: E501
 
@@ -365,7 +419,7 @@ class Version(object):
     def release_image(self):
         """Gets the release_image of this Version.  # noqa: E501
 
-        ReleaseImage contains the URI of Openshift release image  # noqa: E501
+        ReleaseImage contains the URI of Openshift release image.  # noqa: E501
 
         :return: The release_image of this Version.  # noqa: E501
         :rtype: str
@@ -376,7 +430,7 @@ class Version(object):
     def release_image(self, release_image):
         """Sets the release_image of this Version.
 
-        ReleaseImage contains the URI of Openshift release image  # noqa: E501
+        ReleaseImage contains the URI of Openshift release image.  # noqa: E501
 
         :param release_image: The release_image of this Version.  # noqa: E501
         :type: str

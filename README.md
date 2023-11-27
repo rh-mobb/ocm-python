@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_infrastructure_access_roles_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_infrastructure_access_roles_get) | **GET** /api/clusters_mgmt/v1/aws_infrastructure_access_roles | 
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_machine_types_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_machine_types_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/machine_types | 
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_regions_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_regions_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/regions | 
+*DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/sts_account_roles | 
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get) | **GET** /api/clusters_mgmt/v1/aws_inquiries/sts_credential_requests | 
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_sts_policies_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_policies_get) | **GET** /api/clusters_mgmt/v1/aws_inquiries/sts_policies | 
 *DefaultApi* | [**api_clusters_mgmt_v1_aws_inquiries_vpcs_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_vpcs_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/vpcs | 
@@ -127,6 +128,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_addons_addoninstallation_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_addoninstallation_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons/{addoninstallation_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_addons_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_addons_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants/{aws_infrastructure_access_role_grant_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants/{aws_infrastructure_access_role_grant_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants | 
@@ -175,6 +180,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_user_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_user_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/groups/{group_id}/users/{user_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_hibernate_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hibernate_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/hibernate | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_hypershift_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hypershift_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/hypershift | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/hypershift | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers/{identity_provider_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers/{identity_provider_id} | 
@@ -194,6 +200,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_ingress_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_ingress_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses/{ingress_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons/{limited_support_reason_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons/{limited_support_reason_id} | 
@@ -223,6 +233,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_node_pools_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_node_pools_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/node_pools | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_product_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions/{minimal_version_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews/{technology_preview_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
@@ -233,6 +247,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_operator_iam_role_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_operator_iam_role_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles/{operator_iam_role_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_support_jump_role | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_tuning_config_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_tuning_config_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs/{tuning_config_id} | 
@@ -245,6 +260,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id}/state | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id}/state | 
+*DefaultApi* | [**api_clusters_mgmt_v1_clusters_cluster_id_vpc_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_vpc_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/vpc | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_get) | **GET** /api/clusters_mgmt/v1/clusters | 
 *DefaultApi* | [**api_clusters_mgmt_v1_clusters_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_clusters_post) | **POST** /api/clusters_mgmt/v1/clusters | 
 *DefaultApi* | [**api_clusters_mgmt_v1_dns_domains_dns_domain_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_dns_domains_dns_domain_id_delete) | **DELETE** /api/clusters_mgmt/v1/dns_domains/{dns_domain_id} | 
@@ -261,6 +277,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_flavours_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_flavours_post) | **POST** /api/clusters_mgmt/v1/flavours | 
 *DefaultApi* | [**api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/encryption_keys | 
 *DefaultApi* | [**api_clusters_mgmt_v1_gcp_inquiries_key_rings_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_key_rings_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/key_rings | 
+*DefaultApi* | [**api_clusters_mgmt_v1_gcp_inquiries_machine_types_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_machine_types_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/machine_types | 
 *DefaultApi* | [**api_clusters_mgmt_v1_gcp_inquiries_regions_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_regions_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/regions | 
 *DefaultApi* | [**api_clusters_mgmt_v1_gcp_inquiries_vpcs_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_vpcs_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/vpcs | 
 *DefaultApi* | [**api_clusters_mgmt_v1_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_get) | **GET** /api/clusters_mgmt/v1 | 
@@ -268,6 +285,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_limited_support_reason_templates_limited_support_reason_template_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_limited_support_reason_templates_limited_support_reason_template_id_get) | **GET** /api/clusters_mgmt/v1/limited_support_reason_templates/{limited_support_reason_template_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_machine_types_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_machine_types_get) | **GET** /api/clusters_mgmt/v1/machine_types | 
 *DefaultApi* | [**api_clusters_mgmt_v1_machine_types_machine_type_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_machine_types_machine_type_id_get) | **GET** /api/clusters_mgmt/v1/machine_types/{machine_type_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_network_verifications_network_verification_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_network_verifications_network_verification_id_get) | **GET** /api/clusters_mgmt/v1/network_verifications/{network_verification_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_network_verifications_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_network_verifications_post) | **POST** /api/clusters_mgmt/v1/network_verifications | 
 *DefaultApi* | [**api_clusters_mgmt_v1_oidc_configs_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_get) | **GET** /api/clusters_mgmt/v1/oidc_configs | 
 *DefaultApi* | [**api_clusters_mgmt_v1_oidc_configs_oidc_config_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_oidc_config_id_delete) | **DELETE** /api/clusters_mgmt/v1/oidc_configs/{oidc_config_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_oidc_configs_oidc_config_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_oidc_config_id_get) | **GET** /api/clusters_mgmt/v1/oidc_configs/{oidc_config_id} | 
@@ -278,11 +297,17 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**api_clusters_mgmt_v1_pending_delete_clusters_pending_delete_cluster_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_pending_delete_clusters_pending_delete_cluster_id_patch) | **PATCH** /api/clusters_mgmt/v1/pending_delete_clusters/{pending_delete_cluster_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_products_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_get) | **GET** /api/clusters_mgmt/v1/products | 
 *DefaultApi* | [**api_clusters_mgmt_v1_products_product_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_product_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_products_product_id_minimal_versions_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_product_id_minimal_versions_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/minimal_versions | 
+*DefaultApi* | [**api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/minimal_versions/{minimal_version_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_products_product_id_technology_previews_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_product_id_technology_previews_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/technology_previews | 
+*DefaultApi* | [**api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/technology_previews/{technology_preview_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_provision_shards_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_provision_shards_get) | **GET** /api/clusters_mgmt/v1/provision_shards | 
 *DefaultApi* | [**api_clusters_mgmt_v1_provision_shards_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_provision_shards_post) | **POST** /api/clusters_mgmt/v1/provision_shards | 
 *DefaultApi* | [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_delete) | **DELETE** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_get) | **GET** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_patch**](docs/DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_patch) | **PATCH** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
+*DefaultApi* | [**api_clusters_mgmt_v1_trusted_ip_addresses_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_trusted_ip_addresses_get) | **GET** /api/clusters_mgmt/v1/trusted_ip_addresses | 
+*DefaultApi* | [**api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get) | **GET** /api/clusters_mgmt/v1/trusted_ip_addresses/{trusted_ip_id} | 
 *DefaultApi* | [**api_clusters_mgmt_v1_version_gates_get**](docs/DefaultApi.md#api_clusters_mgmt_v1_version_gates_get) | **GET** /api/clusters_mgmt/v1/version_gates | 
 *DefaultApi* | [**api_clusters_mgmt_v1_version_gates_post**](docs/DefaultApi.md#api_clusters_mgmt_v1_version_gates_post) | **POST** /api/clusters_mgmt/v1/version_gates | 
 *DefaultApi* | [**api_clusters_mgmt_v1_version_gates_version_gate_id_delete**](docs/DefaultApi.md#api_clusters_mgmt_v1_version_gates_version_gate_id_delete) | **DELETE** /api/clusters_mgmt/v1/version_gates/{version_gate_id} | 
@@ -293,6 +318,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AMIOverride](docs/AMIOverride.md)
  - [AWS](docs/AWS.md)
  - [AWSFlavour](docs/AWSFlavour.md)
  - [AWSInfrastructureAccessRole](docs/AWSInfrastructureAccessRole.md)
@@ -301,7 +327,9 @@ Class | Method | HTTP request | Description
  - [AWSInfrastructureAccessRoleState](docs/AWSInfrastructureAccessRoleState.md)
  - [AWSMachinePool](docs/AWSMachinePool.md)
  - [AWSNodePool](docs/AWSNodePool.md)
+ - [AWSSTSAccountRole](docs/AWSSTSAccountRole.md)
  - [AWSSTSPolicy](docs/AWSSTSPolicy.md)
+ - [AWSSTSRole](docs/AWSSTSRole.md)
  - [AWSSpotMarketOptions](docs/AWSSpotMarketOptions.md)
  - [AWSVolume](docs/AWSVolume.md)
  - [AddOn](docs/AddOn.md)
@@ -328,8 +356,12 @@ Class | Method | HTTP request | Description
  - [AlertSeverity](docs/AlertSeverity.md)
  - [AlertsInfo](docs/AlertsInfo.md)
  - [AuditLog](docs/AuditLog.md)
+ - [AutoscalerResourceLimits](docs/AutoscalerResourceLimits.md)
+ - [AutoscalerResourceLimitsGPULimit](docs/AutoscalerResourceLimitsGPULimit.md)
+ - [AutoscalerScaleDownConfig](docs/AutoscalerScaleDownConfig.md)
  - [AwsEtcdEncryption](docs/AwsEtcdEncryption.md)
  - [BillingModel](docs/BillingModel.md)
+ - [BillingModelItem](docs/BillingModelItem.md)
  - [ByoOidc](docs/ByoOidc.md)
  - [CCS](docs/CCS.md)
  - [CPUTotalNodeRoleOSMetricNode](docs/CPUTotalNodeRoleOSMetricNode.md)
@@ -340,6 +372,7 @@ Class | Method | HTTP request | Description
  - [CloudVPC](docs/CloudVPC.md)
  - [Cluster](docs/Cluster.md)
  - [ClusterAPI](docs/ClusterAPI.md)
+ - [ClusterAutoscaler](docs/ClusterAutoscaler.md)
  - [ClusterConfigurationMode](docs/ClusterConfigurationMode.md)
  - [ClusterConsole](docs/ClusterConsole.md)
  - [ClusterCredentials](docs/ClusterCredentials.md)
@@ -371,8 +404,10 @@ Class | Method | HTTP request | Description
  - [GCP](docs/GCP.md)
  - [GCPEncryptionKey](docs/GCPEncryptionKey.md)
  - [GCPFlavour](docs/GCPFlavour.md)
+ - [GCPImageOverride](docs/GCPImageOverride.md)
  - [GCPNetwork](docs/GCPNetwork.md)
  - [GCPVolume](docs/GCPVolume.md)
+ - [GcpSecurity](docs/GcpSecurity.md)
  - [GithubIdentityProvider](docs/GithubIdentityProvider.md)
  - [GitlabIdentityProvider](docs/GitlabIdentityProvider.md)
  - [GoogleIdentityProvider](docs/GoogleIdentityProvider.md)
@@ -384,6 +419,7 @@ Class | Method | HTTP request | Description
  - [IdentityProvider](docs/IdentityProvider.md)
  - [IdentityProviderMappingMethod](docs/IdentityProviderMappingMethod.md)
  - [IdentityProviderType](docs/IdentityProviderType.md)
+ - [ImageOverrides](docs/ImageOverrides.md)
  - [InflightCheck](docs/InflightCheck.md)
  - [InflightCheckState](docs/InflightCheckState.md)
  - [Ingress](docs/Ingress.md)
@@ -431,13 +467,18 @@ Class | Method | HTTP request | Description
  - [InlineResponse20045](docs/InlineResponse20045.md)
  - [InlineResponse20046](docs/InlineResponse20046.md)
  - [InlineResponse20047](docs/InlineResponse20047.md)
+ - [InlineResponse20048](docs/InlineResponse20048.md)
+ - [InlineResponse20049](docs/InlineResponse20049.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
+ - [InlineResponse20050](docs/InlineResponse20050.md)
+ - [InlineResponse20051](docs/InlineResponse20051.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2009](docs/InlineResponse2009.md)
  - [InstanceIAMRoles](docs/InstanceIAMRoles.md)
  - [KeyRing](docs/KeyRing.md)
+ - [KubeletConfig](docs/KubeletConfig.md)
  - [LDAPAttributes](docs/LDAPAttributes.md)
  - [LDAPIdentityProvider](docs/LDAPIdentityProvider.md)
  - [Label](docs/Label.md)
@@ -455,7 +496,9 @@ Class | Method | HTTP request | Description
  - [ManagedService](docs/ManagedService.md)
  - [Manifest](docs/Manifest.md)
  - [Metadata](docs/Metadata.md)
+ - [NamespaceOwnershipPolicy](docs/NamespaceOwnershipPolicy.md)
  - [Network](docs/Network.md)
+ - [NetworkVerification](docs/NetworkVerification.md)
  - [NodeInfo](docs/NodeInfo.md)
  - [NodePool](docs/NodePool.md)
  - [NodePoolAutoscaling](docs/NodePoolAutoscaling.md)
@@ -474,28 +517,39 @@ Class | Method | HTTP request | Description
  - [PrivateLinkPrincipal](docs/PrivateLinkPrincipal.md)
  - [PrivateLinkPrincipals](docs/PrivateLinkPrincipals.md)
  - [Product](docs/Product.md)
+ - [ProductMinimalVersion](docs/ProductMinimalVersion.md)
+ - [ProductTechnologyPreview](docs/ProductTechnologyPreview.md)
  - [ProvisionShard](docs/ProvisionShard.md)
+ - [ProvisionShardTopology](docs/ProvisionShardTopology.md)
  - [Proxy](docs/Proxy.md)
+ - [ResourceRange](docs/ResourceRange.md)
  - [RootVolume](docs/RootVolume.md)
  - [STS](docs/STS.md)
  - [STSCredentialRequest](docs/STSCredentialRequest.md)
  - [STSOperator](docs/STSOperator.md)
+ - [ScheduleType](docs/ScheduleType.md)
+ - [SecurityGroup](docs/SecurityGroup.md)
  - [ServerConfig](docs/ServerConfig.md)
  - [SocketTotalNodeRoleOSMetricNode](docs/SocketTotalNodeRoleOSMetricNode.md)
  - [SocketTotalsNodeRoleOSMetricNode](docs/SocketTotalsNodeRoleOSMetricNode.md)
+ - [StsSupportJumpRole](docs/StsSupportJumpRole.md)
+ - [SubnetNetworkVerification](docs/SubnetNetworkVerification.md)
  - [Subnetwork](docs/Subnetwork.md)
  - [Subscription](docs/Subscription.md)
  - [Syncset](docs/Syncset.md)
  - [Taint](docs/Taint.md)
+ - [TrustedIp](docs/TrustedIp.md)
  - [TuningConfig](docs/TuningConfig.md)
  - [UpgradePolicy](docs/UpgradePolicy.md)
  - [UpgradePolicyState](docs/UpgradePolicyState.md)
  - [UpgradePolicyStateValue](docs/UpgradePolicyStateValue.md)
+ - [UpgradeType](docs/UpgradeType.md)
  - [User](docs/User.md)
  - [Value](docs/Value.md)
  - [Version](docs/Version.md)
  - [VersionGate](docs/VersionGate.md)
  - [VersionGateAgreement](docs/VersionGateAgreement.md)
+ - [WildcardPolicy](docs/WildcardPolicy.md)
 
 
 ## Documentation For Authorization

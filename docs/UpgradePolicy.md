@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **enable_minor_version_upgrades** | **bool** | Indicates if minor version upgrades are allowed for automatic upgrades (for manual it&#39;s always allowed). | [optional] 
 **next_run** | **datetime** | Next time the upgrade should run. | [optional] 
 **schedule** | **str** | Schedule cron expression that defines automatic upgrade scheduling. | [optional] 
-**schedule_type** | **str** | Schedule type can be either \&quot;manual\&quot; (single execution) or \&quot;automatic\&quot; (re-occurring). | [optional] 
-**upgrade_type** | **str** | Upgrade type specify the type of the upgrade. Can be \&quot;OSD\&quot; or \&quot;CVE\&quot;. | [optional] 
+**schedule_type** | [**ScheduleType**](ScheduleType.md) |  | [optional] 
+**upgrade_type** | [**UpgradeType**](UpgradeType.md) |  | [optional] 
 **version** | **str** | Version is the desired upgrade version. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

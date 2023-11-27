@@ -34,7 +34,7 @@ class InlineResponse20026(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[InflightCheck]',
+        'items': 'list[HTPasswdUser]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20026(object):
     def items(self):
         """Gets the items of this InlineResponse20026.  # noqa: E501
 
-        Retrieved list of inflight checks.  # noqa: E501
+        Updated list of users of the IDP.  # noqa: E501
 
         :return: The items of this InlineResponse20026.  # noqa: E501
-        :rtype: list[InflightCheck]
+        :rtype: list[HTPasswdUser]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20026(object):
     def items(self, items):
         """Sets the items of this InlineResponse20026.
 
-        Retrieved list of inflight checks.  # noqa: E501
+        Updated list of users of the IDP.  # noqa: E501
 
         :param items: The items of this InlineResponse20026.  # noqa: E501
-        :type: list[InflightCheck]
+        :type: list[HTPasswdUser]
         """
 
         self._items = items

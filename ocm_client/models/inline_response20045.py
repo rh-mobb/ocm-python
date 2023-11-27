@@ -34,7 +34,7 @@ class InlineResponse20045(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[ProvisionShard]',
+        'items': 'list[OidcConfig]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20045(object):
     def items(self):
         """Gets the items of this InlineResponse20045.  # noqa: E501
 
-        Retrieved a list of provision shards.  # noqa: E501
+        Retrieved list of identity providers.  # noqa: E501
 
         :return: The items of this InlineResponse20045.  # noqa: E501
-        :rtype: list[ProvisionShard]
+        :rtype: list[OidcConfig]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20045(object):
     def items(self, items):
         """Sets the items of this InlineResponse20045.
 
-        Retrieved a list of provision shards.  # noqa: E501
+        Retrieved list of identity providers.  # noqa: E501
 
         :param items: The items of this InlineResponse20045.  # noqa: E501
-        :type: list[ProvisionShard]
+        :type: list[OidcConfig]
         """
 
         self._items = items
@@ -118,7 +118,7 @@ class InlineResponse20045(object):
     def size(self):
         """Gets the size of this InlineResponse20045.  # noqa: E501
 
-        Maximum number of items that will be contained in the returned page.  # noqa: E501
+        Number of items contained in the returned page.  # noqa: E501
 
         :return: The size of this InlineResponse20045.  # noqa: E501
         :rtype: int
@@ -129,7 +129,7 @@ class InlineResponse20045(object):
     def size(self, size):
         """Sets the size of this InlineResponse20045.
 
-        Maximum number of items that will be contained in the returned page.  # noqa: E501
+        Number of items contained in the returned page.  # noqa: E501
 
         :param size: The size of this InlineResponse20045.  # noqa: E501
         :type: int

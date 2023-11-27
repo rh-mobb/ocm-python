@@ -44,9 +44,9 @@ class NodePoolUpgradePolicy(object):
         'next_run': 'datetime',
         'node_pool_id': 'str',
         'schedule': 'str',
-        'schedule_type': 'str',
+        'schedule_type': 'ScheduleType',
         'state': 'UpgradePolicyState',
-        'upgrade_type': 'str',
+        'upgrade_type': 'UpgradeType',
         'version': 'str'
     }
 
@@ -352,10 +352,9 @@ class NodePoolUpgradePolicy(object):
     def schedule_type(self):
         """Gets the schedule_type of this NodePoolUpgradePolicy.  # noqa: E501
 
-        Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).  # noqa: E501
 
         :return: The schedule_type of this NodePoolUpgradePolicy.  # noqa: E501
-        :rtype: str
+        :rtype: ScheduleType
         """
         return self._schedule_type
 
@@ -363,10 +362,9 @@ class NodePoolUpgradePolicy(object):
     def schedule_type(self, schedule_type):
         """Sets the schedule_type of this NodePoolUpgradePolicy.
 
-        Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).  # noqa: E501
 
         :param schedule_type: The schedule_type of this NodePoolUpgradePolicy.  # noqa: E501
-        :type: str
+        :type: ScheduleType
         """
 
         self._schedule_type = schedule_type
@@ -396,10 +394,9 @@ class NodePoolUpgradePolicy(object):
     def upgrade_type(self):
         """Gets the upgrade_type of this NodePoolUpgradePolicy.  # noqa: E501
 
-        Upgrade type specify the type of the upgrade. Can only be \"NodePool\".  # noqa: E501
 
         :return: The upgrade_type of this NodePoolUpgradePolicy.  # noqa: E501
-        :rtype: str
+        :rtype: UpgradeType
         """
         return self._upgrade_type
 
@@ -407,10 +404,9 @@ class NodePoolUpgradePolicy(object):
     def upgrade_type(self, upgrade_type):
         """Sets the upgrade_type of this NodePoolUpgradePolicy.
 
-        Upgrade type specify the type of the upgrade. Can only be \"NodePool\".  # noqa: E501
 
         :param upgrade_type: The upgrade_type of this NodePoolUpgradePolicy.  # noqa: E501
-        :type: str
+        :type: UpgradeType
         """
 
         self._upgrade_type = upgrade_type

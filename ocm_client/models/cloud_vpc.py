@@ -34,45 +34,83 @@ class CloudVPC(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'aws_security_groups': 'list[SecurityGroup]',
         'aws_subnets': 'list[Subnetwork]',
+        'cidr_block': 'str',
         'id': 'str',
         'name': 'str',
+        'red_hat_managed': 'bool',
         'subnets': 'list[str]'
     }
 
     attribute_map = {
+        'aws_security_groups': 'aws_security_groups',
         'aws_subnets': 'aws_subnets',
+        'cidr_block': 'cidr_block',
         'id': 'id',
         'name': 'name',
+        'red_hat_managed': 'red_hat_managed',
         'subnets': 'subnets'
     }
 
-    def __init__(self, aws_subnets=None, id=None, name=None, subnets=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aws_security_groups=None, aws_subnets=None, cidr_block=None, id=None, name=None, red_hat_managed=None, subnets=None, local_vars_configuration=None):  # noqa: E501
         """CloudVPC - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._aws_security_groups = None
         self._aws_subnets = None
+        self._cidr_block = None
         self._id = None
         self._name = None
+        self._red_hat_managed = None
         self._subnets = None
         self.discriminator = None
 
+        if aws_security_groups is not None:
+            self.aws_security_groups = aws_security_groups
         if aws_subnets is not None:
             self.aws_subnets = aws_subnets
+        if cidr_block is not None:
+            self.cidr_block = cidr_block
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
+        if red_hat_managed is not None:
+            self.red_hat_managed = red_hat_managed
         if subnets is not None:
             self.subnets = subnets
+
+    @property
+    def aws_security_groups(self):
+        """Gets the aws_security_groups of this CloudVPC.  # noqa: E501
+
+        List of AWS security groups with details.  # noqa: E501
+
+        :return: The aws_security_groups of this CloudVPC.  # noqa: E501
+        :rtype: list[SecurityGroup]
+        """
+        return self._aws_security_groups
+
+    @aws_security_groups.setter
+    def aws_security_groups(self, aws_security_groups):
+        """Sets the aws_security_groups of this CloudVPC.
+
+        List of AWS security groups with details.  # noqa: E501
+
+        :param aws_security_groups: The aws_security_groups of this CloudVPC.  # noqa: E501
+        :type: list[SecurityGroup]
+        """
+
+        self._aws_security_groups = aws_security_groups
 
     @property
     def aws_subnets(self):
         """Gets the aws_subnets of this CloudVPC.  # noqa: E501
 
-        List of subnetworks  # noqa: E501
+        List of AWS subnetworks with details.  # noqa: E501
 
         :return: The aws_subnets of this CloudVPC.  # noqa: E501
         :rtype: list[Subnetwork]
@@ -83,7 +121,7 @@ class CloudVPC(object):
     def aws_subnets(self, aws_subnets):
         """Sets the aws_subnets of this CloudVPC.
 
-        List of subnetworks  # noqa: E501
+        List of AWS subnetworks with details.  # noqa: E501
 
         :param aws_subnets: The aws_subnets of this CloudVPC.  # noqa: E501
         :type: list[Subnetwork]
@@ -92,10 +130,33 @@ class CloudVPC(object):
         self._aws_subnets = aws_subnets
 
     @property
+    def cidr_block(self):
+        """Gets the cidr_block of this CloudVPC.  # noqa: E501
+
+        CIDR block of the virtual private cloud.  # noqa: E501
+
+        :return: The cidr_block of this CloudVPC.  # noqa: E501
+        :rtype: str
+        """
+        return self._cidr_block
+
+    @cidr_block.setter
+    def cidr_block(self, cidr_block):
+        """Sets the cidr_block of this CloudVPC.
+
+        CIDR block of the virtual private cloud.  # noqa: E501
+
+        :param cidr_block: The cidr_block of this CloudVPC.  # noqa: E501
+        :type: str
+        """
+
+        self._cidr_block = cidr_block
+
+    @property
     def id(self):
         """Gets the id of this CloudVPC.  # noqa: E501
 
-        ID of virtual private cloud  # noqa: E501
+        ID of virtual private cloud.  # noqa: E501
 
         :return: The id of this CloudVPC.  # noqa: E501
         :rtype: str
@@ -106,7 +167,7 @@ class CloudVPC(object):
     def id(self, id):
         """Sets the id of this CloudVPC.
 
-        ID of virtual private cloud  # noqa: E501
+        ID of virtual private cloud.  # noqa: E501
 
         :param id: The id of this CloudVPC.  # noqa: E501
         :type: str
@@ -118,7 +179,7 @@ class CloudVPC(object):
     def name(self):
         """Gets the name of this CloudVPC.  # noqa: E501
 
-        Name of virtual private cloud according to its `Name` tag on AWS  # noqa: E501
+        Name of virtual private cloud according to its `Name` tag on AWS.  # noqa: E501
 
         :return: The name of this CloudVPC.  # noqa: E501
         :rtype: str
@@ -129,13 +190,36 @@ class CloudVPC(object):
     def name(self, name):
         """Sets the name of this CloudVPC.
 
-        Name of virtual private cloud according to its `Name` tag on AWS  # noqa: E501
+        Name of virtual private cloud according to its `Name` tag on AWS.  # noqa: E501
 
         :param name: The name of this CloudVPC.  # noqa: E501
         :type: str
         """
 
         self._name = name
+
+    @property
+    def red_hat_managed(self):
+        """Gets the red_hat_managed of this CloudVPC.  # noqa: E501
+
+        If the resource is RH managed.  # noqa: E501
+
+        :return: The red_hat_managed of this CloudVPC.  # noqa: E501
+        :rtype: bool
+        """
+        return self._red_hat_managed
+
+    @red_hat_managed.setter
+    def red_hat_managed(self, red_hat_managed):
+        """Sets the red_hat_managed of this CloudVPC.
+
+        If the resource is RH managed.  # noqa: E501
+
+        :param red_hat_managed: The red_hat_managed of this CloudVPC.  # noqa: E501
+        :type: bool
+        """
+
+        self._red_hat_managed = red_hat_managed
 
     @property
     def subnets(self):

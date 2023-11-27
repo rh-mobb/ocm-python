@@ -835,6 +835,89 @@
         }
       }
     },
+    "/api/clusters_mgmt/v1/aws_inquiries/sts_account_roles": {
+      "post": {
+        "parameters": [
+          {
+            "name": "page",
+            "description": "Index of the returned page, where one corresponds to the first page. As this\ncollection doesn't support paging the result will always be `1`.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Number of items that will be contained in the returned page. As this collection\ndoesn't support paging or searching the result will always be the total number of\nbe the total number of STS account roles.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AWS"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "aws_account_id": {
+                      "description": "The AWS Account Id for the STS Account Roles",
+                      "type": "string"
+                    },
+                    "items": {
+                      "description": "Retrieved list of STS Account Roles",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/AWSSTSAccountRole"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the returned page, where one corresponds to the first page. As this\ncollection doesn't support paging the result will always be `1`.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Number of items that will be contained in the returned page. As this collection\ndoesn't support paging or searching the result will always be the total number of\nbe the total number of STS account roles.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page. As this collection doesn't support paging or\nsearching the result will always be the total number of STS account roles",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/clusters_mgmt/v1/aws_inquiries/sts_credential_requests": {
       "get": {
         "description": "Retrieves the list of policies.",
@@ -1077,6 +1160,14 @@
       "get": {
         "description": "Retrieves the list of cloud providers.",
         "parameters": [
+          {
+            "name": "fetchRegions",
+            "description": "If true, includes the regions on each provider in the output. Could slow request response time.",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
           {
             "name": "order",
             "description": "Order criteria.\n\nThe syntax of this parameter is similar to the syntax of the _order by_ clause of\na SQL statement, but using the names of the attributes of the cloud provider\ninstead of the names of the columns of a table. For example, in order to sort the\nclusters descending by name identifier the value should be:\n\n```sql\nname desc\n```\n\nIf the parameter isn't provided, or if the value is empty, then the order of the\nresults is undefined.",
@@ -1673,6 +1764,14 @@
               "type": "string"
             },
             "required": true
+          },
+          {
+            "name": "best_effort",
+            "description": "BestEffort flag is used to check if the cluster deletion should be best-effort mode or not.",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
           },
           {
             "name": "deprovision",
@@ -2593,6 +2692,159 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AddOnInstallation"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler": {
+      "delete": {
+        "description": "Deletes the cluster autoscaler.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success."
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "Retrieves the autoscaler of a cluster.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterAutoscaler"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Creates a new cluster autoscaler object.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterAutoscaler"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterAutoscaler"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "Updates the cluster autoscaler.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClusterAutoscaler"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClusterAutoscaler"
                 }
               }
             }
@@ -4885,6 +5137,50 @@
             }
           }
         }
+      },
+      "patch": {
+        "description": "Updates the Hypershift details for a single cluster.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HypershiftConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HypershiftConfig"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers": {
@@ -5949,6 +6245,159 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Ingress"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config": {
+      "delete": {
+        "description": "Deletes the cluster KubeletConfig",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success."
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "Retrieves the KubeletConfig for a cluster",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeletConfig"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Creates a new cluster KubeletConfig",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeletConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeletConfig"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "description": "Updates the existing cluster KubeletConfig",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KubeletConfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KubeletConfig"
                 }
               }
             }
@@ -7386,6 +7835,286 @@
         }
       }
     },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions": {
+      "get": {
+        "description": "Retrieves the list of product minimal versions.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "order",
+            "description": "Order criteria.\n\nThe syntax of this parameter is similar to the syntax of the _order by_ clause of\na SQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to sort the products\ndescending by name the value should be:\n\n```sql\nname desc\n```\n\nIf the parameter isn't provided, or if the value is empty, then the order of the\nresults is undefined.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "search",
+            "description": "Search criteria.\n\nThe syntax of this parameter is similar to the syntax of the _where_ clause of an\nSQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to retrieve all the\nproducts with a name starting with `my` the value should be:\n\n```sql\nname like 'my%'\n```\n\nIf the parameter isn't provided, or if the value is empty, then all the products\nthat the user has permission to see will be returned.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Maximum number of items that will be contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of product minimal versions.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ProductMinimalVersion"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Maximum number of items that will be contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions/{minimal_version_id}": {
+      "get": {
+        "description": "Retrieves the details of the product minimal version.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "minimal_version_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductMinimalVersion"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews": {
+      "get": {
+        "description": "Retrieves the list of product technology previews.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "order",
+            "description": "Order criteria.\n\nThe syntax of this parameter is similar to the syntax of the _order by_ clause of\na SQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to sort the products\ndescending by name the value should be:\n\n```sql\nname desc\n```\n\nIf the parameter isn't provided, or if the value is empty, then the order of the\nresults is undefined.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "search",
+            "description": "Search criteria.\n\nThe syntax of this parameter is similar to the syntax of the _where_ clause of an\nSQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to retrieve all the\nproducts with a name starting with `my` the value should be:\n\n```sql\nname like 'my%'\n```\n\nIf the parameter isn't provided, or if the value is empty, then all the products\nthat the user has permission to see will be returned.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Maximum number of items that will be contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of product technology previews.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ProductTechnologyPreview"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Maximum number of items that will be contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews/{technology_preview_id}": {
+      "get": {
+        "description": "Retrieves the details of the product technology preview.",
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "technology_preview_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductTechnologyPreview"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard": {
       "delete": {
         "description": "Delete the provision shard.",
@@ -7752,6 +8481,42 @@
         "responses": {
           "204": {
             "description": "Success."
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/sts_support_jump_role": {
+      "get": {
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StsSupportJumpRole"
+                }
+              }
+            }
           },
           "default": {
             "description": "Error.",
@@ -8358,6 +9123,42 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpgradePolicyState"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/clusters/{cluster_id}/vpc": {
+      "get": {
+        "parameters": [
+          {
+            "name": "cluster_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CloudVPC"
                 }
               }
             }
@@ -9054,6 +9855,86 @@
         }
       }
     },
+    "/api/clusters_mgmt/v1/gcp_inquiries/machine_types": {
+      "post": {
+        "description": "Retrieves the list of machine types in the provided region.",
+        "parameters": [
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Maximum number of items that will be contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloudProviderData"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of machine types.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MachineType"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Maximum number of items that will be contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/clusters_mgmt/v1/gcp_inquiries/regions": {
       "post": {
         "description": "Retrieves the list of available regions of the cloud provider.\nIMPORTANT: This list doesn't currently support paging or searching, so the returned\n`page` will always be 1 and `size` and `total` will always be the total number of available regions\nof the provider.",
@@ -9446,9 +10327,82 @@
         }
       }
     },
+    "/api/clusters_mgmt/v1/network_verifications": {
+      "post": {
+        "description": "Creates an entry for a network verification for each subnet supplied setting then to initial state.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NetworkVerification"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NetworkVerification"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/network_verifications/{network_verification_id}": {
+      "get": {
+        "description": "Retrieves the details of a subnet network verification.",
+        "parameters": [
+          {
+            "name": "network_verification_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubnetNetworkVerification"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/clusters_mgmt/v1/oidc_configs": {
       "post": {
-        "description": "Creates a hosting under Red Hat's S3 bucket for byo oidc configuration",
+        "description": "Creates a hosting under Red Hat's S3 bucket for byo oidc configuration.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -9952,6 +10906,286 @@
         }
       }
     },
+    "/api/clusters_mgmt/v1/products/{product_id}/minimal_versions": {
+      "get": {
+        "description": "Retrieves the list of product minimal versions.",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "order",
+            "description": "Order criteria.\n\nThe syntax of this parameter is similar to the syntax of the _order by_ clause of\na SQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to sort the products\ndescending by name the value should be:\n\n```sql\nname desc\n```\n\nIf the parameter isn't provided, or if the value is empty, then the order of the\nresults is undefined.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "search",
+            "description": "Search criteria.\n\nThe syntax of this parameter is similar to the syntax of the _where_ clause of an\nSQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to retrieve all the\nproducts with a name starting with `my` the value should be:\n\n```sql\nname like 'my%'\n```\n\nIf the parameter isn't provided, or if the value is empty, then all the products\nthat the user has permission to see will be returned.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Maximum number of items that will be contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of product minimal versions.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ProductMinimalVersion"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Maximum number of items that will be contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/products/{product_id}/minimal_versions/{minimal_version_id}": {
+      "get": {
+        "description": "Retrieves the details of the product minimal version.",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "minimal_version_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductMinimalVersion"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/products/{product_id}/technology_previews": {
+      "get": {
+        "description": "Retrieves the list of product technology previews.",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "order",
+            "description": "Order criteria.\n\nThe syntax of this parameter is similar to the syntax of the _order by_ clause of\na SQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to sort the products\ndescending by name the value should be:\n\n```sql\nname desc\n```\n\nIf the parameter isn't provided, or if the value is empty, then the order of the\nresults is undefined.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "search",
+            "description": "Search criteria.\n\nThe syntax of this parameter is similar to the syntax of the _where_ clause of an\nSQL statement, but using the names of the attributes of the product instead of\nthe names of the columns of a table. For example, in order to retrieve all the\nproducts with a name starting with `my` the value should be:\n\n```sql\nname like 'my%'\n```\n\nIf the parameter isn't provided, or if the value is empty, then all the products\nthat the user has permission to see will be returned.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Maximum number of items that will be contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of product technology previews.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ProductTechnologyPreview"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Maximum number of items that will be contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection that match the search criteria,\nregardless of the size of the page.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/products/{product_id}/technology_previews/{technology_preview_id}": {
+      "get": {
+        "description": "Retrieves the details of the product technology preview.",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "name": "technology_preview_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductTechnologyPreview"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/clusters_mgmt/v1/provision_shards": {
       "post": {
         "description": "Adds a provision shard.",
@@ -10156,6 +11390,114 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProvisionShard"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/trusted_ip_addresses": {
+      "get": {
+        "description": "Retrieves the list of trusted ip addresses.",
+        "parameters": [
+          {
+            "name": "page",
+            "description": "Index of the requested page, where one corresponds to the first page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "description": "Number of items contained in the returned page.",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "description": "Retrieved list of trusted ip addresses.",
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/TrustedIp"
+                      }
+                    },
+                    "page": {
+                      "description": "Index of the requested page, where one corresponds to the first page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "size": {
+                      "description": "Number of items contained in the returned page.",
+                      "type": "integer",
+                      "format": "int32"
+                    },
+                    "total": {
+                      "description": "Total number of items of the collection.",
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clusters_mgmt/v1/trusted_ip_addresses/{trusted_ip_id}": {
+      "get": {
+        "description": "Retrieves the trusted ip adresses.",
+        "parameters": [
+          {
+            "name": "trusted_ip_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrustedIp"
                 }
               }
             }
@@ -10495,6 +11837,35 @@
           }
         }
       },
+      "AMIOverride": {
+        "description": "AMIOverride specifies what Amazon Machine Image should be used for a particular product and region.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'AMIOverride' if this is a complete object or 'AMIOverrideLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "ami": {
+            "description": "AMI is the id of the Amazon Machine Image.",
+            "type": "string"
+          },
+          "product": {
+            "description": "Link to the product type.",
+            "$ref": "#/components/schemas/Product"
+          },
+          "region": {
+            "description": "Link to the cloud provider region.",
+            "$ref": "#/components/schemas/CloudRegion"
+          }
+        }
+      },
       "AWS": {
         "description": "_Amazon Web Services_ specific settings of a cluster.",
         "properties": {
@@ -10514,6 +11885,27 @@
             "description": "AWS account identifier.",
             "type": "string"
           },
+          "additional_compute_security_group_ids": {
+            "description": "Additional AWS Security Groups to be added to default worker (compute) machine pool.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "additional_control_plane_security_group_ids": {
+            "description": "Additional AWS Security Groups to be added to default control plane machine pool.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "additional_infra_security_group_ids": {
+            "description": "Additional AWS Security Groups to be added to default infra machine pool.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "audit_log": {
             "description": "Audit log forwarding configuration",
             "$ref": "#/components/schemas/AuditLog"
@@ -10529,6 +11921,14 @@
           "etcd_encryption": {
             "description": "Related etcd encryption configuration",
             "$ref": "#/components/schemas/AwsEtcdEncryption"
+          },
+          "private_hosted_zone_id": {
+            "description": "ID of private hosted zone.",
+            "type": "string"
+          },
+          "private_hosted_zone_role_arn": {
+            "description": "Role ARN for private hosted zone.",
+            "type": "string"
           },
           "private_link": {
             "description": "Sets cluster to be inaccessible externally.",
@@ -10688,6 +12088,13 @@
             "description": "Self link.",
             "type": "string"
           },
+          "additional_security_group_ids": {
+            "description": "Additional AWS Security Groups to be added machine pool. Note that machine pools can only be worker node at the time.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "spot_market_options": {
             "description": "Use spot instances on this machine pool to reduce cost.",
             "$ref": "#/components/schemas/AWSSpotMarketOptions"
@@ -10763,6 +12170,22 @@
           }
         }
       },
+      "AWSSTSAccountRole": {
+        "description": "Representation of an sts account role for a rosa cluster",
+        "properties": {
+          "items": {
+            "description": "The list of STS Roles for this Account Role",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AWSSTSRole"
+            }
+          },
+          "prefix": {
+            "description": "The Prefix for this Account Role",
+            "type": "string"
+          }
+        }
+      },
       "AWSSTSPolicy": {
         "description": "Representation of an sts policies for rosa cluster",
         "properties": {
@@ -10780,6 +12203,35 @@
           },
           "type": {
             "description": "Type of policy operator/account role",
+            "type": "string"
+          }
+        }
+      },
+      "AWSSTSRole": {
+        "description": "Representation of an sts role for a rosa cluster",
+        "properties": {
+          "hcpManagedPolicies": {
+            "description": "Does this Role have HCP Managed Policies?",
+            "type": "boolean"
+          },
+          "isAdmin": {
+            "description": "Does this role have Admin permission?",
+            "type": "boolean"
+          },
+          "managedPolicies": {
+            "description": "Does this Role have Managed Policies?",
+            "type": "boolean"
+          },
+          "arn": {
+            "description": "The AWS ARN for this Role",
+            "type": "string"
+          },
+          "type": {
+            "description": "The type of this Role",
+            "type": "string"
+          },
+          "roleVersion": {
+            "description": "The Openshift Version for this Role",
             "type": "string"
           }
         }
@@ -10868,18 +12320,22 @@
             "description": "Self link.",
             "type": "string"
           },
-          "cluster_link": {
+          "cluster": {
             "description": "Link to the cluster that is registered with the DNS domain (optional).",
             "$ref": "#/components/schemas/ClusterLink"
           },
-          "organization_link": {
+          "organization": {
             "description": "Link to the organization that reserved the DNS domain.",
             "$ref": "#/components/schemas/OrganizationLink"
           },
-          "reserved_at": {
+          "reserved_at_timestamp": {
             "description": "Date and time when the DNS domain was reserved.",
             "type": "string",
             "format": "date-time"
+          },
+          "user_defined": {
+            "description": "Indicates if this dns domain is user defined.",
+            "type": "boolean"
           }
         }
       },
@@ -10917,6 +12373,10 @@
           "project_id": {
             "description": "GCP project identifier.",
             "type": "string"
+          },
+          "security": {
+            "description": "GCP Security Settings",
+            "$ref": "#/components/schemas/GcpSecurity"
           },
           "token_uri": {
             "description": "GCP token uri",
@@ -10978,11 +12438,48 @@
           }
         }
       },
+      "GCPImageOverride": {
+        "description": "GcpImageOverride specifies what a GCP VM Image should be used for a particular product and billing model",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'GCPImageOverride' if this is a complete object or 'GCPImageOverrideLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "billing_model": {
+            "description": "Link to the billing model.",
+            "$ref": "#/components/schemas/BillingModelItem"
+          },
+          "image_id": {
+            "description": "ImageID is the id of the Google Cloud Platform image.",
+            "type": "string"
+          },
+          "product": {
+            "description": "Link to the product type.",
+            "$ref": "#/components/schemas/Product"
+          },
+          "project_id": {
+            "description": "ProjectID is the id of the Google Cloud Platform project that hosts the image.",
+            "type": "string"
+          }
+        }
+      },
       "GCPNetwork": {
         "description": "GCP Network configuration of a cluster.",
         "properties": {
           "vpc_name": {
             "description": "VPC mame used by the cluster.",
+            "type": "string"
+          },
+          "vpc_project_id": {
+            "description": "The name of the host project where the shared VPC exists.",
             "type": "string"
           },
           "compute_subnet": {
@@ -11031,8 +12528,12 @@
             "description": "ID for a secondary user in the _HTPasswd_ data file.",
             "type": "string"
           },
+          "hashed_password": {
+            "description": "HTPasswd Hashed Password for a user in the _HTPasswd_ data file.\nThe value of this field is set as-is in the _HTPasswd_ data file for the HTPasswd IDP",
+            "type": "string"
+          },
           "password": {
-            "description": "Password for a secondary user in the _HTPasswd_ data file.",
+            "description": "Password in plain-text for a  user in the _HTPasswd_ data file.\nThe value of this field is hashed before setting it in the  _HTPasswd_ data file for the HTPasswd IDP",
             "type": "string"
           },
           "username": {
@@ -11131,7 +12632,7 @@
             "type": "boolean"
           },
           "oidc_config": {
-            "description": "Registered Oidc Config, if available holds information related to the oidc config",
+            "description": "Registered Oidc Config, if available holds information related to the oidc config.",
             "$ref": "#/components/schemas/OidcConfig"
           },
           "operator_iam_roles": {
@@ -11945,6 +13446,69 @@
           }
         }
       },
+      "AutoscalerResourceLimits": {
+        "properties": {
+          "gpus": {
+            "description": "Minimum and maximum number of different GPUs in cluster, in the format <gpu_type>:<min>:<max>.\nCluster autoscaler will not scale the cluster beyond these numbers. Can be passed multiple times.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AutoscalerResourceLimitsGPULimit"
+            }
+          },
+          "cores": {
+            "description": "Minimum and maximum number of cores in cluster, in the format <min>:<max>.\nCluster autoscaler will not scale the cluster beyond these numbers.",
+            "$ref": "#/components/schemas/ResourceRange"
+          },
+          "max_nodes_total": {
+            "description": "Maximum number of nodes in all node groups.\nCluster autoscaler will not grow the cluster beyond this number.",
+            "type": "integer",
+            "format": "int32"
+          },
+          "memory": {
+            "description": "Minimum and maximum number of gigabytes of memory in cluster, in the format <min>:<max>.\nCluster autoscaler will not scale the cluster beyond these numbers.",
+            "$ref": "#/components/schemas/ResourceRange"
+          }
+        }
+      },
+      "AutoscalerResourceLimitsGPULimit": {
+        "properties": {
+          "range": {
+            "$ref": "#/components/schemas/ResourceRange"
+          },
+          "type": {
+            "description": "The type of GPU to associate with the minimum and maximum limits.\nThis value is used by the Cluster Autoscaler to identify Nodes that will have GPU capacity by searching\nfor it as a label value on the Node objects. For example, Nodes that carry the label key\n`cluster-api/accelerator` with the label value being the same as the Type field will be counted towards\nthe resource limits by the Cluster Autoscaler.",
+            "type": "string"
+          }
+        }
+      },
+      "AutoscalerScaleDownConfig": {
+        "properties": {
+          "delay_after_add": {
+            "description": "How long after scale up that scale down evaluation resumes.",
+            "type": "string"
+          },
+          "delay_after_delete": {
+            "description": "How long after node deletion that scale down evaluation resumes, defaults to scan-interval.",
+            "type": "string"
+          },
+          "delay_after_failure": {
+            "description": "How long after scale down failure that scale down evaluation resumes.",
+            "type": "string"
+          },
+          "enabled": {
+            "description": "Should cluster-autoscaler scale down the cluster.",
+            "type": "boolean"
+          },
+          "unneeded_time": {
+            "description": "How long a node should be unneeded before it is eligible for scale down.",
+            "type": "string"
+          },
+          "utilization_threshold": {
+            "description": "Node utilization level, defined as sum of requested resources divided by capacity, below which a node can be considered for scale down.",
+            "type": "string"
+          }
+        }
+      },
       "AwsEtcdEncryption": {
         "description": "Contains the necessary attributes to support etcd encryption for AWS based clusters.",
         "properties": {
@@ -11960,10 +13524,44 @@
         "enum": [
           "marketplace",
           "marketplace-aws",
+          "marketplace-gcp",
           "marketplace-rhm",
           "marketplace-azure",
           "standard"
         ]
+      },
+      "BillingModelItem": {
+        "description": "BillingModelItem represents a billing model",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'BillingModelItem' if this is a complete object or 'BillingModelItemLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "billing_model_type": {
+            "description": "BillingModelType is the type of the BillingModel. e.g. standard, marketplace.",
+            "type": "string"
+          },
+          "description": {
+            "description": "Single line description of the billing model.",
+            "type": "string"
+          },
+          "display_name": {
+            "description": "User friendly display name of the billing model.",
+            "type": "string"
+          },
+          "marketplace": {
+            "description": "Indicates the marketplace of the billing model. e.g. gcp, aws, etc.",
+            "type": "string"
+          }
+        }
       },
       "ByoOidc": {
         "description": "ByoOidc configuration.",
@@ -11977,20 +13575,35 @@
       "CloudVPC": {
         "description": "Description of a cloud provider virtual private cloud.",
         "properties": {
+          "aws_security_groups": {
+            "description": "List of AWS security groups with details.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SecurityGroup"
+            }
+          },
           "aws_subnets": {
-            "description": "List of subnetworks",
+            "description": "List of AWS subnetworks with details.",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Subnetwork"
             }
           },
+          "cidr_block": {
+            "description": "CIDR block of the virtual private cloud.",
+            "type": "string"
+          },
           "id": {
-            "description": "ID of virtual private cloud",
+            "description": "ID of virtual private cloud.",
             "type": "string"
           },
           "name": {
-            "description": "Name of virtual private cloud according to its `Name` tag on AWS",
+            "description": "Name of virtual private cloud according to its `Name` tag on AWS.",
             "type": "string"
+          },
+          "red_hat_managed": {
+            "description": "If the resource is RH managed.",
+            "type": "boolean"
           },
           "subnets": {
             "description": "List of subnets used by the virtual private cloud.",
@@ -12023,6 +13636,13 @@
           "name": {
             "description": "Human friendly identifier of the cloud provider, for example `aws`.",
             "type": "string"
+          },
+          "regions": {
+            "description": "(optional) Provider's regions - only included when listing providers with `fetchRegions=true`.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CloudRegion"
+            }
           }
         }
       },
@@ -12088,6 +13708,14 @@
             "description": "'true' if the region is supported only for CCS clusters, 'false' otherwise.",
             "type": "boolean"
           },
+          "kms_location_id": {
+            "description": "(GCP only) Comma-separated list of KMS location IDs that can be used with this region.\nE.g. \"global,nam4,us\". Order is not guaranteed.",
+            "type": "string"
+          },
+          "kms_location_name": {
+            "description": "(GCP only) Comma-separated list of display names corresponding to KMSLocationID.\nE.g. \"Global,nam4 (Iowa, South Carolina, and Oklahoma),US\". Order is not guaranteed but will match KMSLocationID.\nUnfortunately, this API doesn't allow robust splitting - Contact ocm-feedback@redhat.com if you want to rely on this.",
+            "type": "string"
+          },
           "cloud_provider": {
             "description": "Link to the cloud provider that the region belongs to.",
             "$ref": "#/components/schemas/CloudProvider"
@@ -12097,7 +13725,11 @@
             "type": "string"
           },
           "enabled": {
-            "description": "Whether the region is enabled for deploying an OSD cluster.",
+            "description": "Whether the region is enabled for deploying a managed cluster.",
+            "type": "boolean"
+          },
+          "govcloud": {
+            "description": "Whether the region is an AWS GovCloud region.",
             "type": "boolean"
           },
           "name": {
@@ -12178,6 +13810,10 @@
             "items": {
               "$ref": "#/components/schemas/AddOnInstallation"
             }
+          },
+          "autoscaler": {
+            "description": "Link to an optional _ClusterAutoscaler_ that is coupled with the cluster.",
+            "$ref": "#/components/schemas/ClusterAutoscaler"
           },
           "billing_model": {
             "description": "Billing model for cluster resources.",
@@ -12272,6 +13908,10 @@
             "items": {
               "$ref": "#/components/schemas/Ingress"
             }
+          },
+          "kubelet_config": {
+            "description": "Details of cluster-wide KubeletConfig",
+            "$ref": "#/components/schemas/KubeletConfig"
           },
           "load_balancer_quota": {
             "description": "Load Balancer quota to be assigned to the cluster.",
@@ -12379,6 +14019,69 @@
           "listening": {
             "description": "The listening method of the API server.",
             "$ref": "#/components/schemas/ListeningMethod"
+          }
+        }
+      },
+      "ClusterAutoscaler": {
+        "description": "Cluster-wide autoscaling configuration.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'ClusterAutoscaler' if this is a complete object or 'ClusterAutoscalerLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "balance_similar_node_groups": {
+            "description": "BalanceSimilarNodeGroups enables/disables the\n`--balance-similar-node-groups` cluster-autoscaler feature.\nThis feature will automatically identify node groups with\nthe same instance type and the same set of labels and try\nto keep the respective sizes of those node groups balanced.",
+            "type": "boolean"
+          },
+          "balancing_ignored_labels": {
+            "description": "This option specifies labels that cluster autoscaler should ignore when considering node group similarity.\nFor example, if you have nodes with \"topology.ebs.csi.aws.com/zone\" label, you can add name of this label here\nto prevent cluster autoscaler from splitting nodes into different node groups based on its value.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ignore_daemonsets_utilization": {
+            "description": "Should CA ignore DaemonSet pods when calculating resource utilization for scaling down. false by default.",
+            "type": "boolean"
+          },
+          "log_verbosity": {
+            "description": "Sets the autoscaler log level.\nDefault value is 1, level 4 is recommended for DEBUGGING and level 6 will enable almost everything.",
+            "type": "integer",
+            "format": "int32"
+          },
+          "max_node_provision_time": {
+            "description": "Maximum time CA waits for node to be provisioned.",
+            "type": "string"
+          },
+          "max_pod_grace_period": {
+            "description": "Gives pods graceful termination time before scaling down.",
+            "type": "integer",
+            "format": "int32"
+          },
+          "pod_priority_threshold": {
+            "description": "To allow users to schedule \"best-effort\" pods, which shouldn't trigger\nCluster Autoscaler actions, but only run when there are spare resources available,\nMore info: https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#how-does-cluster-autoscaler-work-with-pod-priority-and-preemption.",
+            "type": "integer",
+            "format": "int32"
+          },
+          "resource_limits": {
+            "description": "Constraints of autoscaling resources.",
+            "$ref": "#/components/schemas/AutoscalerResourceLimits"
+          },
+          "scale_down": {
+            "description": "Configuration of scale down operation.",
+            "$ref": "#/components/schemas/AutoscalerScaleDownConfig"
+          },
+          "skip_nodes_with_local_storage": {
+            "description": "Enables/Disables `--skip-nodes-with-local-storage` CA feature flag. If true cluster autoscaler will never delete nodes with pods with local storage, e.g. EmptyDir or HostPath. true by default at autoscaler.",
+            "type": "boolean"
           }
         }
       },
@@ -12744,16 +14447,16 @@
             "type": "string"
           },
           "schedule_type": {
-            "description": "Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).",
-            "type": "string"
+            "description": "Schedule type of the control plane upgrade.",
+            "$ref": "#/components/schemas/ScheduleType"
           },
           "state": {
             "description": "State of the upgrade policy for the hosted control plane.",
             "$ref": "#/components/schemas/UpgradePolicyState"
           },
           "upgrade_type": {
-            "description": "Upgrade type specify the type of the upgrade. Can only be \"ControlPlane\".",
-            "type": "string"
+            "description": "Upgrade type of the control plane.",
+            "$ref": "#/components/schemas/UpgradeType"
           },
           "version": {
             "description": "Version is the desired upgrade version.",
@@ -12833,6 +14536,10 @@
       "Environment": {
         "description": "Description of an environment",
         "properties": {
+          "backplane_url": {
+            "description": "the backplane url for the environment",
+            "type": "string"
+          },
           "last_limited_support_check": {
             "description": "last time that the worker checked for limited support clusters",
             "type": "string",
@@ -12935,6 +14642,15 @@
             "description": "Number of master nodes of the cluster.",
             "type": "integer",
             "format": "int32"
+          }
+        }
+      },
+      "GcpSecurity": {
+        "description": "Google cloud platform security settings of a cluster.",
+        "properties": {
+          "secure_boot": {
+            "description": "Determines if Shielded VM feature \"Secure Boot\" should be set for the nodes of the cluster.",
+            "type": "boolean"
           }
         }
       },
@@ -13140,6 +14856,35 @@
           "OpenIDIdentityProvider"
         ]
       },
+      "ImageOverrides": {
+        "description": "ImageOverrides holds the lists of available images per cloud provider.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'ImageOverrides' if this is a complete object or 'ImageOverridesLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "aws": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AMIOverride"
+            }
+          },
+          "gcp": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GCPImageOverride"
+            }
+          }
+        }
+      },
       "InflightCheck": {
         "description": "Representation of check running before the cluster is provisioned.",
         "properties": {
@@ -13213,9 +14958,24 @@
             "description": "DNS Name of the ingress.",
             "type": "string"
           },
+          "cluster_routes_hostname": {
+            "description": "Cluster routes hostname.",
+            "type": "string"
+          },
+          "cluster_routes_tls_secret_ref": {
+            "description": "Cluster routes TLS Secret reference.",
+            "type": "string"
+          },
           "default": {
             "description": "Indicates if this is the default ingress.",
             "type": "boolean"
+          },
+          "excluded_namespaces": {
+            "description": "A set of excluded namespaces for the ingress.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "listening": {
             "description": "Listening method of the ingress",
@@ -13225,12 +14985,20 @@
             "description": "Load Balancer type of the ingress",
             "$ref": "#/components/schemas/LoadBalancerFlavor"
           },
+          "route_namespace_ownership_policy": {
+            "description": "Namespace Ownership Policy for the ingress.",
+            "$ref": "#/components/schemas/NamespaceOwnershipPolicy"
+          },
           "route_selectors": {
             "description": "A set of labels for the ingress. ",
             "type": "object",
             "additionalProperties": {
               "type": "string"
             }
+          },
+          "route_wildcard_policy": {
+            "description": "Wildcard policy for the ingress.",
+            "$ref": "#/components/schemas/WildcardPolicy"
           }
         }
       },
@@ -13265,6 +15033,28 @@
           "name": {
             "description": "Name of the key ring.",
             "type": "string"
+          }
+        }
+      },
+      "KubeletConfig": {
+        "description": "OCM representation of KubeletConfig, exposing the fields of Kubernetes\nKubeletConfig that can be managed by users",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'KubeletConfig' if this is a complete object or 'KubeletConfigLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "pod_pids_limit": {
+            "description": "Allows user to specify the podPidsLimit to be applied via KubeletConfig.\nUseful if workloads have greater PIDs limit requirements than the OCP default.",
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -13365,7 +15155,7 @@
         ]
       },
       "LoadBalancerFlavor": {
-        "description": "Type of node received via telemetry.",
+        "description": "Type of load balancer for AWS cloud provider parameters.",
         "type": "string",
         "enum": [
           "classic",
@@ -13605,6 +15395,14 @@
           }
         }
       },
+      "NamespaceOwnershipPolicy": {
+        "description": "Type of Namespace Ownership Policy.",
+        "type": "string",
+        "enum": [
+          "InterNamespaceAllowed",
+          "Strict"
+        ]
+      },
       "Network": {
         "description": "Network configuration of a cluster.",
         "properties": {
@@ -13628,6 +15426,30 @@
           "type": {
             "description": "The main controller responsible for rendering the core networking components.",
             "type": "string"
+          }
+        }
+      },
+      "NetworkVerification": {
+        "properties": {
+          "cloud_provider_data": {
+            "description": "Cloud provider data to execute the network verification.",
+            "$ref": "#/components/schemas/CloudProviderData"
+          },
+          "cluster_id": {
+            "description": "Cluster ID needed to execute the network verification.",
+            "type": "string"
+          },
+          "items": {
+            "description": "Details about each subnet network verification.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SubnetNetworkVerification"
+            }
+          },
+          "total": {
+            "description": "Amount of network verifier executions started.",
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -13816,16 +15638,16 @@
             "type": "string"
           },
           "schedule_type": {
-            "description": "Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).",
-            "type": "string"
+            "description": "Schedule type of the upgrade.",
+            "$ref": "#/components/schemas/ScheduleType"
           },
           "state": {
             "description": "State of the upgrade policy for the node pool.",
             "$ref": "#/components/schemas/UpgradePolicyState"
           },
           "upgrade_type": {
-            "description": "Upgrade type specify the type of the upgrade. Can only be \"NodePool\".",
-            "type": "string"
+            "description": "Upgrade type of the node pool.",
+            "$ref": "#/components/schemas/UpgradeType"
           },
           "version": {
             "description": "Version is the desired upgrade version.",
@@ -14131,6 +15953,63 @@
           }
         }
       },
+      "ProductMinimalVersion": {
+        "description": "Representation of a product minimal version.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'ProductMinimalVersion' if this is a complete object or 'ProductMinimalVersionLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "rosa_cli": {
+            "description": "The ROSA CLI minimal version.",
+            "type": "string"
+          },
+          "start_date": {
+            "description": "The start date for this minimal version.",
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ProductTechnologyPreview": {
+        "description": "Representation of a product technology preview.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'ProductTechnologyPreview' if this is a complete object or 'ProductTechnologyPreviewLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "additional_text": {
+            "description": "Message associated with this technology preview.",
+            "type": "string"
+          },
+          "end_date": {
+            "description": "The end date for this technology preview.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "start_date": {
+            "description": "The start date for this technology preview.",
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
       "ProvisionShard": {
         "description": "Contains the properties of the provision shard, including AWS and GCP related configurations",
         "properties": {
@@ -14198,6 +16077,12 @@
           }
         }
       },
+      "ProvisionShardTopology": {
+        "type": "string",
+        "enum": [
+          "dedicated"
+        ]
+      },
       "Proxy": {
         "description": "Proxy configuration of a cluster.",
         "properties": {
@@ -14215,6 +16100,18 @@
           }
         }
       },
+      "ResourceRange": {
+        "properties": {
+          "max": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "min": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "RootVolume": {
         "description": "Root volume capabilities.",
         "properties": {
@@ -14225,6 +16122,31 @@
           "gcp": {
             "description": "GCP Volume specification",
             "$ref": "#/components/schemas/GCPVolume"
+          }
+        }
+      },
+      "ScheduleType": {
+        "description": "ScheduleType defines which type of scheduling should be used for the upgrade policy.",
+        "type": "string",
+        "enum": [
+          "automatic",
+          "manual"
+        ]
+      },
+      "SecurityGroup": {
+        "description": "AWS security group object",
+        "properties": {
+          "id": {
+            "description": "The security group ID.",
+            "type": "string"
+          },
+          "name": {
+            "description": "Name of the security group according to its `Name` tag on AWS.",
+            "type": "string"
+          },
+          "red_hat_managed": {
+            "description": "If the resource is RH managed.",
+            "type": "boolean"
           }
         }
       },
@@ -14244,12 +16166,16 @@
             "type": "string"
           },
           "kubeconfig": {
-            "description": "The kubeconfig of the server",
+            "description": "The kubeconfig of the server.",
             "type": "string"
           },
           "server": {
-            "description": "The URL of the server",
+            "description": "The URL of the server.",
             "type": "string"
+          },
+          "topology": {
+            "description": "The topology of a provision shard (Optional).",
+            "$ref": "#/components/schemas/ProvisionShardTopology"
           }
         }
       },
@@ -14289,23 +16215,74 @@
           }
         }
       },
+      "StsSupportJumpRole": {
+        "description": "Isolated STS support role created per organization.",
+        "properties": {
+          "role_arn": {
+            "description": "ARN of the support role created in the SRE jump account.",
+            "type": "string"
+          }
+        }
+      },
+      "SubnetNetworkVerification": {
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'SubnetNetworkVerification' if this is a complete object or 'SubnetNetworkVerificationLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "details": {
+            "description": "Slice of failures that happened during a subnet network verification.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "state": {
+            "description": "State of the subnet network verification.",
+            "type": "string"
+          },
+          "tags": {
+            "description": "Tags supplied to the network verifier for this subnet.",
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "Subnetwork": {
         "description": "AWS subnetwork object to be used while installing a cluster",
         "properties": {
+          "cidr_block": {
+            "description": "The CIDR Block of the subnet.",
+            "type": "string"
+          },
           "availability_zone": {
-            "description": "The availability zone to which the subnet is related",
+            "description": "The availability zone to which the subnet is related.",
             "type": "string"
           },
           "name": {
-            "description": "Name of the subnet according to its `Name` tag on AWS",
+            "description": "Name of the subnet according to its `Name` tag on AWS.",
             "type": "string"
           },
           "public": {
-            "description": "Whether it is a public subnet",
+            "description": "Whether or not it is a public subnet.",
+            "type": "boolean"
+          },
+          "red_hat_managed": {
+            "description": "If the resource is RH managed.",
             "type": "boolean"
           },
           "subnet_id": {
-            "description": "The subnet id to be used while installing a cluster",
+            "description": "The subnet ID to be used while installing a cluster.",
             "type": "string"
           }
         }
@@ -14368,6 +16345,27 @@
           }
         }
       },
+      "TrustedIp": {
+        "description": "Representation of a trusted ip address in clusterdeployment.",
+        "properties": {
+          "kind": {
+            "description": "Indicates the type of this object. Will be 'TrustedIp' if this is a complete object or 'TrustedIpLink' if it is just a link.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier of the object.",
+            "type": "string"
+          },
+          "href": {
+            "description": "Self link.",
+            "type": "string"
+          },
+          "enabled": {
+            "description": "The boolean set to show if the ip is enabled.",
+            "type": "boolean"
+          }
+        }
+      },
       "TuningConfig": {
         "description": "Representation of a tuning config.",
         "properties": {
@@ -14426,12 +16424,12 @@
             "type": "string"
           },
           "schedule_type": {
-            "description": "Schedule type can be either \"manual\" (single execution) or \"automatic\" (re-occurring).",
-            "type": "string"
+            "description": "Schedule type of the upgrade.",
+            "$ref": "#/components/schemas/ScheduleType"
           },
           "upgrade_type": {
-            "description": "Upgrade type specify the type of the upgrade. Can be \"OSD\" or \"CVE\".",
-            "type": "string"
+            "description": "Upgrade type specify the type of the upgrade.",
+            "$ref": "#/components/schemas/UpgradeType"
           },
           "version": {
             "description": "Version is the desired upgrade version.",
@@ -14475,6 +16473,16 @@
           "pending",
           "scheduled",
           "started"
+        ]
+      },
+      "UpgradeType": {
+        "description": "UpgradeType defines which type of upgrade should be used.",
+        "type": "string",
+        "enum": [
+          "OSD",
+          "ADDON",
+          "ControlPlane",
+          "NodePool"
         ]
       },
       "User": {
@@ -14523,6 +16531,10 @@
             "description": "Self link.",
             "type": "string"
           },
+          "gcp_marketplace_enabled": {
+            "description": "GCPMarketplaceEnabled indicates if this version can be used to create GCP Marketplace clusters.",
+            "type": "boolean"
+          },
           "rosa_enabled": {
             "description": "ROSAEnabled indicates whether this version can be used to create ROSA clusters.",
             "type": "boolean"
@@ -14555,12 +16567,16 @@
             "description": "HostedControlPlaneEnabled indicates whether this version can be used to create HCP clusters.",
             "type": "boolean"
           },
+          "image_overrides": {
+            "description": "ImageOverrides contains the lists of images per cloud provider.",
+            "$ref": "#/components/schemas/ImageOverrides"
+          },
           "raw_id": {
             "description": "RawID is the id of the version - without channel group and prefix.",
             "type": "string"
           },
           "release_image": {
-            "description": "ReleaseImage contains the URI of Openshift release image",
+            "description": "ReleaseImage contains the URI of Openshift release image.",
             "type": "string"
           }
         }
@@ -14641,6 +16657,14 @@
           }
         }
       },
+      "WildcardPolicy": {
+        "description": "Type of wildcard policy.",
+        "type": "string",
+        "enum": [
+          "WildcardsAllowed",
+          "WildcardsDisallowed"
+        ]
+      },
       "Error": {
         "type": "object",
         "properties": {
@@ -14684,7 +16708,7 @@
   "security": [
     {
       "bearer": [
-
+        
       ]
     }
   ]

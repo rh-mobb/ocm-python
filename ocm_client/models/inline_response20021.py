@@ -34,7 +34,7 @@ class InlineResponse20021(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[Group]',
+        'items': 'list[VersionGateAgreement]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20021(object):
     def items(self):
         """Gets the items of this InlineResponse20021.  # noqa: E501
 
-        Retrieved list of groups.  # noqa: E501
+        Retrieved list of version gate agreement.  # noqa: E501
 
         :return: The items of this InlineResponse20021.  # noqa: E501
-        :rtype: list[Group]
+        :rtype: list[VersionGateAgreement]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20021(object):
     def items(self, items):
         """Sets the items of this InlineResponse20021.
 
-        Retrieved list of groups.  # noqa: E501
+        Retrieved list of version gate agreement.  # noqa: E501
 
         :param items: The items of this InlineResponse20021.  # noqa: E501
-        :type: list[Group]
+        :type: list[VersionGateAgreement]
         """
 
         self._items = items

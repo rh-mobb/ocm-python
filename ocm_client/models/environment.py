@@ -34,34 +34,62 @@ class Environment(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'backplane_url': 'str',
         'last_limited_support_check': 'datetime',
         'last_upgrade_available_check': 'datetime',
         'name': 'str'
     }
 
     attribute_map = {
+        'backplane_url': 'backplane_url',
         'last_limited_support_check': 'last_limited_support_check',
         'last_upgrade_available_check': 'last_upgrade_available_check',
         'name': 'name'
     }
 
-    def __init__(self, last_limited_support_check=None, last_upgrade_available_check=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, backplane_url=None, last_limited_support_check=None, last_upgrade_available_check=None, name=None, local_vars_configuration=None):  # noqa: E501
         """Environment - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._backplane_url = None
         self._last_limited_support_check = None
         self._last_upgrade_available_check = None
         self._name = None
         self.discriminator = None
 
+        if backplane_url is not None:
+            self.backplane_url = backplane_url
         if last_limited_support_check is not None:
             self.last_limited_support_check = last_limited_support_check
         if last_upgrade_available_check is not None:
             self.last_upgrade_available_check = last_upgrade_available_check
         if name is not None:
             self.name = name
+
+    @property
+    def backplane_url(self):
+        """Gets the backplane_url of this Environment.  # noqa: E501
+
+        the backplane url for the environment  # noqa: E501
+
+        :return: The backplane_url of this Environment.  # noqa: E501
+        :rtype: str
+        """
+        return self._backplane_url
+
+    @backplane_url.setter
+    def backplane_url(self, backplane_url):
+        """Sets the backplane_url of this Environment.
+
+        the backplane url for the environment  # noqa: E501
+
+        :param backplane_url: The backplane_url of this Environment.  # noqa: E501
+        :type: str
+        """
+
+        self._backplane_url = backplane_url
 
     @property
     def last_limited_support_check(self):

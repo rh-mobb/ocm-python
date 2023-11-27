@@ -34,7 +34,7 @@ class InlineResponse20031(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[NodePool]',
+        'items': 'list[MachinePool]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20031(object):
     def items(self):
         """Gets the items of this InlineResponse20031.  # noqa: E501
 
-        Retrieved list of node pools.  # noqa: E501
+        Retrieved list of machine pools.  # noqa: E501
 
         :return: The items of this InlineResponse20031.  # noqa: E501
-        :rtype: list[NodePool]
+        :rtype: list[MachinePool]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20031(object):
     def items(self, items):
         """Sets the items of this InlineResponse20031.
 
-        Retrieved list of node pools.  # noqa: E501
+        Retrieved list of machine pools.  # noqa: E501
 
         :param items: The items of this InlineResponse20031.  # noqa: E501
-        :type: list[NodePool]
+        :type: list[MachinePool]
         """
 
         self._items = items

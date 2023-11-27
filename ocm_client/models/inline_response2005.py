@@ -34,31 +34,36 @@ class InlineResponse2005(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[STSCredentialRequest]',
+        'aws_account_id': 'str',
+        'items': 'list[AWSSTSAccountRole]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
     }
 
     attribute_map = {
+        'aws_account_id': 'aws_account_id',
         'items': 'items',
         'page': 'page',
         'size': 'size',
         'total': 'total'
     }
 
-    def __init__(self, items=None, page=None, size=None, total=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aws_account_id=None, items=None, page=None, size=None, total=None, local_vars_configuration=None):  # noqa: E501
         """InlineResponse2005 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._aws_account_id = None
         self._items = None
         self._page = None
         self._size = None
         self._total = None
         self.discriminator = None
 
+        if aws_account_id is not None:
+            self.aws_account_id = aws_account_id
         if items is not None:
             self.items = items
         if page is not None:
@@ -69,13 +74,36 @@ class InlineResponse2005(object):
             self.total = total
 
     @property
+    def aws_account_id(self):
+        """Gets the aws_account_id of this InlineResponse2005.  # noqa: E501
+
+        The AWS Account Id for the STS Account Roles  # noqa: E501
+
+        :return: The aws_account_id of this InlineResponse2005.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_account_id
+
+    @aws_account_id.setter
+    def aws_account_id(self, aws_account_id):
+        """Sets the aws_account_id of this InlineResponse2005.
+
+        The AWS Account Id for the STS Account Roles  # noqa: E501
+
+        :param aws_account_id: The aws_account_id of this InlineResponse2005.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_account_id = aws_account_id
+
+    @property
     def items(self):
         """Gets the items of this InlineResponse2005.  # noqa: E501
 
-        Retrieved list of CredRequest.  # noqa: E501
+        Retrieved list of STS Account Roles  # noqa: E501
 
         :return: The items of this InlineResponse2005.  # noqa: E501
-        :rtype: list[STSCredentialRequest]
+        :rtype: list[AWSSTSAccountRole]
         """
         return self._items
 
@@ -83,10 +111,10 @@ class InlineResponse2005(object):
     def items(self, items):
         """Sets the items of this InlineResponse2005.
 
-        Retrieved list of CredRequest.  # noqa: E501
+        Retrieved list of STS Account Roles  # noqa: E501
 
         :param items: The items of this InlineResponse2005.  # noqa: E501
-        :type: list[STSCredentialRequest]
+        :type: list[AWSSTSAccountRole]
         """
 
         self._items = items
@@ -95,7 +123,7 @@ class InlineResponse2005(object):
     def page(self):
         """Gets the page of this InlineResponse2005.  # noqa: E501
 
-        Index of the requested page, where one corresponds to the first page.  # noqa: E501
+        Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`.  # noqa: E501
 
         :return: The page of this InlineResponse2005.  # noqa: E501
         :rtype: int
@@ -106,7 +134,7 @@ class InlineResponse2005(object):
     def page(self, page):
         """Sets the page of this InlineResponse2005.
 
-        Index of the requested page, where one corresponds to the first page.  # noqa: E501
+        Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`.  # noqa: E501
 
         :param page: The page of this InlineResponse2005.  # noqa: E501
         :type: int
@@ -118,7 +146,7 @@ class InlineResponse2005(object):
     def size(self):
         """Gets the size of this InlineResponse2005.  # noqa: E501
 
-        Maximum number of items that will be contained in the returned page.  # noqa: E501
+        Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of be the total number of STS account roles.  # noqa: E501
 
         :return: The size of this InlineResponse2005.  # noqa: E501
         :rtype: int
@@ -129,7 +157,7 @@ class InlineResponse2005(object):
     def size(self, size):
         """Sets the size of this InlineResponse2005.
 
-        Maximum number of items that will be contained in the returned page.  # noqa: E501
+        Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of be the total number of STS account roles.  # noqa: E501
 
         :param size: The size of this InlineResponse2005.  # noqa: E501
         :type: int
@@ -141,7 +169,7 @@ class InlineResponse2005(object):
     def total(self):
         """Gets the total of this InlineResponse2005.  # noqa: E501
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of STS account roles  # noqa: E501
 
         :return: The total of this InlineResponse2005.  # noqa: E501
         :rtype: int
@@ -152,7 +180,7 @@ class InlineResponse2005(object):
     def total(self, total):
         """Sets the total of this InlineResponse2005.
 
-        Total number of items of the collection that match the search criteria, regardless of the size of the page.  # noqa: E501
+        Total number of items of the collection that match the search criteria, regardless of the size of the page. As this collection doesn't support paging or searching the result will always be the total number of STS account roles  # noqa: E501
 
         :param total: The total of this InlineResponse2005.  # noqa: E501
         :type: int

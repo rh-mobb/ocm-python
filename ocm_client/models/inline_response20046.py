@@ -34,7 +34,7 @@ class InlineResponse20046(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[VersionGate]',
+        'items': 'list[PendingDeleteCluster]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20046(object):
     def items(self):
         """Gets the items of this InlineResponse20046.  # noqa: E501
 
-        Retrieved list of version gates.  # noqa: E501
+        Retrieved list of pending delete clusters.  # noqa: E501
 
         :return: The items of this InlineResponse20046.  # noqa: E501
-        :rtype: list[VersionGate]
+        :rtype: list[PendingDeleteCluster]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20046(object):
     def items(self, items):
         """Sets the items of this InlineResponse20046.
 
-        Retrieved list of version gates.  # noqa: E501
+        Retrieved list of pending delete clusters.  # noqa: E501
 
         :param items: The items of this InlineResponse20046.  # noqa: E501
-        :type: list[VersionGate]
+        :type: list[PendingDeleteCluster]
         """
 
         self._items = items
@@ -118,7 +118,7 @@ class InlineResponse20046(object):
     def size(self):
         """Gets the size of this InlineResponse20046.  # noqa: E501
 
-        Maximum number of items that will be contained in the returned page.  Default value is `100`.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :return: The size of this InlineResponse20046.  # noqa: E501
         :rtype: int
@@ -129,7 +129,7 @@ class InlineResponse20046(object):
     def size(self, size):
         """Sets the size of this InlineResponse20046.
 
-        Maximum number of items that will be contained in the returned page.  Default value is `100`.  # noqa: E501
+        Maximum number of items that will be contained in the returned page.  # noqa: E501
 
         :param size: The size of this InlineResponse20046.  # noqa: E501
         :type: int

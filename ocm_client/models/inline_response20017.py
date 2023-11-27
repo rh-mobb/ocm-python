@@ -34,7 +34,7 @@ class InlineResponse20017(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'items': 'list[Label]',
+        'items': 'list[ControlPlaneUpgradePolicy]',
         'page': 'int',
         'size': 'int',
         'total': 'int'
@@ -72,10 +72,10 @@ class InlineResponse20017(object):
     def items(self):
         """Gets the items of this InlineResponse20017.  # noqa: E501
 
-        Retrieved list of labels.  # noqa: E501
+        Retrieved list of upgrade policy.  # noqa: E501
 
         :return: The items of this InlineResponse20017.  # noqa: E501
-        :rtype: list[Label]
+        :rtype: list[ControlPlaneUpgradePolicy]
         """
         return self._items
 
@@ -83,10 +83,10 @@ class InlineResponse20017(object):
     def items(self, items):
         """Sets the items of this InlineResponse20017.
 
-        Retrieved list of labels.  # noqa: E501
+        Retrieved list of upgrade policy.  # noqa: E501
 
         :param items: The items of this InlineResponse20017.  # noqa: E501
-        :type: list[Label]
+        :type: list[ControlPlaneUpgradePolicy]
         """
 
         self._items = items

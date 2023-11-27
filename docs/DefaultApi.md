@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_aws_infrastructure_access_roles_get**](DefaultApi.md#api_clusters_mgmt_v1_aws_infrastructure_access_roles_get) | **GET** /api/clusters_mgmt/v1/aws_infrastructure_access_roles | 
 [**api_clusters_mgmt_v1_aws_inquiries_machine_types_post**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_machine_types_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/machine_types | 
 [**api_clusters_mgmt_v1_aws_inquiries_regions_post**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_regions_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/regions | 
+[**api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/sts_account_roles | 
 [**api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get) | **GET** /api/clusters_mgmt/v1/aws_inquiries/sts_credential_requests | 
 [**api_clusters_mgmt_v1_aws_inquiries_sts_policies_get**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_sts_policies_get) | **GET** /api/clusters_mgmt/v1/aws_inquiries/sts_policies | 
 [**api_clusters_mgmt_v1_aws_inquiries_vpcs_post**](DefaultApi.md#api_clusters_mgmt_v1_aws_inquiries_vpcs_post) | **POST** /api/clusters_mgmt/v1/aws_inquiries/vpcs | 
@@ -43,6 +44,10 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_addons_addoninstallation_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_addoninstallation_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons/{addoninstallation_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_addons_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_addons_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_addons_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/addons | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/autoscaler | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants/{aws_infrastructure_access_role_grant_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_aws_infrastructure_access_role_grant_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants/{aws_infrastructure_access_role_grant_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/aws_infrastructure_access_role_grants | 
@@ -91,6 +96,7 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_user_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_user_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/groups/{group_id}/users/{user_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_hibernate_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hibernate_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/hibernate | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_hypershift_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hypershift_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/hypershift | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/hypershift | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers/{identity_provider_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/identity_providers/{identity_provider_id} | 
@@ -110,6 +116,10 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_ingress_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_ingress_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses/{ingress_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_ingresses_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_ingresses_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/ingresses | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/kubelet_config | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons/{limited_support_reason_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_limited_support_reason_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/limited_support_reasons/{limited_support_reason_id} | 
@@ -139,6 +149,10 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_node_pools_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_node_pools_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/node_pools | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_product_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/minimal_versions/{minimal_version_id} | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/product/technology_previews/{technology_preview_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/provision_shard | 
@@ -149,6 +163,7 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_operator_iam_role_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_operator_iam_role_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles/{operator_iam_role_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_operator_roles | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/sts_support_jump_role | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_post) | **POST** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_tuning_config_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_tuning_config_id_delete) | **DELETE** /api/clusters_mgmt/v1/clusters/{cluster_id}/tuning_configs/{tuning_config_id} | 
@@ -161,6 +176,7 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id} | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id}/state | 
 [**api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_patch**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_upgrade_policy_id_state_patch) | **PATCH** /api/clusters_mgmt/v1/clusters/{cluster_id}/upgrade_policies/{upgrade_policy_id}/state | 
+[**api_clusters_mgmt_v1_clusters_cluster_id_vpc_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_cluster_id_vpc_get) | **GET** /api/clusters_mgmt/v1/clusters/{cluster_id}/vpc | 
 [**api_clusters_mgmt_v1_clusters_get**](DefaultApi.md#api_clusters_mgmt_v1_clusters_get) | **GET** /api/clusters_mgmt/v1/clusters | 
 [**api_clusters_mgmt_v1_clusters_post**](DefaultApi.md#api_clusters_mgmt_v1_clusters_post) | **POST** /api/clusters_mgmt/v1/clusters | 
 [**api_clusters_mgmt_v1_dns_domains_dns_domain_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_dns_domains_dns_domain_id_delete) | **DELETE** /api/clusters_mgmt/v1/dns_domains/{dns_domain_id} | 
@@ -177,6 +193,7 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_flavours_post**](DefaultApi.md#api_clusters_mgmt_v1_flavours_post) | **POST** /api/clusters_mgmt/v1/flavours | 
 [**api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post**](DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/encryption_keys | 
 [**api_clusters_mgmt_v1_gcp_inquiries_key_rings_post**](DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_key_rings_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/key_rings | 
+[**api_clusters_mgmt_v1_gcp_inquiries_machine_types_post**](DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_machine_types_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/machine_types | 
 [**api_clusters_mgmt_v1_gcp_inquiries_regions_post**](DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_regions_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/regions | 
 [**api_clusters_mgmt_v1_gcp_inquiries_vpcs_post**](DefaultApi.md#api_clusters_mgmt_v1_gcp_inquiries_vpcs_post) | **POST** /api/clusters_mgmt/v1/gcp_inquiries/vpcs | 
 [**api_clusters_mgmt_v1_get**](DefaultApi.md#api_clusters_mgmt_v1_get) | **GET** /api/clusters_mgmt/v1 | 
@@ -184,6 +201,8 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_limited_support_reason_templates_limited_support_reason_template_id_get**](DefaultApi.md#api_clusters_mgmt_v1_limited_support_reason_templates_limited_support_reason_template_id_get) | **GET** /api/clusters_mgmt/v1/limited_support_reason_templates/{limited_support_reason_template_id} | 
 [**api_clusters_mgmt_v1_machine_types_get**](DefaultApi.md#api_clusters_mgmt_v1_machine_types_get) | **GET** /api/clusters_mgmt/v1/machine_types | 
 [**api_clusters_mgmt_v1_machine_types_machine_type_id_get**](DefaultApi.md#api_clusters_mgmt_v1_machine_types_machine_type_id_get) | **GET** /api/clusters_mgmt/v1/machine_types/{machine_type_id} | 
+[**api_clusters_mgmt_v1_network_verifications_network_verification_id_get**](DefaultApi.md#api_clusters_mgmt_v1_network_verifications_network_verification_id_get) | **GET** /api/clusters_mgmt/v1/network_verifications/{network_verification_id} | 
+[**api_clusters_mgmt_v1_network_verifications_post**](DefaultApi.md#api_clusters_mgmt_v1_network_verifications_post) | **POST** /api/clusters_mgmt/v1/network_verifications | 
 [**api_clusters_mgmt_v1_oidc_configs_get**](DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_get) | **GET** /api/clusters_mgmt/v1/oidc_configs | 
 [**api_clusters_mgmt_v1_oidc_configs_oidc_config_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_oidc_config_id_delete) | **DELETE** /api/clusters_mgmt/v1/oidc_configs/{oidc_config_id} | 
 [**api_clusters_mgmt_v1_oidc_configs_oidc_config_id_get**](DefaultApi.md#api_clusters_mgmt_v1_oidc_configs_oidc_config_id_get) | **GET** /api/clusters_mgmt/v1/oidc_configs/{oidc_config_id} | 
@@ -194,11 +213,17 @@ Method | HTTP request | Description
 [**api_clusters_mgmt_v1_pending_delete_clusters_pending_delete_cluster_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_pending_delete_clusters_pending_delete_cluster_id_patch) | **PATCH** /api/clusters_mgmt/v1/pending_delete_clusters/{pending_delete_cluster_id} | 
 [**api_clusters_mgmt_v1_products_get**](DefaultApi.md#api_clusters_mgmt_v1_products_get) | **GET** /api/clusters_mgmt/v1/products | 
 [**api_clusters_mgmt_v1_products_product_id_get**](DefaultApi.md#api_clusters_mgmt_v1_products_product_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id} | 
+[**api_clusters_mgmt_v1_products_product_id_minimal_versions_get**](DefaultApi.md#api_clusters_mgmt_v1_products_product_id_minimal_versions_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/minimal_versions | 
+[**api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get**](DefaultApi.md#api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/minimal_versions/{minimal_version_id} | 
+[**api_clusters_mgmt_v1_products_product_id_technology_previews_get**](DefaultApi.md#api_clusters_mgmt_v1_products_product_id_technology_previews_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/technology_previews | 
+[**api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get**](DefaultApi.md#api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get) | **GET** /api/clusters_mgmt/v1/products/{product_id}/technology_previews/{technology_preview_id} | 
 [**api_clusters_mgmt_v1_provision_shards_get**](DefaultApi.md#api_clusters_mgmt_v1_provision_shards_get) | **GET** /api/clusters_mgmt/v1/provision_shards | 
 [**api_clusters_mgmt_v1_provision_shards_post**](DefaultApi.md#api_clusters_mgmt_v1_provision_shards_post) | **POST** /api/clusters_mgmt/v1/provision_shards | 
 [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_delete) | **DELETE** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
 [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_get**](DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_get) | **GET** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
 [**api_clusters_mgmt_v1_provision_shards_provision_shard_id_patch**](DefaultApi.md#api_clusters_mgmt_v1_provision_shards_provision_shard_id_patch) | **PATCH** /api/clusters_mgmt/v1/provision_shards/{provision_shard_id} | 
+[**api_clusters_mgmt_v1_trusted_ip_addresses_get**](DefaultApi.md#api_clusters_mgmt_v1_trusted_ip_addresses_get) | **GET** /api/clusters_mgmt/v1/trusted_ip_addresses | 
+[**api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get**](DefaultApi.md#api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get) | **GET** /api/clusters_mgmt/v1/trusted_ip_addresses/{trusted_ip_id} | 
 [**api_clusters_mgmt_v1_version_gates_get**](DefaultApi.md#api_clusters_mgmt_v1_version_gates_get) | **GET** /api/clusters_mgmt/v1/version_gates | 
 [**api_clusters_mgmt_v1_version_gates_post**](DefaultApi.md#api_clusters_mgmt_v1_version_gates_post) | **POST** /api/clusters_mgmt/v1/version_gates | 
 [**api_clusters_mgmt_v1_version_gates_version_gate_id_delete**](DefaultApi.md#api_clusters_mgmt_v1_version_gates_version_gate_id_delete) | **DELETE** /api/clusters_mgmt/v1/version_gates/{version_gate_id} | 
@@ -1251,8 +1276,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post**
+> InlineResponse2005 api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post(page=page, size=size, aws=aws)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    page = 56 # int | Index of the returned page, where one corresponds to the first page. As this collection doesn't support paging the result will always be `1`. (optional)
+size = 56 # int | Number of items that will be contained in the returned page. As this collection doesn't support paging or searching the result will always be the total number of be the total number of STS account roles. (optional)
+aws = ocm_client.AWS() # AWS |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post(page=page, size=size, aws=aws)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_aws_inquiries_sts_account_roles_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Index of the returned page, where one corresponds to the first page. As this collection doesn&#39;t support paging the result will always be &#x60;1&#x60;. | [optional] 
+ **size** | **int**| Number of items that will be contained in the returned page. As this collection doesn&#39;t support paging or searching the result will always be the total number of be the total number of STS account roles. | [optional] 
+ **aws** | [**AWS**](AWS.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2005**](InlineResponse2005.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get**
-> InlineResponse2005 api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get(page=page, size=size)
+> InlineResponse2006 api_clusters_mgmt_v1_aws_inquiries_sts_credential_requests_get(page=page, size=size)
 
 
 
@@ -1306,7 +1405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -1326,7 +1425,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_aws_inquiries_sts_policies_get**
-> InlineResponse2006 api_clusters_mgmt_v1_aws_inquiries_sts_policies_get(order=order, page=page, search=search, size=size)
+> InlineResponse2007 api_clusters_mgmt_v1_aws_inquiries_sts_policies_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -1384,7 +1483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -1404,7 +1503,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_aws_inquiries_vpcs_post**
-> InlineResponse2007 api_clusters_mgmt_v1_aws_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+> InlineResponse2008 api_clusters_mgmt_v1_aws_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
 
 
 
@@ -1460,7 +1559,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -1480,7 +1579,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_available_regions_post**
-> InlineResponse2009 api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_available_regions_post(cloud_provider_id, page=page, size=size, aws=aws)
+> InlineResponse20010 api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_available_regions_post(cloud_provider_id, page=page, size=size, aws=aws)
 
 
 
@@ -1538,7 +1637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -1630,7 +1729,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_regions_get**
-> InlineResponse20010 api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_regions_get(cloud_provider_id, page=page, size=size)
+> InlineResponse20011 api_clusters_mgmt_v1_cloud_providers_cloud_provider_id_regions_get(cloud_provider_id, page=page, size=size)
 
 
 
@@ -1686,7 +1785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -2003,7 +2102,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_cloud_providers_get**
-> InlineResponse2008 api_clusters_mgmt_v1_cloud_providers_get(order=order, page=page, search=search, size=size)
+> InlineResponse2009 api_clusters_mgmt_v1_cloud_providers_get(fetch_regions=fetch_regions, order=order, page=page, search=search, size=size)
 
 
 
@@ -2038,13 +2137,14 @@ configuration = ocm_client.Configuration(
 with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ocm_client.DefaultApi(api_client)
-    order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to sort the clusters descending by name identifier the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
+    fetch_regions = True # bool | If true, includes the regions on each provider in the output. Could slow request response time. (optional)
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to sort the clusters descending by name identifier the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
 search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to retrieve all the cloud providers with a name starting with `A` the value should be:  ```sql name like 'A%' ```  If the parameter isn't provided, or if the value is empty, then all the clusters that the user has permission to see will be returned. (optional)
 size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
 
     try:
-        api_response = api_instance.api_clusters_mgmt_v1_cloud_providers_get(order=order, page=page, search=search, size=size)
+        api_response = api_instance.api_clusters_mgmt_v1_cloud_providers_get(fetch_regions=fetch_regions, order=order, page=page, search=search, size=size)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DefaultApi->api_clusters_mgmt_v1_cloud_providers_get: %s\n" % e)
@@ -2054,6 +2154,7 @@ size = 56 # int | Maximum number of items that will be contained in the returned
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **fetch_regions** | **bool**| If true, includes the regions on each provider in the output. Could slow request response time. | [optional] 
  **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to sort the clusters descending by name identifier the value should be:  &#x60;&#x60;&#x60;sql name desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
  **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
  **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the cloud provider instead of the names of the columns of a table. For example, in order to retrieve all the cloud providers with a name starting with &#x60;A&#x60; the value should be:  &#x60;&#x60;&#x60;sql name like &#39;A%&#39; &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the clusters that the user has permission to see will be returned. | [optional] 
@@ -2061,7 +2162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -2604,7 +2705,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_get**
-> InlineResponse20012 api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_get(cluster_id, page=page, size=size)
+> InlineResponse20013 api_clusters_mgmt_v1_clusters_cluster_id_addon_upgrade_policies_get(cluster_id, page=page, size=size)
 
 
 
@@ -2660,7 +2761,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -2977,7 +3078,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_addons_get**
-> InlineResponse20013 api_clusters_mgmt_v1_clusters_cluster_id_addons_get(cluster_id, order=order, page=page, search=search, size=size)
+> InlineResponse20014 api_clusters_mgmt_v1_clusters_cluster_id_addons_get(cluster_id, order=order, page=page, search=search, size=size)
 
 
 
@@ -3037,7 +3138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -3112,6 +3213,297 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AddOnInstallation**](AddOnInstallation.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete**
+> api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete(cluster_id)
+
+
+
+Deletes the cluster autoscaler.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_instance.api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete(cluster_id)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get**
+> ClusterAutoscaler api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get(cluster_id)
+
+
+
+Retrieves the autoscaler of a cluster.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get(cluster_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+[**ClusterAutoscaler**](ClusterAutoscaler.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch**
+> ClusterAutoscaler api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch(cluster_id, cluster_autoscaler=cluster_autoscaler)
+
+
+
+Updates the cluster autoscaler.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+cluster_autoscaler = ocm_client.ClusterAutoscaler() # ClusterAutoscaler |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch(cluster_id, cluster_autoscaler=cluster_autoscaler)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **cluster_autoscaler** | [**ClusterAutoscaler**](ClusterAutoscaler.md)|  | [optional] 
+
+### Return type
+
+[**ClusterAutoscaler**](ClusterAutoscaler.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post**
+> ClusterAutoscaler api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post(cluster_id, cluster_autoscaler=cluster_autoscaler)
+
+
+
+Creates a new cluster autoscaler object.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+cluster_autoscaler = ocm_client.ClusterAutoscaler() # ClusterAutoscaler |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post(cluster_id, cluster_autoscaler=cluster_autoscaler)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_autoscaler_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **cluster_autoscaler** | [**ClusterAutoscaler**](ClusterAutoscaler.md)|  | [optional] 
+
+### Return type
+
+[**ClusterAutoscaler**](ClusterAutoscaler.md)
 
 ### Authorization
 
@@ -3278,7 +3670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get**
-> InlineResponse20015 api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get(cluster_id, order=order, page=page, search=search, size=size)
+> InlineResponse20016 api_clusters_mgmt_v1_clusters_cluster_id_aws_infrastructure_access_role_grants_get(cluster_id, order=order, page=page, search=search, size=size)
 
 
 
@@ -3338,7 +3730,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -3504,7 +3896,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_aws_private_link_configuration_principals_get**
-> InlineResponse20014 api_clusters_mgmt_v1_clusters_cluster_id_aws_private_link_configuration_principals_get(cluster_id, page=page, search=search, size=size)
+> InlineResponse20015 api_clusters_mgmt_v1_clusters_cluster_id_aws_private_link_configuration_principals_get(cluster_id, page=page, search=search, size=size)
 
 
 
@@ -3562,7 +3954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -4097,7 +4489,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_control_plane_upgrade_policies_get**
-> InlineResponse20016 api_clusters_mgmt_v1_clusters_cluster_id_control_plane_upgrade_policies_get(cluster_id, page=page, size=size)
+> InlineResponse20017 api_clusters_mgmt_v1_clusters_cluster_id_control_plane_upgrade_policies_get(cluster_id, page=page, size=size)
 
 
 
@@ -4153,7 +4545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -4319,7 +4711,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_delete**
-> api_clusters_mgmt_v1_clusters_cluster_id_delete(cluster_id, deprovision=deprovision, dry_run=dry_run)
+> api_clusters_mgmt_v1_clusters_cluster_id_delete(cluster_id, best_effort=best_effort, deprovision=deprovision, dry_run=dry_run)
 
 
 
@@ -4355,11 +4747,12 @@ with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
+best_effort = True # bool | BestEffort flag is used to check if the cluster deletion should be best-effort mode or not. (optional)
 deprovision = True # bool | If false it will only delete from OCM but not the actual cluster resources. false is only allowed for OCP clusters. true by default. (optional)
 dry_run = True # bool | Dry run flag is used to check if the operation can be completed, but won't delete. (optional)
 
     try:
-        api_instance.api_clusters_mgmt_v1_clusters_cluster_id_delete(cluster_id, deprovision=deprovision, dry_run=dry_run)
+        api_instance.api_clusters_mgmt_v1_clusters_cluster_id_delete(cluster_id, best_effort=best_effort, deprovision=deprovision, dry_run=dry_run)
     except ApiException as e:
         print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_delete: %s\n" % e)
 ```
@@ -4369,6 +4762,7 @@ dry_run = True # bool | Dry run flag is used to check if the operation can be co
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cluster_id** | **str**|  | 
+ **best_effort** | **bool**| BestEffort flag is used to check if the cluster deletion should be best-effort mode or not. | [optional] 
  **deprovision** | **bool**| If false it will only delete from OCM but not the actual cluster resources. false is only allowed for OCP clusters. true by default. | [optional] 
  **dry_run** | **bool**| Dry run flag is used to check if the operation can be completed, but won&#39;t delete. | [optional] 
 
@@ -4608,7 +5002,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_labels_get**
-> InlineResponse20017 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_labels_get(cluster_id, page=page, size=size)
+> InlineResponse20018 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_labels_get(cluster_id, page=page, size=size)
 
 
 
@@ -4664,7 +5058,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -4981,7 +5375,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_manifests_get**
-> InlineResponse20018 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_manifests_get(cluster_id, page=page, size=size)
+> InlineResponse20019 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_manifests_get(cluster_id, page=page, size=size)
 
 
 
@@ -5037,7 +5431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -5354,7 +5748,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_syncsets_get**
-> InlineResponse20019 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_syncsets_get(cluster_id, page=page, size=size)
+> InlineResponse20020 api_clusters_mgmt_v1_clusters_cluster_id_external_configuration_syncsets_get(cluster_id, page=page, size=size)
 
 
 
@@ -5410,7 +5804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -5727,7 +6121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_gate_agreements_get**
-> InlineResponse20020 api_clusters_mgmt_v1_clusters_cluster_id_gate_agreements_get(cluster_id, page=page, size=size)
+> InlineResponse20021 api_clusters_mgmt_v1_clusters_cluster_id_gate_agreements_get(cluster_id, page=page, size=size)
 
 
 
@@ -5783,7 +6177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -6096,7 +6490,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_groups_get**
-> InlineResponse20021 api_clusters_mgmt_v1_clusters_cluster_id_groups_get(cluster_id, page=page, size=size)
+> InlineResponse20022 api_clusters_mgmt_v1_clusters_cluster_id_groups_get(cluster_id, page=page, size=size)
 
 
 
@@ -6152,7 +6546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -6246,7 +6640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_get**
-> InlineResponse20022 api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_get(cluster_id, group_id, page=page, size=size)
+> InlineResponse20023 api_clusters_mgmt_v1_clusters_cluster_id_groups_group_id_users_get(cluster_id, group_id, page=page, size=size)
 
 
 
@@ -6304,7 +6698,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -6693,8 +7087,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch**
+> HypershiftConfig api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch(cluster_id, hypershift_config=hypershift_config)
+
+
+
+Updates the Hypershift details for a single cluster.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+hypershift_config = ocm_client.HypershiftConfig() # HypershiftConfig |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch(cluster_id, hypershift_config=hypershift_config)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_hypershift_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **hypershift_config** | [**HypershiftConfig**](HypershiftConfig.md)|  | [optional] 
+
+### Return type
+
+[**HypershiftConfig**](HypershiftConfig.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get**
-> InlineResponse20023 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get(cluster_id, page=page, size=size)
+> InlineResponse20024 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_get(cluster_id, page=page, size=size)
 
 
 
@@ -6750,7 +7218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -6917,7 +7385,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_get**
-> InlineResponse20024 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_get(cluster_id, identity_provider_id, page=page, size=size)
+> InlineResponse20025 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_get(cluster_id, identity_provider_id, page=page, size=size)
 
 
 
@@ -6975,7 +7443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -7224,7 +7692,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_import_post**
-> InlineResponse20025 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_import_post(cluster_id, identity_provider_id, inline_object=inline_object)
+> InlineResponse20026 api_clusters_mgmt_v1_clusters_cluster_id_identity_providers_identity_provider_id_htpasswd_users_import_post(cluster_id, identity_provider_id, inline_object=inline_object)
 
 
 
@@ -7280,7 +7748,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -7526,7 +7994,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_inflight_checks_get**
-> InlineResponse20026 api_clusters_mgmt_v1_clusters_cluster_id_inflight_checks_get(cluster_id, page=page, size=size)
+> InlineResponse20027 api_clusters_mgmt_v1_clusters_cluster_id_inflight_checks_get(cluster_id, page=page, size=size)
 
 
 
@@ -7582,7 +8050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -7676,7 +8144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_ingresses_get**
-> InlineResponse20027 api_clusters_mgmt_v1_clusters_cluster_id_ingresses_get(cluster_id, page=page, size=size)
+> InlineResponse20028 api_clusters_mgmt_v1_clusters_cluster_id_ingresses_get(cluster_id, page=page, size=size)
 
 
 
@@ -7732,7 +8200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -8122,8 +8590,299 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete**
+> api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete(cluster_id)
+
+
+
+Deletes the cluster KubeletConfig
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_instance.api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete(cluster_id)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get**
+> KubeletConfig api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get(cluster_id)
+
+
+
+Retrieves the KubeletConfig for a cluster
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get(cluster_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+[**KubeletConfig**](KubeletConfig.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch**
+> KubeletConfig api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch(cluster_id, kubelet_config=kubelet_config)
+
+
+
+Updates the existing cluster KubeletConfig
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+kubelet_config = ocm_client.KubeletConfig() # KubeletConfig |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch(cluster_id, kubelet_config=kubelet_config)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **kubelet_config** | [**KubeletConfig**](KubeletConfig.md)|  | [optional] 
+
+### Return type
+
+[**KubeletConfig**](KubeletConfig.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post**
+> KubeletConfig api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post(cluster_id, kubelet_config=kubelet_config)
+
+
+
+Creates a new cluster KubeletConfig
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+kubelet_config = ocm_client.KubeletConfig() # KubeletConfig |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post(cluster_id, kubelet_config=kubelet_config)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_kubelet_config_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **kubelet_config** | [**KubeletConfig**](KubeletConfig.md)|  | [optional] 
+
+### Return type
+
+[**KubeletConfig**](KubeletConfig.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get**
-> InlineResponse20028 api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get(cluster_id, page=page, size=size)
+> InlineResponse20029 api_clusters_mgmt_v1_clusters_cluster_id_limited_support_reasons_get(cluster_id, page=page, size=size)
 
 
 
@@ -8179,7 +8938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -8420,7 +9179,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_logs_get**
-> InlineResponse20029 api_clusters_mgmt_v1_clusters_cluster_id_logs_get(cluster_id, page=page, size=size)
+> InlineResponse20030 api_clusters_mgmt_v1_clusters_cluster_id_logs_get(cluster_id, page=page, size=size)
 
 
 
@@ -8476,7 +9235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -8648,7 +9407,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_machine_pools_get**
-> InlineResponse20030 api_clusters_mgmt_v1_clusters_cluster_id_machine_pools_get(cluster_id, page=page, size=size)
+> InlineResponse20031 api_clusters_mgmt_v1_clusters_cluster_id_machine_pools_get(cluster_id, page=page, size=size)
 
 
 
@@ -8704,7 +9463,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -9375,7 +10134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get**
-> InlineResponse20031 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, page=page, size=size)
+> InlineResponse20032 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, page=page, size=size)
 
 
 
@@ -9431,7 +10190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -9674,7 +10433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_upgrade_policies_get**
-> InlineResponse20032 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_upgrade_policies_get(cluster_id, node_pool_id, page=page, size=size)
+> InlineResponse20033 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_node_pool_id_upgrade_policies_get(cluster_id, node_pool_id, page=page, size=size)
 
 
 
@@ -9732,7 +10491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -10276,6 +11035,314 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get**
+> InlineResponse20034 api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get(cluster_id, order=order, page=page, search=search, size=size)
+
+
+
+Retrieves the list of product minimal versions.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
+page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the products that the user has permission to see will be returned. (optional)
+size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get(cluster_id, order=order, page=page, search=search, size=size)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  &#x60;&#x60;&#x60;sql name desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with &#x60;my&#x60; the value should be:  &#x60;&#x60;&#x60;sql name like &#39;my%&#39; &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the products that the user has permission to see will be returned. | [optional] 
+ **size** | **int**| Maximum number of items that will be contained in the returned page. | [optional] 
+
+### Return type
+
+[**InlineResponse20034**](InlineResponse20034.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get**
+> ProductMinimalVersion api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get(cluster_id, minimal_version_id)
+
+
+
+Retrieves the details of the product minimal version.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+minimal_version_id = 'minimal_version_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get(cluster_id, minimal_version_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_product_minimal_versions_minimal_version_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **minimal_version_id** | **str**|  | 
+
+### Return type
+
+[**ProductMinimalVersion**](ProductMinimalVersion.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get**
+> InlineResponse20035 api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get(cluster_id, order=order, page=page, search=search, size=size)
+
+
+
+Retrieves the list of product technology previews.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
+page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the products that the user has permission to see will be returned. (optional)
+size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get(cluster_id, order=order, page=page, search=search, size=size)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  &#x60;&#x60;&#x60;sql name desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with &#x60;my&#x60; the value should be:  &#x60;&#x60;&#x60;sql name like &#39;my%&#39; &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the products that the user has permission to see will be returned. | [optional] 
+ **size** | **int**| Maximum number of items that will be contained in the returned page. | [optional] 
+
+### Return type
+
+[**InlineResponse20035**](InlineResponse20035.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get**
+> ProductTechnologyPreview api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get(cluster_id, technology_preview_id)
+
+
+
+Retrieves the details of the product technology preview.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+technology_preview_id = 'technology_preview_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get(cluster_id, technology_preview_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_product_technology_previews_technology_preview_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+ **technology_preview_id** | **str**|  | 
+
+### Return type
+
+[**ProductTechnologyPreview**](ProductTechnologyPreview.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete**
 > api_clusters_mgmt_v1_clusters_cluster_id_provision_shard_delete(cluster_id)
 
@@ -10779,7 +11846,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get**
-> InlineResponse20033 api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get(cluster_id, page=page, size=size)
+> InlineResponse20036 api_clusters_mgmt_v1_clusters_cluster_id_sts_operator_roles_get(cluster_id, page=page, size=size)
 
 
 
@@ -10835,7 +11902,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -11001,8 +12068,78 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get**
+> StsSupportJumpRole api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get(cluster_id)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get(cluster_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_sts_support_jump_role_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+[**StsSupportJumpRole**](StsSupportJumpRole.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get**
-> InlineResponse20034 api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get(cluster_id, page=page, size=size)
+> InlineResponse20037 api_clusters_mgmt_v1_clusters_cluster_id_tuning_configs_get(cluster_id, page=page, size=size)
 
 
 
@@ -11058,7 +12195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -11375,7 +12512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_get**
-> InlineResponse20035 api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_get(cluster_id, page=page, size=size)
+> InlineResponse20038 api_clusters_mgmt_v1_clusters_cluster_id_upgrade_policies_get(cluster_id, page=page, size=size)
 
 
 
@@ -11431,7 +12568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -11897,8 +13034,78 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_clusters_cluster_id_vpc_get**
+> CloudVPC api_clusters_mgmt_v1_clusters_cluster_id_vpc_get(cluster_id)
+
+
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    cluster_id = 'cluster_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_vpc_get(cluster_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_vpc_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cluster_id** | **str**|  | 
+
+### Return type
+
+[**CloudVPC**](CloudVPC.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_clusters_get**
-> InlineResponse20011 api_clusters_mgmt_v1_clusters_get(order=order, page=page, search=search, size=size)
+> InlineResponse20012 api_clusters_mgmt_v1_clusters_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -11956,7 +13163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -12265,7 +13472,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_dns_domains_get**
-> InlineResponse20036 api_clusters_mgmt_v1_dns_domains_get(page=page, search=search, size=size)
+> InlineResponse20039 api_clusters_mgmt_v1_dns_domains_get(page=page, search=search, size=size)
 
 
 
@@ -12319,7 +13526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -12769,7 +13976,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_flavours_get**
-> InlineResponse20037 api_clusters_mgmt_v1_flavours_get(order=order, page=page, search=search, size=size)
+> InlineResponse20040 api_clusters_mgmt_v1_flavours_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -12825,7 +14032,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -12917,7 +14124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post**
-> InlineResponse20038 api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+> InlineResponse20041 api_clusters_mgmt_v1_gcp_inquiries_encryption_keys_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
 
 
 
@@ -12973,7 +14180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -12993,7 +14200,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_gcp_inquiries_key_rings_post**
-> InlineResponse20039 api_clusters_mgmt_v1_gcp_inquiries_key_rings_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+> InlineResponse20042 api_clusters_mgmt_v1_gcp_inquiries_key_rings_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
 
 
 
@@ -13049,7 +14256,83 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20042**](InlineResponse20042.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_gcp_inquiries_machine_types_post**
+> InlineResponse2003 api_clusters_mgmt_v1_gcp_inquiries_machine_types_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+
+
+
+Retrieves the list of machine types in the provided region.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
+cloud_provider_data = ocm_client.CloudProviderData() # CloudProviderData |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_gcp_inquiries_machine_types_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_gcp_inquiries_machine_types_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **size** | **int**| Maximum number of items that will be contained in the returned page. | [optional] 
+ **cloud_provider_data** | [**CloudProviderData**](CloudProviderData.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -13145,7 +14428,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_gcp_inquiries_vpcs_post**
-> InlineResponse2007 api_clusters_mgmt_v1_gcp_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
+> InlineResponse2008 api_clusters_mgmt_v1_gcp_inquiries_vpcs_post(page=page, size=size, cloud_provider_data=cloud_provider_data)
 
 
 
@@ -13201,7 +14484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -13289,7 +14572,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_limited_support_reason_templates_get**
-> InlineResponse20040 api_clusters_mgmt_v1_limited_support_reason_templates_get(page=page, size=size)
+> InlineResponse20043 api_clusters_mgmt_v1_limited_support_reason_templates_get(page=page, size=size)
 
 
 
@@ -13343,7 +14626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -13435,7 +14718,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_machine_types_get**
-> InlineResponse20041 api_clusters_mgmt_v1_machine_types_get(order=order, page=page, search=search, size=size)
+> InlineResponse20044 api_clusters_mgmt_v1_machine_types_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -13493,7 +14776,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -13584,8 +14867,152 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_network_verifications_network_verification_id_get**
+> SubnetNetworkVerification api_clusters_mgmt_v1_network_verifications_network_verification_id_get(network_verification_id)
+
+
+
+Retrieves the details of a subnet network verification.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    network_verification_id = 'network_verification_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_network_verifications_network_verification_id_get(network_verification_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_network_verifications_network_verification_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network_verification_id** | **str**|  | 
+
+### Return type
+
+[**SubnetNetworkVerification**](SubnetNetworkVerification.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_network_verifications_post**
+> NetworkVerification api_clusters_mgmt_v1_network_verifications_post(network_verification=network_verification)
+
+
+
+Creates an entry for a network verification for each subnet supplied setting then to initial state.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    network_verification = ocm_client.NetworkVerification() # NetworkVerification |  (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_network_verifications_post(network_verification=network_verification)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_network_verifications_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network_verification** | [**NetworkVerification**](NetworkVerification.md)|  | [optional] 
+
+### Return type
+
+[**NetworkVerification**](NetworkVerification.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_oidc_configs_get**
-> InlineResponse20042 api_clusters_mgmt_v1_oidc_configs_get(page=page, size=size)
+> InlineResponse20045 api_clusters_mgmt_v1_oidc_configs_get(page=page, size=size)
 
 
 
@@ -13639,7 +15066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -13880,7 +15307,7 @@ Name | Type | Description  | Notes
 
 
 
-Creates a hosting under Red Hat's S3 bucket for byo oidc configuration
+Creates a hosting under Red Hat's S3 bucket for byo oidc configuration.
 
 ### Example
 
@@ -13948,7 +15375,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_pending_delete_clusters_get**
-> InlineResponse20043 api_clusters_mgmt_v1_pending_delete_clusters_get(order=order, page=page, search=search, size=size)
+> InlineResponse20046 api_clusters_mgmt_v1_pending_delete_clusters_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -14006,7 +15433,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -14172,7 +15599,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_products_get**
-> InlineResponse20044 api_clusters_mgmt_v1_products_get(order=order, page=page, search=search, size=size)
+> InlineResponse20047 api_clusters_mgmt_v1_products_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -14230,7 +15657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -14321,8 +15748,316 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_products_product_id_minimal_versions_get**
+> InlineResponse20034 api_clusters_mgmt_v1_products_product_id_minimal_versions_get(product_id, order=order, page=page, search=search, size=size)
+
+
+
+Retrieves the list of product minimal versions.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    product_id = 'product_id_example' # str | 
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
+page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the products that the user has permission to see will be returned. (optional)
+size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_products_product_id_minimal_versions_get(product_id, order=order, page=page, search=search, size=size)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_products_product_id_minimal_versions_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**|  | 
+ **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  &#x60;&#x60;&#x60;sql name desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with &#x60;my&#x60; the value should be:  &#x60;&#x60;&#x60;sql name like &#39;my%&#39; &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the products that the user has permission to see will be returned. | [optional] 
+ **size** | **int**| Maximum number of items that will be contained in the returned page. | [optional] 
+
+### Return type
+
+[**InlineResponse20034**](InlineResponse20034.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get**
+> ProductMinimalVersion api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get(product_id, minimal_version_id)
+
+
+
+Retrieves the details of the product minimal version.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    product_id = 'product_id_example' # str | 
+minimal_version_id = 'minimal_version_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get(product_id, minimal_version_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_products_product_id_minimal_versions_minimal_version_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**|  | 
+ **minimal_version_id** | **str**|  | 
+
+### Return type
+
+[**ProductMinimalVersion**](ProductMinimalVersion.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_products_product_id_technology_previews_get**
+> InlineResponse20035 api_clusters_mgmt_v1_products_product_id_technology_previews_get(product_id, order=order, page=page, search=search, size=size)
+
+
+
+Retrieves the list of product technology previews.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    product_id = 'product_id_example' # str | 
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  ```sql name desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
+page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with `my` the value should be:  ```sql name like 'my%' ```  If the parameter isn't provided, or if the value is empty, then all the products that the user has permission to see will be returned. (optional)
+size = 56 # int | Maximum number of items that will be contained in the returned page. (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_products_product_id_technology_previews_get(product_id, order=order, page=page, search=search, size=size)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_products_product_id_technology_previews_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**|  | 
+ **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to sort the products descending by name the value should be:  &#x60;&#x60;&#x60;sql name desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of an SQL statement, but using the names of the attributes of the product instead of the names of the columns of a table. For example, in order to retrieve all the products with a name starting with &#x60;my&#x60; the value should be:  &#x60;&#x60;&#x60;sql name like &#39;my%&#39; &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the products that the user has permission to see will be returned. | [optional] 
+ **size** | **int**| Maximum number of items that will be contained in the returned page. | [optional] 
+
+### Return type
+
+[**InlineResponse20035**](InlineResponse20035.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get**
+> ProductTechnologyPreview api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get(product_id, technology_preview_id)
+
+
+
+Retrieves the details of the product technology preview.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    product_id = 'product_id_example' # str | 
+technology_preview_id = 'technology_preview_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get(product_id, technology_preview_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_products_product_id_technology_previews_technology_preview_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **product_id** | **str**|  | 
+ **technology_preview_id** | **str**|  | 
+
+### Return type
+
+[**ProductTechnologyPreview**](ProductTechnologyPreview.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_provision_shards_get**
-> InlineResponse20045 api_clusters_mgmt_v1_provision_shards_get(page=page, search=search, size=size)
+> InlineResponse20048 api_clusters_mgmt_v1_provision_shards_get(page=page, search=search, size=size)
 
 
 
@@ -14376,7 +16111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -14684,8 +16419,154 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **api_clusters_mgmt_v1_trusted_ip_addresses_get**
+> InlineResponse20049 api_clusters_mgmt_v1_trusted_ip_addresses_get(page=page, size=size)
+
+
+
+Retrieves the list of trusted ip addresses.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+size = 56 # int | Number of items contained in the returned page. (optional)
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_trusted_ip_addresses_get(page=page, size=size)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_trusted_ip_addresses_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **size** | **int**| Number of items contained in the returned page. | [optional] 
+
+### Return type
+
+[**InlineResponse20049**](InlineResponse20049.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get**
+> TrustedIp api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get(trusted_ip_id)
+
+
+
+Retrieves the trusted ip adresses.
+
+### Example
+
+* Bearer (JWT) Authentication (bearer):
+```python
+from __future__ import print_function
+import time
+import ocm_client
+from ocm_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.openshift.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ocm_client.Configuration(
+    host = "https://api.openshift.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearer
+configuration = ocm_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with ocm_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ocm_client.DefaultApi(api_client)
+    trusted_ip_id = 'trusted_ip_id_example' # str | 
+
+    try:
+        api_response = api_instance.api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get(trusted_ip_id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DefaultApi->api_clusters_mgmt_v1_trusted_ip_addresses_trusted_ip_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **trusted_ip_id** | **str**|  | 
+
+### Return type
+
+[**TrustedIp**](TrustedIp.md)
+
+### Authorization
+
+[bearer](../README.md#bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success. |  -  |
+**0** | Error. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **api_clusters_mgmt_v1_version_gates_get**
-> InlineResponse20046 api_clusters_mgmt_v1_version_gates_get(order=order, page=page, search=search, size=size)
+> InlineResponse20050 api_clusters_mgmt_v1_version_gates_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -14743,7 +16624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -14978,7 +16859,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_versions_get**
-> InlineResponse20047 api_clusters_mgmt_v1_versions_get(order=order, page=page, search=search, size=size)
+> InlineResponse20051 api_clusters_mgmt_v1_versions_get(order=order, page=page, search=search, size=size)
 
 
 
@@ -15036,7 +16917,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **private_key** | **str** | GCP private key | [optional] 
 **private_key_id** | **str** | GCP private key identifier | [optional] 
 **project_id** | **str** | GCP project identifier. | [optional] 
+**security** | [**GcpSecurity**](GcpSecurity.md) |  | [optional] 
 **token_uri** | **str** | GCP token uri | [optional] 
 **type** | **str** | GCP the type of the service the key belongs to | [optional] 
 
