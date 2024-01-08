@@ -38,6 +38,7 @@ class SubnetNetworkVerification(object):
         'id': 'str',
         'href': 'str',
         'details': 'list[str]',
+        'platform': 'Platform',
         'state': 'str',
         'tags': 'dict(str, str)'
     }
@@ -47,11 +48,12 @@ class SubnetNetworkVerification(object):
         'id': 'id',
         'href': 'href',
         'details': 'details',
+        'platform': 'platform',
         'state': 'state',
         'tags': 'tags'
     }
 
-    def __init__(self, kind=None, id=None, href=None, details=None, state=None, tags=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, kind=None, id=None, href=None, details=None, platform=None, state=None, tags=None, local_vars_configuration=None):  # noqa: E501
         """SubnetNetworkVerification - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,6 +63,7 @@ class SubnetNetworkVerification(object):
         self._id = None
         self._href = None
         self._details = None
+        self._platform = None
         self._state = None
         self._tags = None
         self.discriminator = None
@@ -73,6 +76,8 @@ class SubnetNetworkVerification(object):
             self.href = href
         if details is not None:
             self.details = details
+        if platform is not None:
+            self.platform = platform
         if state is not None:
             self.state = state
         if tags is not None:
@@ -169,6 +174,27 @@ class SubnetNetworkVerification(object):
         """
 
         self._details = details
+
+    @property
+    def platform(self):
+        """Gets the platform of this SubnetNetworkVerification.  # noqa: E501
+
+
+        :return: The platform of this SubnetNetworkVerification.  # noqa: E501
+        :rtype: Platform
+        """
+        return self._platform
+
+    @platform.setter
+    def platform(self, platform):
+        """Sets the platform of this SubnetNetworkVerification.
+
+
+        :param platform: The platform of this SubnetNetworkVerification.  # noqa: E501
+        :type: Platform
+        """
+
+        self._platform = platform
 
     @property
     def state(self):

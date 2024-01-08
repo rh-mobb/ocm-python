@@ -16491,7 +16491,9 @@ class DefaultApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cluster_id: (required)
+        :param str order: Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to sort the node pools descending by identifier the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined.
         :param int page: Index of the requested page, where one corresponds to the first page.
+        :param str search: Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to retrieve all the node pools with replicas of two the following is required:  ```sql replicas = 2 ```  If the parameter isn't provided, or if the value is empty, then all the node pools that the user has permission to see will be returned.
         :param int size: Number of items contained in the returned page.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -16518,7 +16520,9 @@ class DefaultApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cluster_id: (required)
+        :param str order: Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to sort the node pools descending by identifier the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined.
         :param int page: Index of the requested page, where one corresponds to the first page.
+        :param str search: Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to retrieve all the node pools with replicas of two the following is required:  ```sql replicas = 2 ```  If the parameter isn't provided, or if the value is empty, then all the node pools that the user has permission to see will be returned.
         :param int size: Number of items contained in the returned page.
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -16538,7 +16542,9 @@ class DefaultApi(object):
 
         all_params = [
             'cluster_id',
+            'order',
             'page',
+            'search',
             'size'
         ]
         all_params.extend(
@@ -16570,8 +16576,12 @@ class DefaultApi(object):
             path_params['cluster_id'] = local_var_params['cluster_id']  # noqa: E501
 
         query_params = []
+        if 'order' in local_var_params and local_var_params['order'] is not None:  # noqa: E501
+            query_params.append(('order', local_var_params['order']))  # noqa: E501
         if 'page' in local_var_params and local_var_params['page'] is not None:  # noqa: E501
             query_params.append(('page', local_var_params['page']))  # noqa: E501
+        if 'search' in local_var_params and local_var_params['search'] is not None:  # noqa: E501
+            query_params.append(('search', local_var_params['search']))  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] is not None:  # noqa: E501
             query_params.append(('size', local_var_params['size']))  # noqa: E501
 

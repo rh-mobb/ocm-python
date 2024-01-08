@@ -512,6 +512,7 @@ Class | Method | HTTP request | Description
  - [OperatorIAMRole](docs/OperatorIAMRole.md)
  - [OrganizationLink](docs/OrganizationLink.md)
  - [PendingDeleteCluster](docs/PendingDeleteCluster.md)
+ - [Platform](docs/Platform.md)
  - [PrivateLinkClusterConfiguration](docs/PrivateLinkClusterConfiguration.md)
  - [PrivateLinkConfiguration](docs/PrivateLinkConfiguration.md)
  - [PrivateLinkPrincipal](docs/PrivateLinkPrincipal.md)

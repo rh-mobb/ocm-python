@@ -223,6 +223,7 @@ from ocm_client.models.open_id_identity_provider import OpenIDIdentityProvider
 from ocm_client.models.operator_iam_role import OperatorIAMRole
 from ocm_client.models.organization_link import OrganizationLink
 from ocm_client.models.pending_delete_cluster import PendingDeleteCluster
+from ocm_client.models.platform import Platform
 from ocm_client.models.private_link_cluster_configuration import PrivateLinkClusterConfiguration
 from ocm_client.models.private_link_configuration import PrivateLinkConfiguration
 from ocm_client.models.private_link_principal import PrivateLinkPrincipal

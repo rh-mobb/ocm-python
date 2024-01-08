@@ -10134,7 +10134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get**
-> InlineResponse20032 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, page=page, size=size)
+> InlineResponse20032 api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, order=order, page=page, search=search, size=size)
 
 
 
@@ -10170,11 +10170,13 @@ with ocm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ocm_client.DefaultApi(api_client)
     cluster_id = 'cluster_id_example' # str | 
+order = 'order_example' # str | Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to sort the node pools descending by identifier the value should be:  ```sql id desc ```  If the parameter isn't provided, or if the value is empty, then the order of the results is undefined. (optional)
 page = 56 # int | Index of the requested page, where one corresponds to the first page. (optional)
+search = 'search_example' # str | Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to retrieve all the node pools with replicas of two the following is required:  ```sql replicas = 2 ```  If the parameter isn't provided, or if the value is empty, then all the node pools that the user has permission to see will be returned. (optional)
 size = 56 # int | Number of items contained in the returned page. (optional)
 
     try:
-        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, page=page, size=size)
+        api_response = api_instance.api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get(cluster_id, order=order, page=page, search=search, size=size)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DefaultApi->api_clusters_mgmt_v1_clusters_cluster_id_node_pools_get: %s\n" % e)
@@ -10185,7 +10187,9 @@ size = 56 # int | Number of items contained in the returned page. (optional)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cluster_id** | **str**|  | 
+ **order** | **str**| Order criteria.  The syntax of this parameter is similar to the syntax of the _order by_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to sort the node pools descending by identifier the value should be:  &#x60;&#x60;&#x60;sql id desc &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then the order of the results is undefined. | [optional] 
  **page** | **int**| Index of the requested page, where one corresponds to the first page. | [optional] 
+ **search** | **str**| Search criteria.  The syntax of this parameter is similar to the syntax of the _where_ clause of a SQL statement, but using the names of the attributes of the node pools instead of the names of the columns of a table. For example, in order to retrieve all the node pools with replicas of two the following is required:  &#x60;&#x60;&#x60;sql replicas &#x3D; 2 &#x60;&#x60;&#x60;  If the parameter isn&#39;t provided, or if the value is empty, then all the node pools that the user has permission to see will be returned. | [optional] 
  **size** | **int**| Number of items contained in the returned page. | [optional] 
 
 ### Return type

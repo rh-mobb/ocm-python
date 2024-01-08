@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **str** | Unique identifier of the object. | [optional] 
 **href** | **str** | Self link. | [optional] 
 **details** | **list[str]** | Slice of failures that happened during a subnet network verification. | [optional] 
+**platform** | [**Platform**](Platform.md) |  | [optional] 
 **state** | **str** | State of the subnet network verification. | [optional] 
 **tags** | **dict(str, str)** | Tags supplied to the network verifier for this subnet. | [optional] 
 

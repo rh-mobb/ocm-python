@@ -37,6 +37,7 @@ class NetworkVerification(object):
         'cloud_provider_data': 'CloudProviderData',
         'cluster_id': 'str',
         'items': 'list[SubnetNetworkVerification]',
+        'platform': 'Platform',
         'total': 'int'
     }
 
@@ -44,10 +45,11 @@ class NetworkVerification(object):
         'cloud_provider_data': 'cloud_provider_data',
         'cluster_id': 'cluster_id',
         'items': 'items',
+        'platform': 'platform',
         'total': 'total'
     }
 
-    def __init__(self, cloud_provider_data=None, cluster_id=None, items=None, total=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cloud_provider_data=None, cluster_id=None, items=None, platform=None, total=None, local_vars_configuration=None):  # noqa: E501
         """NetworkVerification - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +58,7 @@ class NetworkVerification(object):
         self._cloud_provider_data = None
         self._cluster_id = None
         self._items = None
+        self._platform = None
         self._total = None
         self.discriminator = None
 
@@ -65,6 +68,8 @@ class NetworkVerification(object):
             self.cluster_id = cluster_id
         if items is not None:
             self.items = items
+        if platform is not None:
+            self.platform = platform
         if total is not None:
             self.total = total
 
@@ -134,6 +139,27 @@ class NetworkVerification(object):
         """
 
         self._items = items
+
+    @property
+    def platform(self):
+        """Gets the platform of this NetworkVerification.  # noqa: E501
+
+
+        :return: The platform of this NetworkVerification.  # noqa: E501
+        :rtype: Platform
+        """
+        return self._platform
+
+    @platform.setter
+    def platform(self, platform):
+        """Sets the platform of this NetworkVerification.
+
+
+        :param platform: The platform of this NetworkVerification.  # noqa: E501
+        :type: Platform
+        """
+
+        self._platform = platform
 
     @property
     def total(self):
