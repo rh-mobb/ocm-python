@@ -1,7 +1,9 @@
 # AddonUpgradePolicyState
 
 Representation of an addon upgrade policy state that that is set for a cluster.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kind** | **str** | Indicates the type of this object. Will be &#39;AddonUpgradePolicyState&#39; if this is a complete object or &#39;AddonUpgradePolicyStateLink&#39; if it is just a link. | [optional] 
@@ -10,6 +12,23 @@ Name | Type | Description | Notes
 **description** | **str** | Description of the state. | [optional] 
 **value** | [**UpgradePolicyStateValue**](UpgradePolicyStateValue.md) |  | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.addon_upgrade_policy_state import AddonUpgradePolicyState
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of AddonUpgradePolicyState from a JSON string
+addon_upgrade_policy_state_instance = AddonUpgradePolicyState.from_json(json)
+# print the JSON string representation of the object
+print(AddonUpgradePolicyState.to_json())
+
+# convert the object into a dict
+addon_upgrade_policy_state_dict = addon_upgrade_policy_state_instance.to_dict()
+# create an instance of AddonUpgradePolicyState from a dict
+addon_upgrade_policy_state_from_dict = AddonUpgradePolicyState.from_dict(addon_upgrade_policy_state_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

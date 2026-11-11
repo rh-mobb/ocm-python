@@ -1,9 +1,12 @@
 # ListeningMethod
 
 Cluster components listening method.
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+
+## Enum
+
+* `EXTERNAL` (value: `'external'`)
+
+* `INTERNAL` (value: `'internal'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

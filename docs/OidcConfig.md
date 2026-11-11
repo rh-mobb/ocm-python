@@ -1,7 +1,9 @@
 # OidcConfig
 
 Contains the necessary attributes to support oidc configuration hosting under Red Hat or registering a Customer's byo oidc config.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **href** | **str** | HREF for the oidc config, filled in response. | [optional] 
@@ -16,6 +18,23 @@ Name | Type | Description | Notes
 **reusable** | **bool** | Indicates whether the Oidc Config can be reused. | [optional] 
 **secret_arn** | **str** | Secrets Manager ARN for the OIDC private key, supplied in request. It is only to be used in Unmanaged Oidc Config. | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.oidc_config import OidcConfig
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of OidcConfig from a JSON string
+oidc_config_instance = OidcConfig.from_json(json)
+# print the JSON string representation of the object
+print(OidcConfig.to_json())
+
+# convert the object into a dict
+oidc_config_dict = oidc_config_instance.to_dict()
+# create an instance of OidcConfig from a dict
+oidc_config_from_dict = OidcConfig.from_dict(oidc_config_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

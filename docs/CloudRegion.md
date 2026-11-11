@@ -1,7 +1,9 @@
 # CloudRegion
 
 Description of a region of a cloud provider.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kind** | **str** | Indicates the type of this object. Will be &#39;CloudRegion&#39; if this is a complete object or &#39;CloudRegionLink&#39; if it is just a link. | [optional] 
@@ -18,6 +20,23 @@ Name | Type | Description | Notes
 **supports_hypershift** | **bool** | &#39;true&#39; if the region is supported for Hypershift deployments, &#39;false&#39; otherwise. | [optional] 
 **supports_multi_az** | **bool** | Whether the region supports multiple availability zones. | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.cloud_region import CloudRegion
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of CloudRegion from a JSON string
+cloud_region_instance = CloudRegion.from_json(json)
+# print the JSON string representation of the object
+print(CloudRegion.to_json())
+
+# convert the object into a dict
+cloud_region_dict = cloud_region_instance.to_dict()
+# create an instance of CloudRegion from a dict
+cloud_region_from_dict = CloudRegion.from_dict(cloud_region_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -1,0 +1,21 @@
+# OpenAPI Generator additional properties for `python` (Pydantic v2) client.
+# See: https://openapi-generator.tech/docs/generators/python/
+
+packageName: ocm_client
+projectName: ocm-client
+packageVersion: "0.4.0"
+packageUrl: "https://github.com/rh-mobb/ocm-python"
+
+# OCM returns fields not always declared; spec-compliant additionalProperties behavior.
+disallowAdditionalPropertiesIfNotPresent: false
+
+hideGenerationTimestamp: true
+
+# Sync urllib3 client (fits Ansible/scripts); models still use Pydantic v2.
+# For async-first: library: httpx and supportHttpxSync: true (evaluate in a future release).
+library: urllib3
+
+# Generator pin (also in openapitools.json / .openapi-generator/VERSION): 7.27.0
+
+# PEP 561
+# (py.typed is emitted by modern generator)

@@ -1,7 +1,9 @@
 # ProvisionShard
 
 Contains the properties of the provision shard, including AWS and GCP related configurations
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kind** | **str** | Indicates the type of this object. Will be &#39;ProvisionShard&#39; if this is a complete object or &#39;ProvisionShardLink&#39; if it is just a link. | [optional] 
@@ -20,6 +22,23 @@ Name | Type | Description | Notes
 **region** | [**CloudRegion**](CloudRegion.md) |  | [optional] 
 **status** | **str** | Status of the provision shard. Possible values: active/maintenance/offline. | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.provision_shard import ProvisionShard
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of ProvisionShard from a JSON string
+provision_shard_instance = ProvisionShard.from_json(json)
+# print the JSON string representation of the object
+print(ProvisionShard.to_json())
+
+# convert the object into a dict
+provision_shard_dict = provision_shard_instance.to_dict()
+# create an instance of ProvisionShard from a dict
+provision_shard_from_dict = ProvisionShard.from_dict(provision_shard_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -1,12 +1,31 @@
 # Value
 
 Numeric value and the unit used to measure it.  Units are not mandatory, and they're not specified for some resources. For resources that use bytes, the accepted units are:  - 1 B = 1 byte - 1 KB = 10^3 bytes - 1 MB = 10^6 bytes - 1 GB = 10^9 bytes - 1 TB = 10^12 bytes - 1 PB = 10^15 bytes  - 1 B = 1 byte - 1 KiB = 2^10 bytes - 1 MiB = 2^20 bytes - 1 GiB = 2^30 bytes - 1 TiB = 2^40 bytes - 1 PiB = 2^50 bytes
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **unit** | **str** | Name of the unit used to measure the value. | [optional] 
 **value** | **float** | Numeric value. | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.value import Value
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of Value from a JSON string
+value_instance = Value.from_json(json)
+# print the JSON string representation of the object
+print(Value.to_json())
+
+# convert the object into a dict
+value_dict = value_instance.to_dict()
+# create an instance of Value from a dict
+value_from_dict = Value.from_dict(value_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

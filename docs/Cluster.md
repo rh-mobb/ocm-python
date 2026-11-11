@@ -1,7 +1,9 @@
 # Cluster
 
 Definition of an _OpenShift_ cluster.  The `cloud_provider` attribute is a reference to the cloud provider. When a cluster is retrieved it will be a link to the cloud provider, containing only the kind, id and href attributes:  ```json {   \"cloud_provider\": {     \"kind\": \"CloudProviderLink\",     \"id\": \"123\",     \"href\": \"/api/clusters_mgmt/v1/cloud_providers/123\"   } } ```  When a cluster is created this is optional, and if used it should contain the identifier of the cloud provider to use:  ```json {   \"cloud_provider\": {     \"id\": \"123\",   } } ```  If not included, then the cluster will be created using the default cloud provider, which is currently Amazon Web Services.  The region attribute is mandatory when a cluster is created.  The `aws.access_key_id`, `aws.secret_access_key` and `dns.base_domain` attributes are mandatory when creation a cluster with your own Amazon Web Services account.
+
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **kind** | **str** | Indicates the type of this object. Will be &#39;Cluster&#39; if this is a complete object or &#39;ClusterLink&#39; if it is just a link. | [optional] 
@@ -9,7 +11,7 @@ Name | Type | Description | Notes
 **href** | **str** | Self link. | [optional] 
 **api** | [**ClusterAPI**](ClusterAPI.md) |  | [optional] 
 **aws** | [**AWS**](AWS.md) |  | [optional] 
-**aws_infrastructure_access_role_grants** | [**list[AWSInfrastructureAccessRoleGrant]**](AWSInfrastructureAccessRoleGrant.md) | List of AWS infrastructure access role grants on this cluster. | [optional] 
+**aws_infrastructure_access_role_grants** | [**List[AWSInfrastructureAccessRoleGrant]**](AWSInfrastructureAccessRoleGrant.md) | List of AWS infrastructure access role grants on this cluster. | [optional] 
 **ccs** | [**CCS**](CCS.md) |  | [optional] 
 **dns** | [**DNS**](DNS.md) |  | [optional] 
 **fips** | **bool** | Create cluster that uses FIPS Validated / Modules in Process cryptographic libraries. | [optional] 
@@ -17,51 +19,78 @@ Name | Type | Description | Notes
 **gcp_encryption_key** | [**GCPEncryptionKey**](GCPEncryptionKey.md) |  | [optional] 
 **gcp_network** | [**GCPNetwork**](GCPNetwork.md) |  | [optional] 
 **additional_trust_bundle** | **str** | Additional trust bundle. | [optional] 
-**addons** | [**list[AddOnInstallation]**](AddOnInstallation.md) | List of add-ons on this cluster. | [optional] 
+**addons** | [**List[AddOnInstallation]**](AddOnInstallation.md) | List of add-ons on this cluster. | [optional] 
+**auto_node** | [**ClusterAutoNode**](ClusterAutoNode.md) |  | [optional] 
 **autoscaler** | [**ClusterAutoscaler**](ClusterAutoscaler.md) |  | [optional] 
+**azure** | [**Azure**](Azure.md) |  | [optional] 
 **billing_model** | [**BillingModel**](BillingModel.md) |  | [optional] 
 **byo_oidc** | [**ByoOidc**](ByoOidc.md) |  | [optional] 
+**channel** | **str** | Channel is the Y-stream update channel for the cluster (e.g., \&quot;stable-4.16\&quot;, \&quot;eus-4.16\&quot;). This field allows specifying the update channel independently from the version. | [optional] 
 **cloud_provider** | [**CloudProvider**](CloudProvider.md) |  | [optional] 
 **console** | [**ClusterConsole**](ClusterConsole.md) |  | [optional] 
+**control_plane** | [**ControlPlane**](ControlPlane.md) |  | [optional] 
 **creation_timestamp** | **datetime** | Date and time when the cluster was initially created, using the format defined in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt). | [optional] 
 **delete_protection** | [**DeleteProtection**](DeleteProtection.md) |  | [optional] 
-**disable_user_workload_monitoring** | **bool** | Indicates whether the User workload monitoring is enabled or not It is enabled by default | [optional] 
-**etcd_encryption** | **bool** | Indicates whether that etcd is encrypted or not. This is set only during cluster creation. | [optional] 
+**disable_user_workload_monitoring** | **bool** | Indicates whether the User workload monitoring is enabled or not It is enabled by default This field is deprecated for ROSA Hosted Control Plane clusters and will be removed | [optional] 
+**domain_prefix** | **str** | DomainPrefix of the cluster. This prefix is optionally assigned by the user when the cluster is created. It will appear in the Cluster&#39;s domain when the cluster is provisioned. | [optional] 
+**etcd_encryption** | **bool** | Indicates whether that etcd is encrypted or not. This is set only during cluster creation. For ROSA-HCP Clusters, etcd is always encrypted, if not set/false, or kms user&#39;s key not set,  defaults true indicates &#39;encrypted by internal key&#39;. For ARO-HCP Clusters, this is a readonly attribute, always set to true. | [optional] 
 **expiration_timestamp** | **datetime** | Date and time when the cluster will be automatically deleted, using the format defined in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt). If no timestamp is provided, the cluster will never expire.  This option is unsupported. | [optional] 
 **external_id** | **str** | External identifier of the cluster, generated by the installer. | [optional] 
+**external_auth_config** | [**ExternalAuthConfig**](ExternalAuthConfig.md) |  | [optional] 
 **external_configuration** | [**ExternalConfiguration**](ExternalConfiguration.md) |  | [optional] 
 **flavour** | [**Flavour**](Flavour.md) |  | [optional] 
-**groups** | [**list[Group]**](Group.md) | Link to the collection of groups of user of the cluster. | [optional] 
+**groups** | [**List[Group]**](Group.md) | Link to the collection of groups of user of the cluster. | [optional] 
 **health_state** | [**ClusterHealthState**](ClusterHealthState.md) |  | [optional] 
 **htpasswd** | [**HTPasswdIdentityProvider**](HTPasswdIdentityProvider.md) |  | [optional] 
 **hypershift** | [**Hypershift**](Hypershift.md) |  | [optional] 
-**identity_providers** | [**list[IdentityProvider]**](IdentityProvider.md) | Link to the collection of identity providers of the cluster. | [optional] 
-**inflight_checks** | [**list[InflightCheck]**](InflightCheck.md) | List of inflight checks on this cluster. | [optional] 
+**identity_providers** | [**List[IdentityProvider]**](IdentityProvider.md) | Link to the collection of identity providers of the cluster. | [optional] 
+**image_registry** | [**ClusterImageRegistry**](ClusterImageRegistry.md) |  | [optional] 
+**inflight_checks** | [**List[InflightCheck]**](InflightCheck.md) | List of inflight checks on this cluster. | [optional] 
 **infra_id** | **str** | InfraID is used for example to name the VPCs. | [optional] 
-**ingresses** | [**list[Ingress]**](Ingress.md) | List of ingresses on this cluster. | [optional] 
+**ingresses** | [**List[Ingress]**](Ingress.md) | List of ingresses on this cluster. | [optional] 
 **kubelet_config** | [**KubeletConfig**](KubeletConfig.md) |  | [optional] 
 **load_balancer_quota** | **int** | Load Balancer quota to be assigned to the cluster. | [optional] 
-**machine_pools** | [**list[MachinePool]**](MachinePool.md) | List of machine pools on this cluster. | [optional] 
+**machine_pools** | [**List[MachinePool]**](MachinePool.md) | List of machine pools on this cluster. | [optional] 
+**maintenance** | [**Maintenance**](Maintenance.md) |  | [optional] 
 **managed** | **bool** | Flag indicating if the cluster is managed (by Red Hat) or self-managed by the user. | [optional] 
 **managed_service** | [**ManagedService**](ManagedService.md) |  | [optional] 
-**multi_az** | **bool** | Flag indicating if the cluster should be created with nodes in different availability zones or all the nodes in a single one randomly selected. | [optional] 
-**name** | **str** | Name of the cluster. This name is assigned by the user when the cluster is created. | [optional] 
+**multi_az** | **bool** | Flag indicating if the cluster should be created with nodes in different availability zones or all the nodes in a single one randomly selected. For ARO-HCP Clusters, this attribute is unused, and the control plane is deployed in multiple availability zones when the Azure region where it is deployed supports multiple availability zones. | [optional] 
+**multi_arch_enabled** | **bool** | Indicate whether the cluster is enabled for multi arch workers | [optional] 
+**name** | **str** | Name of the cluster. This name is assigned by the user when the cluster is created. This is used to uniquely identify the cluster | [optional] 
 **network** | [**Network**](Network.md) |  | [optional] 
 **node_drain_grace_period** | [**Value**](Value.md) |  | [optional] 
-**node_pools** | [**list[NodePool]**](NodePool.md) | List of node pools on this cluster. NodePool is a scalable set of worker nodes attached to a hosted cluster. | [optional] 
+**node_pools** | [**List[NodePool]**](NodePool.md) | List of node pools on this cluster. NodePool is a scalable set of worker nodes attached to a hosted cluster. | [optional] 
 **nodes** | [**ClusterNodes**](ClusterNodes.md) |  | [optional] 
 **openshift_version** | **str** | Version of _OpenShift_ installed in the cluster, for example &#x60;4.0.0-0.2&#x60;.  When retrieving a cluster this will always be reported.  When provisioning a cluster this will be ignored, as the version to deploy will be determined internally. | [optional] 
 **product** | [**Product**](Product.md) |  | [optional] 
-**properties** | **dict(str, str)** | User defined properties for tagging and querying. | [optional] 
+**properties** | **Dict[str, str]** | User defined properties for tagging and querying. | [optional] 
 **provision_shard** | [**ProvisionShard**](ProvisionShard.md) |  | [optional] 
 **proxy** | [**Proxy**](Proxy.md) |  | [optional] 
 **region** | [**CloudRegion**](CloudRegion.md) |  | [optional] 
+**registry_config** | [**ClusterRegistryConfig**](ClusterRegistryConfig.md) |  | [optional] 
 **state** | [**ClusterState**](ClusterState.md) |  | [optional] 
 **status** | [**ClusterStatus**](ClusterStatus.md) |  | [optional] 
 **storage_quota** | [**Value**](Value.md) |  | [optional] 
 **subscription** | [**Subscription**](Subscription.md) |  | [optional] 
 **version** | [**Version**](Version.md) |  | [optional] 
 
+## Example
+
+```python
+from ocm_client.models.cluster import Cluster
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of Cluster from a JSON string
+cluster_instance = Cluster.from_json(json)
+# print the JSON string representation of the object
+print(Cluster.to_json())
+
+# convert the object into a dict
+cluster_dict = cluster_instance.to_dict()
+# create an instance of Cluster from a dict
+cluster_from_dict = Cluster.from_dict(cluster_dict)
+```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

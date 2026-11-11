@@ -46,6 +46,7 @@ coverage.xml
 .hypothesis/
 venv/
 .venv/
+.venv-codegen/
 .python-version
 .pytest_cache
 
